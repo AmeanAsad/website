@@ -1,10 +1,13 @@
 import "../styles/globals.css";
+import "@fontsource/pt-sans-caption";
+import "@fontsource/gilda-display";
 import { ChakraProvider } from "@chakra-ui/react";
+import themeExtension from "../styles/theme";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <ChakraProvider>
+        <ChakraProvider theme={themeExtension}>
             <Component {...pageProps} />
         </ChakraProvider>
     );

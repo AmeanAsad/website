@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Homepage.module.scss";
+import { Box } from "@chakra-ui/react";
+import Sidebar from "../Sidebar/Sidebar";
 import PropTypes from "prop-types";
 
 const HomePage = () => {
     return (
-        <div className={styles.pageContainer}>
+        <Box bg="brand.darkBlue" className={styles.pageContainer}>
             <div className={styles.leftNav}>
-                <p> test</p>
+                <Sidebar />
             </div>
             <div className={styles.pageContent}>
                 <p> test</p>
             </div>
             <div className={styles.animationContent}>
-                <p> test</p>
+                <p> tesdst</p>
             </div>
-        </div>
+        </Box>
     );
 };
 
