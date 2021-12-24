@@ -30,6 +30,7 @@ const LinkItems: Array<LinkItemProps> = [
     { name: "Projects", icon: null },
     { name: "Experience", icon: null },
     { name: "Contact", icon: null },
+    { name: "Blog", icon: null },
 ];
 
 export default function SideBar() {

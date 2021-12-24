@@ -6,6 +6,7 @@ const themeExtension: any = extendTheme({
             darkBlue: "#151247",
             red: "#FF4D5B",
             lightBlue: "#EAF0FF",
+            mediumBlue: "#262153",
             white: "#FFFFF7",
         },
     },

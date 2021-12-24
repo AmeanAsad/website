@@ -6,10 +6,16 @@
 
     @media (min-width: 760px) {
         grid-template-columns: 120px 5fr 5fr;
+        grid-template-rows: 1fr;
     }
 }
 
 .leftNav {
+    height: 100%;
+    width: 100%;
+}
+
+.pageContent {
     height: 100%;
     width: 100%;
 }
