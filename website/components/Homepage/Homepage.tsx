@@ -55,7 +55,10 @@ const HomePage = () => {
             <div className={styles.leftNav}>
                 <Sidebar />
             </div>
-            <div className={styles.pageContent}>
+            <Box marginTop={{
+                base: "100px",
+                md:"0"
+            }} className={styles.pageContent}>
                 <Center h="100%" w="100%">
                     <Stack marginLeft="20px" justifyContent={"center"}>
                         <Heading fontSize="15vmin" color="brand.white">
@@ -71,7 +74,7 @@ const HomePage = () => {
                         </Fade>
                     </Stack>
                 </Center>
-            </div>
+            </Box>
             <div className={styles.animationContent}>
                 <p> tesdst</p>
             </div>
