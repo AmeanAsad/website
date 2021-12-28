@@ -5,27 +5,57 @@ import {
     Center,
     chakra,
     Flex,
-    HStack,
-    Stack,
+    useDisclosure,
+    Fade,
+    Text,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverArrow,
+    PopoverBody,
+    IconButton,
 } from "@chakra-ui/react";
 
-import { BiChevronsRight, BiChevronsLeft } from "react-icons/bi";
+import { BiChevronsRight, BiChevronsLeft, BiInfoCircle } from "react-icons/bi";
+import testimonials from "./Testimonials.json";
+
+interface Testimonial {
+    name: string;
+    role: string;
+    content: string;
+    avatar: string;
+}
+
+type TestimonialList = Array<Testimonial>;
 
 const TestimonialCard = (props: any) => {
-    const test = {
-        name: "Brandon P.",
-        role: "Chief Marketing Officer",
-        content:
-            "It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!",
-        avatar: "https://pbs.twimg.com/media/E4kbSE0WQAcpowX.jpg",
+    const [text, setText] = useState<TestimonialList>(testimonials);
+    const { isOpen, onToggle } = useDisclosure();
+    const currentText: Testimonial = text[0];
+
+    const rotateText = () => {
+        setTimeout(() => {
+            if (!isOpen) {
+                onToggle();
+                console.log("toggle");
+                // currentText = text[0];
+                text.unshift(...text.splice(-1));
+                console.log(text);
+                setText([...text]);
+            }
+        }, 500);
     };
 
-    const { name, role, content, avatar } = test;
+    useEffect(() => {
+        rotateText();
+    }, [isOpen]);
+
+    const popoverIcon = (
+        <Icon as={BiInfoCircle} color="brand.lightBlue" w={6} h={6} />
+    );
+    const { name, role, content, avatar } = currentText;
     return (
         <Flex
-            // minH="200px"
-            // height="sm"
-            className="testodp"
             direction="row"
             justifyItems={"center"}
             rounded="xl"
@@ -34,116 +64,92 @@ const TestimonialCard = (props: any) => {
             borderTop={"1px"}
             borderBottom={"1px"}
             borderColor={"brand.lightBlue"}
-            // paddingLeft="10px"
-            sx={
-                {
-                    // "border-top": "1px solid rgba(255,255, 255, 0.25)",
-                    // "border-bottom": "1px solid rgba(255,255, 255, 0.25)",
-                    // "border-left": "60px solid #EAF0FF",
-                    // "border-right": "60px solid #EAF0FF",
-                    // "box-shadow": "rgba(255, 255, 255, 0.35) 0px 5px 15px"
-                    // "box-shadow": "rgba(250, 250, 190, 0.25) 0px 2px 5px -1px, rgba(255,255, 255, 0.3) 0px 1px 3px -1px"
-                }
-            }
         >
-            <Center
-                height="auto"
-                float="left"
-                width="40px"
-                // paddingLeft="30px"
-                marginLeft="-50px"
-                // bg="yellow"
-                className="test"
-            >
+            <Center height="auto" float="left" width="40px" marginLeft="-50px">
                 <Icon
                     as={BiChevronsLeft}
+                    onClick={onToggle}
                     w={20}
                     h={20}
                     color="brand.red"
                     style={{ cursor: "pointer" }}
                 />
             </Center>
-            <Flex
-                // boxShadow={"xl"}
-                // boxShadowColor="white"
-                maxW={"640px"}
-                direction={{ base: "column-reverse", md: "row" }}
-                width={"full"}
-                // rounded={"sm"}
-                // border={"0.5px"}
-                // borderColor={"brand.red"}
-                // backgroundImage={"linear-gradient(#151247,#82294D)"}
-                // borderLeft="10px"
-                // borderRight="10px"
-                // borderColor="white"
-                m="10px"
-                p={3}
-                justifyContent={"space-between"}
-                position={"relative"}
-                bg={"brand.darkBlue"}
-                // bg={"rgba(130,41,77,0.5)"}
-                sx={
-                    {
-                        // "border-top": "1px solid rgba(255,255, 255, 0.25)",
-                        // "border-bottom": "1px solid rgba(255,255, 255, 0.25)",
-                        // "border-left": "50px solid #EAF0FF",
-                        // "border-right": "50px solid #EAF0FF",
-                        // "box-shadow": "rgba(255, 255, 255, 0.35) 0px 5px 15px"
-                        // "box-shadow": "rgba(250, 250, 190, 0.25) 0px 2px 5px -1px, rgba(255,255, 255, 0.3) 0px 1px 3px -1px"
-                    }
-                }
+            <Fade
+                style={{
+                    margin: "10px",
+                    padding: "10px",
+                }}
+                in={isOpen}
             >
                 <Flex
-                    direction={"column"}
-                    p="4"
-                    textAlign={"left"}
+                    maxW={"640px"}
+                    direction={{ base: "column-reverse", md: "row" }}
+                    width={"full"}
+                    m="10px"
+                    p={3}
                     justifyContent={"space-between"}
-                    // bg="brand.lightBlue"
+                    position={"relative"}
+                    bg={"brand.darkBlue"}
                 >
-                    <chakra.p
-                        fontSize={"15px"}
-                        fontWeight="30"
-                        color="brand.white"
-                        pb={4}
+                    <Flex
+                        direction={"column"}
+                        p="4"
+                        textAlign={"left"}
+                        justifyContent={"space-between"}
                     >
-                        {content}
-                    </chakra.p>
-                    <chakra.p fontWeight={"bold"} fontSize={14}>
-                        {name}
-                        <chakra.span fontWeight={"medium"} color={"gray.500"}>
-                            {" "}
-                            - {role}
-                        </chakra.span>
-                    </chakra.p>
+                        {" "}
+                        <Text
+                            fontSize={15}
+                            fontWeight="30"
+                            color="brand.white"
+                            pb={4}
+                        >
+                            {content}
+                        </Text>
+                        <Flex direction="row">
+                            <Text
+                                as="em"
+                                color={"brand.red"}
+                                fontWeight={"bold"}
+                                marginRight={2}
+                                fontSize={18}
+                            >
+                                - {name}
+                            </Text>
+                            <Popover placement="right">
+                                <PopoverTrigger>
+                                    <IconButton
+                                        aria-label="Info Button"
+                                        size="sm"
+                                        variant="link"
+                                        icon={popoverIcon}
+                                    />
+                                </PopoverTrigger>
+                                <PopoverContent>
+                                    <PopoverArrow />
+                                    <PopoverBody>Test Content</PopoverBody>
+                                </PopoverContent>
+                            </Popover>
+                        </Flex>
+                    </Flex>
+                    <Avatar
+                        src={avatar}
+                        size="xl"
+                        loading="eager"
+                        alignSelf={"center"}
+                        m={{ base: "0 0 20px 0", md: "0 0 0 20px" }}
+                        sx={{
+                            border: "4px solid white",
+                        }}
+                    />
                 </Flex>
-                <Avatar
-                    src={avatar}
-                    size="xl"
-                    loading="eager"
-                    // height={"100px"}
-                    // border="8px"
-                    // borderColor="gray.900"
+            </Fade>
 
-                    // width={"100px"}
-                    alignSelf={"center"}
-                    m={{ base: "0 0 20px 0", md: "0 0 0 20px" }}
-                    sx={{
-                        border: "4px solid white",
-                    }}
-                />
-            </Flex>
-            <Center
-                height="auto"
-                float="left"
-                width="40px"
-                // paddingLeft="30px"
-                marginRight="-50px"
-                // marginTop="auto"
-                // bg="yellow"
-                className="test"
-            >
+            <Center height="auto" float="left" width="40px" marginRight="-50px">
                 <Icon
                     as={BiChevronsRight}
+                    onClick={onToggle}
                     w={20}
                     h={20}
                     color="brand.red"
