@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
     Avatar,
-    Box,
-    chakra,
-    Container,
-    Flex,
     Icon,
-    SimpleGrid,
-    useColorModeValue,
+    Center,
+    chakra,
+    Flex,
+    HStack,
+    Stack,
 } from "@chakra-ui/react";
+
+import { BiChevronsRight, BiChevronsLeft } from "react-icons/bi";
+
 const TestimonialCard = (props: any) => {
     const test = {
         name: "Brandon P.",
@@ -21,80 +23,133 @@ const TestimonialCard = (props: any) => {
     const { name, role, content, avatar } = test;
     return (
         <Flex
-            // boxShadow={"xl"}
-            // boxShadowColor="white"
-            maxW={"640px"}
-            direction={{ base: "column-reverse", md: "row" }}
-            width={"full"}
-            rounded={"md"}
-            // border={"0.5px"}
-            // borderColor={"brand.red"}
-            // backgroundImage={"linear-gradient(#151247,#82294D)"}
-            // borderLeft="10px"
-            // borderRight="10px"
-            // borderColor="white"
-
-            p={8}
-            justifyContent={"space-between"}
-            position={"relative"}
-            bg={"brand.darkBlue"}
-            // bg={"rgba(130,41,77,0.5)"}
-            sx={{
-                "border-top": "1px solid rgba(255,255, 255, 0.25)",
-                "border-bottom": "1px solid rgba(255,255, 255, 0.25)",
-
-                "border-left":"30px solid gray",
-                "border-right": "30px solid #413B70"
-            
-                // "box-shadow": "rgba(255, 255, 255, 0.35) 0px 5px 15px"
-                // "box-shadow": "rgba(250, 250, 190, 0.25) 0px 2px 5px -1px, rgba(255,255, 255, 0.3) 0px 1px 3px -1px"
-            }}
+            // minH="200px"
+            // height="sm"
+            className="testodp"
+            direction="row"
+            justifyItems={"center"}
+            rounded="xl"
+            borderRight={"60px solid"}
+            borderLeft={"60px solid"}
+            borderTop={"1px"}
+            borderBottom={"1px"}
+            borderColor={"brand.lightBlue"}
+            // paddingLeft="10px"
+            sx={
+                {
+                    // "border-top": "1px solid rgba(255,255, 255, 0.25)",
+                    // "border-bottom": "1px solid rgba(255,255, 255, 0.25)",
+                    // "border-left": "60px solid #EAF0FF",
+                    // "border-right": "60px solid #EAF0FF",
+                    // "box-shadow": "rgba(255, 255, 255, 0.35) 0px 5px 15px"
+                    // "box-shadow": "rgba(250, 250, 190, 0.25) 0px 2px 5px -1px, rgba(255,255, 255, 0.3) 0px 1px 3px -1px"
+                }
+            }
         >
-            <Flex
-                direction={"column"}
-                textAlign={"left"}
-                justifyContent={"space-between"}
-                // bg="brand.lightBlue"
+            <Center
+                height="auto"
+                float="left"
+                width="40px"
+                // paddingLeft="30px"
+                marginLeft="-50px"
+                // bg="yellow"
+                className="test"
             >
-                <chakra.p
-                    
-                    fontSize={"15px"}
-                    fontWeight="30"
-                    color="brand.white"
-                    pb={4}
+                <Icon
+                    as={BiChevronsLeft}
+                    w={20}
+                    h={20}
+                    color="brand.red"
+                    style={{ cursor: "pointer" }}
+                />
+            </Center>
+            <Flex
+                // boxShadow={"xl"}
+                // boxShadowColor="white"
+                maxW={"640px"}
+                direction={{ base: "column-reverse", md: "row" }}
+                width={"full"}
+                // rounded={"sm"}
+                // border={"0.5px"}
+                // borderColor={"brand.red"}
+                // backgroundImage={"linear-gradient(#151247,#82294D)"}
+                // borderLeft="10px"
+                // borderRight="10px"
+                // borderColor="white"
+                m="10px"
+                p={3}
+                justifyContent={"space-between"}
+                position={"relative"}
+                bg={"brand.darkBlue"}
+                // bg={"rgba(130,41,77,0.5)"}
+                sx={
+                    {
+                        // "border-top": "1px solid rgba(255,255, 255, 0.25)",
+                        // "border-bottom": "1px solid rgba(255,255, 255, 0.25)",
+                        // "border-left": "50px solid #EAF0FF",
+                        // "border-right": "50px solid #EAF0FF",
+                        // "box-shadow": "rgba(255, 255, 255, 0.35) 0px 5px 15px"
+                        // "box-shadow": "rgba(250, 250, 190, 0.25) 0px 2px 5px -1px, rgba(255,255, 255, 0.3) 0px 1px 3px -1px"
+                    }
+                }
+            >
+                <Flex
+                    direction={"column"}
+                    p="4"
+                    textAlign={"left"}
+                    justifyContent={"space-between"}
+                    // bg="brand.lightBlue"
                 >
-                    {content}
-                </chakra.p>
-                <chakra.p
-                    fontWeight={"bold"}
-                    fontSize={14}
-                >
-                    {name}
-                    <chakra.span
-                        fontWeight={"medium"}
-                        color={"gray.500"}
+                    <chakra.p
+                        fontSize={"15px"}
+                        fontWeight="30"
+                        color="brand.white"
+                        pb={4}
                     >
-                        {" "}
-                        - {role}
-                    </chakra.span>
-                </chakra.p>
-            </Flex>
-            <Avatar
-                src={avatar}
-                size="xl"
-                loading="eager"
-                // height={"100px"}
-                // border="8px"
-                // borderColor="gray.900"
-                
-                // width={"100px"}
-                alignSelf={"center"}
-                m={{ base: "0 0 20px 0", md: "0 0 0 20px" }}
-                sx={{
-                    border: "1px solid #262153",
+                        {content}
+                    </chakra.p>
+                    <chakra.p fontWeight={"bold"} fontSize={14}>
+                        {name}
+                        <chakra.span fontWeight={"medium"} color={"gray.500"}>
+                            {" "}
+                            - {role}
+                        </chakra.span>
+                    </chakra.p>
+                </Flex>
+                <Avatar
+                    src={avatar}
+                    size="xl"
+                    loading="eager"
+                    // height={"100px"}
+                    // border="8px"
+                    // borderColor="gray.900"
 
-                }}
-            />
+                    // width={"100px"}
+                    alignSelf={"center"}
+                    m={{ base: "0 0 20px 0", md: "0 0 0 20px" }}
+                    sx={{
+                        border: "4px solid white",
+                    }}
+                />
+            </Flex>
+            <Center
+                height="auto"
+                float="left"
+                width="40px"
+                // paddingLeft="30px"
+                marginRight="-50px"
+                // marginTop="auto"
+                // bg="yellow"
+                className="test"
+            >
+                <Icon
+                    as={BiChevronsRight}
+                    w={20}
+                    h={20}
+                    color="brand.red"
+                    style={{ cursor: "pointer" }}
+                />
+            </Center>
         </Flex>
     );
 };
