@@ -39,7 +39,7 @@ export default function SideBar() {
         <Box
             className="Box"
             w="100%"
-            minH="100vh"
+            h={{ base: 70, md: "100vh" }}
             bg={useColorModeValue("brand.lightBlue", "gray.900")}
         >
             <SidebarContent
@@ -79,23 +79,11 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             // borderRightColor={useColorModeValue("gray.200", "gray.700")}
             w={{ base: "full", md: 120 }}
             pos="fixed"
-            h="100%"
+            h={{ base: "100vh", md: "100%" }}
             {...rest}
         >
             <Flex direction="column" height="full">
-                <Flex
-                    h="20"
-                    alignItems="center"
-                    mx="5"
-                    // justifyContent="space-between"
-                >
-                    {/* <Text
-                        fontSize="2xl"
-                        fontFamily="monospace"
-                        fontWeight="bold"
-                    >
-                        Logo
-                    </Text> */}
+                <Flex h="20" alignItems="center" mx="5">
                     <CloseButton
                         display={{ base: "flex", md: "none" }}
                         onClick={onClose}
