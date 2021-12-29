@@ -14,6 +14,8 @@ import {
     PopoverArrow,
     PopoverBody,
     IconButton,
+    Box,
+    Heading,
 } from "@chakra-ui/react";
 
 import { BiChevronsRight, BiChevronsLeft, BiInfoCircle } from "react-icons/bi";
@@ -30,25 +32,32 @@ type TestimonialList = Array<Testimonial>;
 
 const TestimonialCard = (props: any) => {
     const [text, setText] = useState<TestimonialList>(testimonials);
+    const [direction, setDirection] = useState<number>(1);
     const { isOpen, onToggle } = useDisclosure();
     const currentText: Testimonial = text[0];
 
-    const rotateText = () => {
-        setTimeout(() => {
-            if (!isOpen) {
-                onToggle();
-                console.log("toggle");
-                // currentText = text[0];
-                text.unshift(...text.splice(-1));
-                console.log(text);
-                setText([...text]);
-            }
-        }, 500);
+    const toggle = (dir: number) => {
+        setDirection(dir);
+        onToggle();
     };
 
     useEffect(() => {
+        const rotateText = () => {
+            console.log(direction);
+            setTimeout(() => {
+                if (!isOpen) {
+                    onToggle();
+                    console.log("toggle");
+                    // currentText = text[0];
+                    text.unshift(...text.splice(direction));
+                    console.log(text);
+                    setText([...text]);
+                }
+            }, 800);
+        };
+
         rotateText();
-    }, [isOpen]);
+    }, [isOpen]); // eslint-disable-line
 
     const popoverIcon = (
         <Icon as={BiInfoCircle} color="brand.lightBlue" w={6} h={6} />
@@ -68,7 +77,7 @@ const TestimonialCard = (props: any) => {
             <Center height="auto" float="left" width="40px" marginLeft="-50px">
                 <Icon
                     as={BiChevronsLeft}
-                    onClick={onToggle}
+                    onClick={() => toggle(-1)}
                     w={20}
                     h={20}
                     color="brand.red"
@@ -108,7 +117,7 @@ const TestimonialCard = (props: any) => {
                             {content}
                         </Text>
                         <Flex direction="row">
-                            <Text
+                            <Heading
                                 as="em"
                                 color={"brand.red"}
                                 fontWeight={"bold"}
@@ -116,7 +125,7 @@ const TestimonialCard = (props: any) => {
                                 fontSize={18}
                             >
                                 - {name}
-                            </Text>
+                            </Heading>
                             <Popover placement="right">
                                 <PopoverTrigger>
                                     <IconButton
@@ -126,9 +135,18 @@ const TestimonialCard = (props: any) => {
                                         icon={popoverIcon}
                                     />
                                 </PopoverTrigger>
-                                <PopoverContent>
+                                <PopoverContent
+                                    rounded="sm"
+                                    bg="brand.lightBlue"
+                                >
                                     <PopoverArrow />
-                                    <PopoverBody>Test Content</PopoverBody>
+                                    <PopoverBody>
+                                        <Box bg={"brand.lightBlue"} padding={4}>
+                                            <Text color="brand.darkBlue">
+                                                Content goes here my friend
+                                            </Text>
+                                        </Box>
+                                    </PopoverBody>
                                 </PopoverContent>
                             </Popover>
                         </Flex>
@@ -149,7 +167,7 @@ const TestimonialCard = (props: any) => {
             <Center height="auto" float="left" width="40px" marginRight="-50px">
                 <Icon
                     as={BiChevronsRight}
-                    onClick={onToggle}
+                    onClick={() => toggle(1)}
                     w={20}
                     h={20}
                     color="brand.red"
