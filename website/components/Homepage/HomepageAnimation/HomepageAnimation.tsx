@@ -52,7 +52,7 @@ const HomepageAnimation = () => {
                     //     "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;",
                     // "box-shadow": "rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;",
                     "box-shadow":
-                        "rgba(0, 0, 0, 0.3) 0px 20px 20px, rgba(0, 0, 0, 0.4) 0px 7px 6px;",
+                        "rgba(0, 0, 0, 0.19) 10px 10px 20px, rgba(0, 0, 0, 0.23) 3px 8px 6px;",
                 }}
             >
                 <Text p={5} color="brand.white" marginTop="5">
