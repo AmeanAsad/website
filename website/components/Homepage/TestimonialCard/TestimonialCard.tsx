@@ -30,7 +30,7 @@ interface Testimonial {
 
 type TestimonialList = Array<Testimonial>;
 
-const TestimonialCard = (props: any) => {
+const TestimonialCard = () => {
     const [text, setText] = useState<TestimonialList>(testimonials);
     const [direction, setDirection] = useState<number>(1);
     const { isOpen, onToggle } = useDisclosure();
@@ -47,8 +47,6 @@ const TestimonialCard = (props: any) => {
             setTimeout(() => {
                 if (!isOpen) {
                     onToggle();
-                    console.log("toggle");
-                    // currentText = text[0];
                     text.unshift(...text.splice(direction));
                     console.log(text);
                     setText([...text]);
