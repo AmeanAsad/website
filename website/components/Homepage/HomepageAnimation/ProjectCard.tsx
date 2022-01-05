@@ -20,14 +20,7 @@ import {
 import { Project } from "./ProjectTypes";
 import React from "react";
 
-// interface ProjectInfo {
-//     id: string;
-//     icon: "code" | "document" | "hardware";
-//     topic: string;
-//     title: string;
-//     tags: Array<string>;
-//     date: string;
-// }
+type projectIcon = "code" | "hardware" | "document";
 
 const cardIcons = {
     code: (
@@ -47,6 +40,8 @@ const cardIcons = {
 
 const ProjectCard = (props: Project) => {
     const { icon, topic, title, tags, date } = props;
+    const projectIcon = cardIcons[icon as keyof typeof cardIcons];
+    const iconElement = projectIcon ? projectIcon : cardIcons.document;
     const tagElements = tags.map((tagText, idx) => {
         return (
             <Tag
@@ -64,7 +59,6 @@ const ProjectCard = (props: Project) => {
             </Tag>
         );
     });
-    console.log(tagElements);
 
     const cardHeader = (
         <React.Fragment>
@@ -91,7 +85,7 @@ const ProjectCard = (props: Project) => {
                 />
             </Box>
             <HStack paddingTop={5} marginLeft={5}>
-                {cardIcons[icon]}
+                {iconElement}
 
                 <Text
                     fontSize={15}

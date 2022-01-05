@@ -1,7 +1,6 @@
-type projectIcon = "code" | "document" | "hardware";
 export interface Project {
     id: string;
-    icon: projectIcon;
+    icon: string;
     topic: string;
     title: string;
     tags: Array<string>;

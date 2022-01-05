@@ -43,12 +43,10 @@ const TestimonialCard = () => {
 
     useEffect(() => {
         const rotateText = () => {
-            console.log(direction);
             setTimeout(() => {
                 if (!isOpen) {
                     onToggle();
                     text.unshift(...text.splice(direction));
-                    console.log(text);
                     setText([...text]);
                 }
             }, 800);

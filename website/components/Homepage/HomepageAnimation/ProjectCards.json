@@ -8,27 +8,11 @@
         "date": "April 5, 2021"
     },
     {
-        "id": "hammingDecoding",
-        "icon": "document",
-        "topic": "Mathematics",
-        "title": "Title",
-        "tags": ["tag1", "tag2"],
-        "date": "April 5, 2021"
-    },
-    {
-        "id": "hammingDecoding",
-        "icon": "hardware",
-        "topic": "Mathematics",
-        "title": "Title",
-        "tags": ["tag1", "tag2"],
-        "date": "April 5, 2021"
-    },
-    {
-        "id": "hammingDecoding",
-        "icon": "code",
-        "topic": "Mathematics",
-        "title": "Title",
-        "tags": ["tag1", "tag2"],
-        "date": "April 5, 2021"
+        "id": "someting",
+        "icon": "cod",
+        "topic": "Machine Vision",
+        "title": "Linear Optimization Savings",
+        "tags": ["Optimization", "Python", "React"],
+        "date": "April 5, 2019"
     }
 ]
