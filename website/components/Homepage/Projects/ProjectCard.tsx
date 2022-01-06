@@ -45,8 +45,16 @@ const cardIcons = {
             <Icon as={ImEmbed2} w={6} h={6} color="brand.lightBlue" />
         </Center>
     ),
-    hardware: <Icon as={ImCog} w={6} h={6} color="brand.lightBlue" />,
-    document: <Icon as={ImFileText2} w={7} h={7} color="brand.lightBlue" />,
+    hardware: (
+        <Box h="32px" w="32px">
+            <Icon as={ImCog} w={6} h={6} color="brand.lightBlue" />
+        </Box>
+    ),
+    document: (
+        <Box h="32px" w="32px">
+            <Icon as={ImFileText2} w={7} h={7} color="brand.lightBlue" />{" "}
+        </Box>
+    ),
 };
 
 const ProjectCard = (props: Project) => {
