@@ -1,8 +1,8 @@
-import HomepageAnimation from "../components/Homepage/HomepageAnimation/HomepageAnimation";
+import Projects from "../components/Homepage/Projects/Projects";
 
 import React from "react";
 
 const Home = () => {
-    return <HomepageAnimation />;
+    return <Projects />;
 };
 export default Home;

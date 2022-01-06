@@ -9,10 +9,18 @@
     },
     {
         "id": "someting",
-        "icon": "cod",
+        "icon": "hardware",
         "topic": "Machine Vision",
         "title": "Linear Optimization Savings",
         "tags": ["Optimization", "Python", "React"],
+        "date": "April 5, 2019"
+    },
+    {
+        "id": "someting",
+        "icon": "document",
+        "topic": "Mathematics",
+        "title": "Linear Optimization Savings",
+        "tags": ["Optimization Theory", "Machine Learning", "React"],
         "date": "April 5, 2019"
     }
 ]
