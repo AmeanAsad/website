@@ -5,11 +5,11 @@ import projectsInfo from "./ProjectCards.json";
 import { ProjectCards } from "./ProjectTypes";
 import ProjectCard from "./ProjectCard";
 
-const HomepageAnimation = () => {
+const Projects = () => {
     const projectCards: ProjectCards = projectsInfo;
 
-    const projectCardElements = projectCards.map((projectInfo) => (
-        <ProjectCard key={projectInfo.title} {...projectInfo} />
+    const projectCardElements = projectCards.map((projectInfo, idx) => (
+        <ProjectCard key={projectInfo.title + idx} {...projectInfo} />
     ));
 
     return (
@@ -25,4 +25,4 @@ const HomepageAnimation = () => {
     );
 };
 
-export default HomepageAnimation;
+export default Projects;

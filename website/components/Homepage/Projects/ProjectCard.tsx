@@ -7,17 +7,27 @@ import {
     Icon,
     Tag,
     Text,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalFooter,
+    ModalBody,
+    useDisclosure,
+    IconButton,
+    Spacer,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import {
     ImFileText2,
     ImEnlarge2,
+    ImShrink2,
     ImEnter,
     ImEmbed2,
     ImCog,
 } from "react-icons/im";
 import { Project } from "./ProjectTypes";
+import ProjectPage from "./ProjectPage";
 import React from "react";
 
 type projectIcon = "code" | "hardware" | "document";
@@ -29,6 +39,7 @@ const cardIcons = {
             height="32px"
             border="solid"
             borderWidth="1px"
+            rounded="sm"
             borderColor={"brand.lightBlue"}
         >
             <Icon as={ImEmbed2} w={6} h={6} color="brand.lightBlue" />
@@ -39,9 +50,39 @@ const cardIcons = {
 };
 
 const ProjectCard = (props: Project) => {
-    const { icon, topic, title, tags, date } = props;
+    const { id, icon, topic, title, tags, date } = props;
     const projectIcon = cardIcons[icon as keyof typeof cardIcons];
     const iconElement = projectIcon ? projectIcon : cardIcons.document;
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const closeIcon = (
+        <Icon as={ImShrink2} w={7} h={7} color="brand.darkBlue" />
+    );
+    const modalContent = (
+        <Modal onClose={onClose} size={"full"} isOpen={isOpen}>
+            <ModalOverlay />
+            <ModalContent>
+                <ModalBody bg={"brand.white"}>
+                    <Flex padding={2} width="100%" direction="row">
+                        <Heading color="brand.mediumBlue">{title}</Heading>
+                        <Spacer />
+                        <IconButton
+                            onClick={onClose}
+                            variant="outline"
+                            border={"2px"}
+                            rounded="none"
+                            borderColor={"brand.darkBlue"}
+                            aria-label="Close Modal"
+                            icon={closeIcon}
+                        />
+                    </Flex>
+                    <ProjectPage projectId={id} />
+                </ModalBody>
+                <ModalFooter></ModalFooter>
+            </ModalContent>
+        </Modal>
+    );
     const tagElements = tags.map((tagText, idx) => {
         return (
             <Tag
@@ -67,6 +108,7 @@ const ProjectCard = (props: Project) => {
                 width="60px"
                 border="solid"
                 borderWidth={"30px"}
+                onClick={onOpen}
                 background="brand.white"
                 float="right"
                 sx={{
@@ -133,39 +175,42 @@ const ProjectCard = (props: Project) => {
         </Box>
     );
     return (
-        <motion.div whileHover={{ y: -10 }}>
-            <Box
-                h="350px"
-                w="400px"
-                bg="brand.darkBlue"
-                position={"relative"}
-                margin={6}
-            >
-                {cardHeader}
+        <>
+            {modalContent}
+            <motion.div whileHover={{ y: -10 }}>
                 <Box
+                    h="350px"
+                    w="400px"
                     bg="brand.darkBlue"
-                    h="inherit"
-                    width="100%"
-                    maxHeight="290px"
                     position={"relative"}
-                    sx={{
-                        boxShadow:
-                            "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;",
-                    }}
+                    margin={6}
                 >
-                    <Heading
-                        fontSize={30}
-                        p={5}
-                        color="brand.white"
-                        marginTop="5"
-                        letterSpacing={1}
+                    {cardHeader}
+                    <Box
+                        bg="brand.darkBlue"
+                        h="inherit"
+                        width="100%"
+                        maxHeight="290px"
+                        position={"relative"}
+                        sx={{
+                            boxShadow:
+                                "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;",
+                        }}
                     >
-                        {title}
-                    </Heading>
-                    {cardFooter}
+                        <Heading
+                            fontSize={30}
+                            p={5}
+                            color="brand.white"
+                            marginTop="5"
+                            letterSpacing={1}
+                        >
+                            {title}
+                        </Heading>
+                        {cardFooter}
+                    </Box>
                 </Box>
-            </Box>
-        </motion.div>
+            </motion.div>
+        </>
     );
 };
 
