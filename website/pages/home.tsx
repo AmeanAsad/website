@@ -1,4 +1,4 @@
-import Projects from "../components/Homepage/Projects/Projects";
+import Projects from "../components/Projects/Projects";
 
 import React from "react";
 
