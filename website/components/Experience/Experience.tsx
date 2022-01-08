@@ -7,95 +7,110 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
+    Text,
 } from "@chakra-ui/react";
 import themeExtension from "../../styles/theme";
 import React from "react";
-import { Chrono } from "react-chrono";
-import { ImShrink2 } from "react-icons/im";
+import {
+    VerticalTimeline,
+    VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { ImBriefcase } from "react-icons/im";
+import styles from "./Experience.module.scss";
+import experiences from "./Experiences.json";
 
 const brand = themeExtension.colors.brand;
 console.log(brand);
 
+const TimeLineElement = (props: any) => {
+    const { title, location, date, company, description } = props;
+    return (
+        <VerticalTimelineElement
+            className={styles.experience}
+            contentStyle={{
+                background: "#433A92",
+                color: "#fff",
+                border: "1px solid rgba(255,255,255,0.3)",
+                borderRadius: "5px",
+                boxShadow: "None",
+                fontColor: "white",
+            }}
+            contentArrowStyle={{
+                borderRight: "14px solid rgba(255,255,255,0.8)",
+                borderRightColor: brand.white,
+            }}
+            date={date}
+            iconStyle={{
+                background: "#433A92",
+                color: brand.lightBlue,
+                boxShadow: "unset",
+                border: "2px solid",
+                borderColor: brand.lightBlue,
+            }}
+            icon={<Icon as={ImBriefcase} />}
+        >
+            <Text
+                fontSize={17}
+                letterSpacing={2}
+                textTransform={"uppercase"}
+                color="brand.lightBlue"
+            >
+                {title}
+            </Text>
+            <Text
+                fontSize={14}
+                letterSpacing={1}
+                fontWeight={5}
+                color="brand.lightBlue"
+            >
+                {company}
+            </Text>
+            <Heading
+                fontFamily={"PT Sans Caption"}
+                color={"red"}
+                fontWeight={"thin"}
+                fontSize={14}
+            >
+                {location}
+            </Heading>
+            <Accordion marginTop={3} allowMultiple>
+                <AccordionItem>
+                    {({ isExpanded }) => (
+                        <>
+                            <Text color={"brand.white"}>
+                                <AccordionButton>
+                                    <Box flex="1" textAlign="left">
+                                        {isExpanded ? "Read Less" : "Read More"}
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                            </Text>
+                            <AccordionPanel pb={3}>
+                                {description}
+                            </AccordionPanel>
+                        </>
+                    )}
+                </AccordionItem>
+            </Accordion>
+        </VerticalTimelineElement>
+    );
+};
+
 const Experience = () => {
-    const items = [
-        {
-            title: "This section",
-        },
-        {
-            title: "Section 2 about something",
-        },
-        {
-            title: "May something",
-        },
-    ];
+    const timelineElements = experiences.map((experience, idx) => {
+        return <TimeLineElement key={idx} {...experience} />;
+    });
 
     return (
-        <Box width="100%" height="100vh" background="brand.white">
+        <Box width="100%" height="100%" background="brand.darkBlue">
             <div style={{ width: "100%", height: "100%" }}>
-                <Chrono
-                    borderLessCards
-                    allowDynamicUpdate
-                    hideControls
-                    cardHeight={100}
-                    theme={{
-                        titleColor: brand.darkBlue,
-                        primary: brand.darkBlue,
-                        textColor: brand.darkBlue,
-                        cardBgColor: "brand.darkBlue",
-                        cardForeColor: brand.darkBlue,
-                        secondary: brand.lightBlue,
-                    }}
-                    mode="VERTICAL_ALTERNATING"
-                    items={items}
+                <VerticalTimeline
+                    lineColor={brand.lightBlue}
+                    layout="2-columns"
                 >
-                    <div className="1">
-                        <Box width="200px" height="300px" bg={"brand.darkBlue"}>
-                            <Heading> Test content </Heading>
-                        </Box>
-                    </div>
-
-                    <div className="2">
-                        <Box width="200px" height="300px" bg={"brand.darkBlue"}>
-                            <Heading> Test resh </Heading>
-                        </Box>
-                    </div>
-                    <div className="3">
-                        <Box
-                            width="200px"
-                            height={"fit-content"}
-                            bg={"brand.darkBlue"}
-                        >
-                            <Heading> Test resh </Heading>
-                            <Accordion defaultIndex={[0]} allowMultiple>
-                                <AccordionItem>
-                                    <Heading color={"brand.white"}>
-                                        <AccordionButton>
-                                            <Box flex="1" textAlign="left">
-                                                Read More
-                                            </Box>
-                                            <AccordionIcon />
-                                        </AccordionButton>
-                                    </Heading>
-                                    <AccordionPanel>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat.
-                                    </AccordionPanel>
-                                </AccordionItem>
-                            </Accordion>
-                        </Box>
-                    </div>
-                    <div className="chrono-icons">
-                        <Box w="32px" h="32px" bg="white">
-                            <Icon as={ImShrink2} w={5} h={5} />
-                        </Box>
-                        <Icon as={ImShrink2} w={7} h={7} />
-                        <Icon as={ImShrink2} w={7} h={7} />
-                    </div>
-                </Chrono>
+                    {timelineElements}
+                </VerticalTimeline>
             </div>
         </Box>
     );
