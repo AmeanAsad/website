@@ -4,8 +4,13 @@ import { PtsCanvas } from "react-pts-canvas";
 import { Line, Group, Polygon, Create, Pt } from "pts/dist/es5";
 import { Box } from "@chakra-ui/react";
 
-class ExampleComponent extends PtsCanvas {
-    constructor(props) {
+
+interface State {
+    pts: any;
+    bound: any
+}
+class ExampleComponent<State> extends PtsCanvas  {
+    constructor(props: any) {
         super(props);
         this.pts = new Group();
         this.bound = {

@@ -19,7 +19,7 @@
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        "components/Homepage/Animation.jsx"
+        "components/Homepage/Animation.tsx"
     ],
     "exclude": ["node_modules"]
 }

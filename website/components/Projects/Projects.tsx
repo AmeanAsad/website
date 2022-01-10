@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 
 import React from "react";
-import projectsInfo from "./ProjectCards.json";
+import projectsInfo from "./ProjectCards.json"; 
 import { ProjectCards } from "./ProjectTypes";
 import ProjectCard from "./ProjectCard";
 
