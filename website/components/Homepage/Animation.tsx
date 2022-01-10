@@ -1,23 +1,26 @@
 import React, { Component } from "react";
 
 import { PtsCanvas } from "react-pts-canvas";
-import { Line, Group, Polygon, Create, Pt } from "pts/dist/es5";
+import { Line, Group, Polygon, Create, Pt } from "pts";
 import { Box } from "@chakra-ui/react";
 
-
-interface State {
-    pts: any;
-    bound: any
+interface Bound {
+    topLeft: Array<any>;
+    bottomRight: Array<any>;
 }
-class ExampleComponent<State> extends PtsCanvas  {
+class AnimationComponent extends PtsCanvas {
+    // Use type definitions to make the constructor types defined on component
+    pts: Group;
+    bound: Bound;
+
     constructor(props: any) {
         super(props);
-        this.pts = new Group();
+
+        this.pts = new Group() as any;
         this.bound = {
-            topLeft: null,
-            bottomRight: null,
+            topLeft: [null],
+            bottomRight: [null],
         };
-        this.pop = new Group();
     }
 
     start() {
@@ -28,46 +31,62 @@ class ExampleComponent<State> extends PtsCanvas  {
         this.bound.bottomRight = this.space.innerBound._bottomRight;
     }
 
-    animate(time, ftime) {
-        let centerGroup = new Group(
+    animate(time: number, ftime: number) {
+        // Create a line using the mouse pointer and the center of the screen.
+        const centerLine = new Group(
             this.space.center.$subtract(0.1),
             this.space.pointer
         );
 
-        let intersect = centerGroup.op(Line.intersectRay2D);
-        let sideOf = centerGroup.op(Line.sideOfPt2D);
-        let perpend = centerGroup.op(Line.perpendicularFromPt);
+        const intersect = centerLine.op(Line.intersectRay2D);
+        const perpend = centerLine.op(Line.perpendicularFromPt);
+        // Side of is used to find where the corners are relative to the mouse and pointer
+        const sideOf = centerLine.op(Line.sideOfPt2D);
 
-        const bound = this.bound.bottomRight;
-        const bound2 = this.bound.topLeft;
-        const bound3 = [bound[0], 0];
-        const bound4 = [0, bound[1]];
+        const bottomRight = this.bound.bottomRight;
+        // Define the 4 corner points of the screen.
+        const corner1 = new Pt(this.bound.bottomRight);
+        const corner2 = new Pt(this.bound.topLeft);
+        const corner3 = new Pt([bottomRight[0], 0]);
+        const corner4 = new Pt([0, bottomRight[1]]);
+        const set = [corner1, corner2, corner3, corner4];
 
-        const pt = new Pt(bound);
-        const pt2 = new Pt(bound2);
-        const pt3 = new Pt(bound3);
-        const pt4 = new Pt(bound4);
-        let set = [pt, pt2, pt3, pt4];
-        let sides = set.map((pt) => {
+        // Find direction (right or left) the corners are relative to the centerLine
+        const cornerDirections = set.map((pt) => {
             return sideOf(pt);
         });
-        let filter = set.filter((point, idx) => sides[idx] > 0);
+        // Filter the directions to find the two corner points on the right side
+        // of the centerLine always
+        const filteredSet = set.filter(
+            (point, idx) => cornerDirections[idx] > 0
+        );
 
-        let pp = new Group(pt, pt3);
-        let pp2 = new Group(pt2, pt4);
+        // Define lines on the right and left hand sides of the screen
+        const leftSideLine = new Group(corner1, corner3);
+        const rightSideLine = new Group(corner2, corner4);
 
-        // console.log(fromTop);
-        let intersect1 = intersect(pp);
-        let intersect2 = intersect(pp2);
+        // Find the intersections of the sidelines with the centerLine
+        const intersect1 = intersect(leftSideLine);
+        const intersect2 = intersect(rightSideLine);
 
-        let po = new Group(filter[1], filter[0], intersect1, intersect2);
+        // Use the intersections along with the filtered directions to create
+        // a polygon which creates a shape that encloses one half of the screen
+        const polygonCoords = new Group(
+            filteredSet[1],
+            filteredSet[0],
+            intersect1,
+            intersect2
+        );
 
-        let poly = Polygon.convexHull(po);
+        // Create a convex hull using the polygon coordinates
+        // Should be really fast since there are only 4 points
+        const poly = Polygon.convexHull(polygonCoords);
+
         this.form.fillOnly("rgba(255, 255, 255, 0.7)").polygon(poly);
 
-        this.pts.rotate2D(0.0005, this.space.center);
+        this.pts.rotate2D(0.0008, this.space.center);
 
-        this.pts.forEach((p, i) => {
+        this.pts.forEach((p: Pt, i: number) => {
             // for each point, find the perpendicular to the line
             let lp = perpend(p);
             var ratio = Math.min(
@@ -82,17 +101,13 @@ class ExampleComponent<State> extends PtsCanvas  {
     }
 }
 
-var radius = 50;
-
-export default class App extends Component {
+export default class Animation extends Component {
     render() {
         return (
             <Box className="test" height="100%" width="100%">
-                <ExampleComponent
+                <AnimationComponent
                     background="black"
                     name="pts-tester"
-                    height="100%"
-                    width="100%"
                     style={{ opacity: 0.95, height: "100vh", width: "100vw" }}
                 />
             </Box>

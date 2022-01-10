@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Homepage.module.scss";
 import { Box } from "@chakra-ui/react";
-import Animation from "./Animation.jsx";
+import Animation from "./Animation";
 
 const HomePage = () => {
     return (
