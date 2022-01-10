@@ -1,39 +1,48 @@
 import React from "react";
 import styles from "./Homepage.module.scss";
-import { Box, Center, Heading, Stack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Stack } from "@chakra-ui/react";
 import Sidebar from "../Sidebar/Sidebar";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
+import AnimationComponent from "./Animation";
 
 const HomePage = () => {
     return (
-        <Box bg="brand.darkBlue" className={styles.pageContainer}>
+        <Box position="relative" zIndex="10" className={styles.pageContainer}>
             <div className={styles.leftNav}>
                 <Sidebar />
             </div>
+            <Box className="animation" zIndex="5" position="absolute" top={0}>
+                <AnimationComponent
+                    background="#151247"
+                    name="pts-tester"
+                    style={{ opacity: 0.9, height: "100vh", width: "100vw" }}
+                />
+            </Box>
             <Box
                 marginTop={{
                     base: "100px",
                     md: "0",
                 }}
+                position="relative"
                 className={styles.pageContent}
             >
-                <Center h="100%" w="100%">
+
+                <Flex width="fit-content" top={200} margin="auto" zIndex="1000" position="relative">
                     <Stack marginLeft="20px" justifyContent="center">
-                        <Heading fontSize="15vmin" color="brand.white">
+                        <Heading textAlign="center" fontSize="15vmin" color="brand.white">
                             Amean
                         </Heading>
 
-                        <Heading fontSize="15vmin" color="brand.white">
+                        <Heading textAlign="center" fontSize="15vmin" color="brand.white">
                             Asad
                         </Heading>
 
                         <TestimonialCard />
                     </Stack>
-                </Center>
+                </Flex>
+
             </Box>
-            <div className={styles.animationContent}>
-                <p> tesdst</p>
-            </div>
+
         </Box>
     );
 };

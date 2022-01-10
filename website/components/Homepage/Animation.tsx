@@ -21,12 +21,20 @@ class AnimationComponent extends PtsCanvas {
         };
     }
 
-    start() {
+    initialize() {
         this.pts = new Group();
         this.pts = Create.distributeRandom(this.space.innerBound, 200);
 
         this.bound.topLeft = this.space.innerBound._topLeft;
         this.bound.bottomRight = this.space.innerBound._bottomRight;
+    }
+
+    start() {
+        this.initialize();
+    }
+
+    resize() {
+        this.initialize();
     }
 
     animate() {
@@ -78,9 +86,17 @@ class AnimationComponent extends PtsCanvas {
 
         // Create a convex hull using the polygon coordinates
         // Should be really fast since there are only 4 points
-        const poly = Polygon.convexHull(polygonCoords);
 
-        this.form.fillOnly("rgba(255, 255, 255, 0.7)").polygon(poly);
+        try {
+            const poly = Polygon.convexHull(polygonCoords);
+
+            this.form.fillOnly("#050410").polygon(poly);
+        } catch (err) {
+            // Ignore exception
+            // Exception is ignored because the mouse is out of bounds
+            // which means we do not update the polygon as the coordinates
+            // will be undefined, triggering an error
+        }
 
         this.pts.rotate2D(0.0008, this.space.center);
 
@@ -92,7 +108,7 @@ class AnimationComponent extends PtsCanvas {
                 1 - lp.$subtract(p).magnitude() / (this.space.size.x / 2)
             );
             this.form
-                .stroke(`rgba(255,255,255,${ratio}`, ratio * 2)
+                .stroke(`rgba(255, 77, 91,${ratio}`, ratio * 2)
                 .line([p, lp]);
             this.form.fillOnly(["#f03", "#09f", "#0c6"][i % 3]).point(p, 1);
         });

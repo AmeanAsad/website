@@ -68,6 +68,9 @@ const TestimonialCard = () => {
             borderTop="1px"
             borderBottom="1px"
             borderColor="brand.lightBlue"
+            // maxW="600px"
+            backgroundColor="rgba(255,255,255,0.2)"
+
         >
             <Center height="auto" float="left" width="40px" marginLeft="-50px">
                 <Icon
@@ -75,7 +78,7 @@ const TestimonialCard = () => {
                     onClick={() => toggle(-1)}
                     w={20}
                     h={20}
-                    color="brand.red"
+                    color="brand.darkBlue"
                     style={{ cursor: "pointer" }}
                 />
             </Center>
@@ -87,14 +90,12 @@ const TestimonialCard = () => {
                 in={isOpen}
             >
                 <Flex
-                    maxW="640px"
                     direction={{ base: "column-reverse", md: "row" }}
                     width="full"
                     m="10px"
                     p={3}
                     justifyContent="space-between"
                     position="relative"
-                    bg="brand.darkBlue"
                 >
                     <Flex
                         direction="column"
@@ -104,7 +105,7 @@ const TestimonialCard = () => {
                     >
                         {" "}
                         <Text
-                            fontSize={15}
+                            fontSize={17}
                             fontWeight="30"
                             color="brand.white"
                             pb={4}
@@ -114,7 +115,7 @@ const TestimonialCard = () => {
                         <Flex direction="row">
                             <Heading
                                 as="em"
-                                color="brand.red"
+                                color="brand.white"
                                 fontWeight="bold"
                                 marginRight={2}
                                 fontSize={18}
@@ -152,9 +153,9 @@ const TestimonialCard = () => {
                         loading="eager"
                         alignSelf="center"
                         m={{ base: "0 0 20px 0", md: "0 0 0 20px" }}
-                        sx={{
-                            border: "4px solid white",
-                        }}
+                        borderWidth="4px"
+                        borderColor="brand.darkBlue"
+
                     />
                 </Flex>
             </Fade>
@@ -165,7 +166,7 @@ const TestimonialCard = () => {
                     onClick={() => toggle(1)}
                     w={20}
                     h={20}
-                    color="brand.red"
+                    color="brand.darkBlue"
                     style={{ cursor: "pointer" }}
                 />
             </Center>

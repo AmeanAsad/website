@@ -5,17 +5,16 @@
     grid-template-rows: 100px 300px 300px;
 
     @media (min-width: 760px) {
-        grid-template-columns: 120px 5fr 5fr;
+        grid-template-columns: 120px 1fr;
         grid-template-rows: 1fr;
     }
 }
 
 .leftNav {
-    height: 100%;
-    width: 100%;
+    z-index: 1000;
 }
 
-.pageContent {
-    height: 100%;
-    width: 100%;
-}
+// .pageContent {
+//     height: 100%;
+//     width: 100%;
+// }
