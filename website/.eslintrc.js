@@ -1,16 +1,22 @@
-{
-    "extends": [
+module.exports = {
+    extends: [
         "next",
         "next/core-web-vitals",
-        // "prettier",
-        // "plugin:@typescript-eslint/recommended",
-        // "airbnb"
-        // "plugin:react/recommended"
+        "prettier",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "plugin:react/recommended",
     ],
-    "rules": {
-        "indent": ["error", 4, { "SwitchCase": 1 }],
+    rules: {
+        indent: ["error", 4, { SwitchCase: 1 }],
         "react/jsx-indent": "off",
         "react/jsx-indent-props": "off",
+        "react/function-component-definition": [
+            2,
+            { namedComponents: "arrow-function" },
+        ],
+        "import/extensions": "off",
+        "no-underscore-dangle": ["off"],
         "no-console": "warn",
         "import/order": "off",
         "react/sort-comp": "off",
@@ -33,8 +39,8 @@
         "array-callback-return": "off",
         "prettier/prettier": "off",
         "refer-default-export": "off",
-        "quotes": ["error", "double"],
+        quotes: ["error", "double"],
         "no-restricted-properties": "off",
-        "use-object-destructuring": "off"
-    }
-}
+        "use-object-destructuring": "off",
+    },
+};

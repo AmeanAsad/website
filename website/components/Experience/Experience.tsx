@@ -21,7 +21,6 @@ import styles from "./Experience.module.scss";
 import experiences from "./Experiences.json";
 
 const brand = themeExtension.colors.brand;
-console.log(brand);
 
 const TimeLineElement = (props: any) => {
     const { title, location, date, company, description } = props;
@@ -53,7 +52,7 @@ const TimeLineElement = (props: any) => {
             <Text
                 fontSize={17}
                 letterSpacing={2}
-                textTransform={"uppercase"}
+                textTransform="uppercase"
                 color="brand.lightBlue"
             >
                 {title}
@@ -67,9 +66,9 @@ const TimeLineElement = (props: any) => {
                 {company}
             </Text>
             <Heading
-                fontFamily={"PT Sans Caption"}
-                color={"red"}
-                fontWeight={"thin"}
+                fontFamily="PT Sans Caption"
+                color="red"
+                fontWeight="thin"
                 fontSize={14}
             >
                 {location}
@@ -78,7 +77,7 @@ const TimeLineElement = (props: any) => {
                 <AccordionItem>
                     {({ isExpanded }) => (
                         <>
-                            <Text color={"brand.white"}>
+                            <Text color="brand.white">
                                 <AccordionButton>
                                     <Box flex="1" textAlign="left">
                                         {isExpanded ? "Read Less" : "Read More"}
@@ -98,8 +97,8 @@ const TimeLineElement = (props: any) => {
 };
 
 const Experience = () => {
-    const timelineElements = experiences.map((experience, idx) => {
-        return <TimeLineElement key={idx} {...experience} />;
+    const timelineElements = experiences.map((experience) => {
+        return <TimeLineElement key={experience.title} {...experience} />;
     });
 
     return (

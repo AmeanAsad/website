@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 
-const themeExtension: any = extendTheme({
+const themeExtension: Record<any, any> = extendTheme({
     colors: {
         brand: {
             darkBlue: "#151247",

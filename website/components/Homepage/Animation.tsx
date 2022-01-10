@@ -1,25 +1,23 @@
-import React, { Component } from "react";
-
 import { PtsCanvas } from "react-pts-canvas";
 import { Line, Group, Polygon, Create, Pt } from "pts";
-import { Box } from "@chakra-ui/react";
 
 interface Bound {
-    topLeft: Array<any>;
-    bottomRight: Array<any>;
+    topLeft: Array<number>;
+    bottomRight: Array<number>;
 }
 class AnimationComponent extends PtsCanvas {
     // Use type definitions to make the constructor types defined on component
     pts: Group;
+
     bound: Bound;
 
-    constructor(props: any) {
+    constructor(props: Record<any, any>) {
         super(props);
 
-        this.pts = new Group() as any;
+        this.pts = new Group();
         this.bound = {
-            topLeft: [null],
-            bottomRight: [null],
+            topLeft: [0, 0],
+            bottomRight: [0, 0],
         };
     }
 
@@ -31,7 +29,7 @@ class AnimationComponent extends PtsCanvas {
         this.bound.bottomRight = this.space.innerBound._bottomRight;
     }
 
-    animate(time: number, ftime: number) {
+    animate() {
         // Create a line using the mouse pointer and the center of the screen.
         const centerLine = new Group(
             this.space.center.$subtract(0.1),
@@ -88,8 +86,8 @@ class AnimationComponent extends PtsCanvas {
 
         this.pts.forEach((p: Pt, i: number) => {
             // for each point, find the perpendicular to the line
-            let lp = perpend(p);
-            var ratio = Math.min(
+            const lp = perpend(p);
+            const ratio = Math.min(
                 1,
                 1 - lp.$subtract(p).magnitude() / (this.space.size.x / 2)
             );
@@ -101,16 +99,4 @@ class AnimationComponent extends PtsCanvas {
     }
 }
 
-export default class Animation extends Component {
-    render() {
-        return (
-            <Box className="test" height="100%" width="100%">
-                <AnimationComponent
-                    background="black"
-                    name="pts-tester"
-                    style={{ opacity: 0.95, height: "100vh", width: "100vw" }}
-                />
-            </Box>
-        );
-    }
-}
+export default AnimationComponent;

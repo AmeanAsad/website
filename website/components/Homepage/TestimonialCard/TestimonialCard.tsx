@@ -57,17 +57,17 @@ const TestimonialCard = () => {
     const popoverIcon = (
         <Icon as={BiInfoCircle} color="brand.lightBlue" w={6} h={6} />
     );
-    const { name, role, content, avatar } = currentText;
+    const { name, content, avatar } = currentText;
     return (
         <Flex
             direction="row"
-            justifyItems={"center"}
+            justifyItems="center"
             rounded="xl"
-            borderRight={"60px solid"}
-            borderLeft={"60px solid"}
-            borderTop={"1px"}
-            borderBottom={"1px"}
-            borderColor={"brand.lightBlue"}
+            borderRight="60px solid"
+            borderLeft="60px solid"
+            borderTop="1px"
+            borderBottom="1px"
+            borderColor="brand.lightBlue"
         >
             <Center height="auto" float="left" width="40px" marginLeft="-50px">
                 <Icon
@@ -87,20 +87,20 @@ const TestimonialCard = () => {
                 in={isOpen}
             >
                 <Flex
-                    maxW={"640px"}
+                    maxW="640px"
                     direction={{ base: "column-reverse", md: "row" }}
-                    width={"full"}
+                    width="full"
                     m="10px"
                     p={3}
-                    justifyContent={"space-between"}
-                    position={"relative"}
-                    bg={"brand.darkBlue"}
+                    justifyContent="space-between"
+                    position="relative"
+                    bg="brand.darkBlue"
                 >
                     <Flex
-                        direction={"column"}
+                        direction="column"
                         p="4"
-                        textAlign={"left"}
-                        justifyContent={"space-between"}
+                        textAlign="left"
+                        justifyContent="space-between"
                     >
                         {" "}
                         <Text
@@ -114,8 +114,8 @@ const TestimonialCard = () => {
                         <Flex direction="row">
                             <Heading
                                 as="em"
-                                color={"brand.red"}
-                                fontWeight={"bold"}
+                                color="brand.red"
+                                fontWeight="bold"
                                 marginRight={2}
                                 fontSize={18}
                             >
@@ -136,7 +136,7 @@ const TestimonialCard = () => {
                                 >
                                     <PopoverArrow />
                                     <PopoverBody>
-                                        <Box bg={"brand.lightBlue"} padding={4}>
+                                        <Box bg="brand.lightBlue" padding={4}>
                                             <Text color="brand.darkBlue">
                                                 Content goes here my friend
                                             </Text>
@@ -150,7 +150,7 @@ const TestimonialCard = () => {
                         src={avatar}
                         size="xl"
                         loading="eager"
-                        alignSelf={"center"}
+                        alignSelf="center"
                         m={{ base: "0 0 20px 0", md: "0 0 0 20px" }}
                         sx={{
                             border: "4px solid white",

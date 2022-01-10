@@ -1,24 +1,18 @@
 import React, { ReactNode } from "react";
 import {
-    IconButton,
     Box,
     CloseButton,
     Flex,
-    Icon,
     Button,
     useColorModeValue,
-    Link,
     Drawer,
     DrawerContent,
     Text,
     useDisclosure,
     BoxProps,
     FlexProps,
-    VStack,
     Heading,
 } from "@chakra-ui/react";
-
-import { ReactText } from "react";
 
 interface LinkItemProps {
     name: string;
@@ -33,38 +27,28 @@ const LinkItems: Array<LinkItemProps> = [
     { name: "Blog", icon: null },
 ];
 
-export default function SideBar() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    return (
-        <Box
-            className="Box"
-            w="100%"
-            h={{ base: 70, md: "100vh" }}
-            bg={useColorModeValue("brand.white", "gray.900")}
-        >
-            <SidebarContent
-                onClose={() => onClose}
-                display={{ base: "none", md: "block" }}
-                width="100%"
-            />
-            <Drawer
-                autoFocus={false}
-                isOpen={isOpen}
-                placement="left"
-                onClose={onClose}
-                returnFocusOnClose={false}
-                onOverlayClick={onClose}
-                size="full"
-            >
-                <DrawerContent>
-                    <SidebarContent onClose={onClose} />
-                </DrawerContent>
-            </Drawer>
-
-            <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
-        </Box>
-    );
+interface NavItemProps extends FlexProps {
+    children: ReactNode;
 }
+const NavItem = ({ children, ...rest }: NavItemProps) => {
+    return (
+        <Flex
+            align="center"
+            justifyContent="center"
+            w="100%"
+            role="group"
+            cursor="pointer"
+            _hover={{
+                bg: "brand.red",
+                color: "brand.darkBlue",
+            }}
+            flex="1"
+            {...rest}
+        >
+            {children}
+        </Flex>
+    );
+};
 
 interface SidebarProps extends BoxProps {
     onClose: () => void;
@@ -90,36 +74,12 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
                     />
                 </Flex>
                 {LinkItems.map((link) => (
-                    <NavItem key={link.name} icon={link.icon}>
-                        <Heading size={"md"}>{link.name} </Heading>
+                    <NavItem key={link.name}>
+                        <Heading size="md">{link.name} </Heading>
                     </NavItem>
                 ))}
             </Flex>
         </Box>
-    );
-};
-
-interface NavItemProps extends FlexProps {
-    icon: any;
-    children: ReactNode;
-}
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
-    return (
-        <Flex
-            align="center"
-            justifyContent={"center"}
-            w="100%"
-            role="group"
-            cursor="pointer"
-            _hover={{
-                bg: "brand.red",
-                color: "brand.darkBlue",
-            }}
-            flex="1"
-            {...rest}
-        >
-            {children}
-        </Flex>
     );
 };
 
@@ -152,3 +112,38 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         </Flex>
     );
 };
+
+const SideBar = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    return (
+        <Box
+            className="Box"
+            w="100%"
+            h={{ base: 70, md: "100vh" }}
+            bg="brand.white"
+        >
+            <SidebarContent
+                onClose={() => onClose}
+                display={{ base: "none", md: "block" }}
+                width="100%"
+            />
+            <Drawer
+                autoFocus={false}
+                isOpen={isOpen}
+                placement="left"
+                onClose={onClose}
+                returnFocusOnClose={false}
+                onOverlayClick={onClose}
+                size="full"
+            >
+                <DrawerContent>
+                    <SidebarContent onClose={onClose} />
+                </DrawerContent>
+            </Drawer>
+
+            <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
+        </Box>
+    );
+};
+
+export default SideBar;

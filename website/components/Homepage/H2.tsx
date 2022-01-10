@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Homepage.module.scss";
 import { Box } from "@chakra-ui/react";
-import Animation from "./Animation";
+import AnimationComponent from "./Animation";
 
 const HomePage = () => {
     return (
@@ -11,7 +11,11 @@ const HomePage = () => {
             bg="brand.darkBlue"
             className={styles.pageContainer}
         >
-            <Animation />
+            <AnimationComponent
+                background="black"
+                name="pts-tester"
+                style={{ opacity: 0.95, height: "100vh", width: "100vw" }}
+            />
         </Box>
     );
 };

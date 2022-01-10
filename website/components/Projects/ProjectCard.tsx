@@ -22,15 +22,12 @@ import {
     ImFileText2,
     ImEnlarge2,
     ImShrink2,
-    ImEnter,
     ImEmbed2,
     ImCog,
 } from "react-icons/im";
 import { Project } from "./ProjectTypes";
 import ProjectPage from "./ProjectPage";
 import React from "react";
-
-type projectIcon = "code" | "hardware" | "document";
 
 const cardIcons = {
     code: (
@@ -40,7 +37,7 @@ const cardIcons = {
             border="solid"
             borderWidth="1px"
             rounded="sm"
-            borderColor={"brand.lightBlue"}
+            borderColor="brand.lightBlue"
         >
             <Icon as={ImEmbed2} w={6} h={6} color="brand.lightBlue" />
         </Center>
@@ -60,7 +57,7 @@ const cardIcons = {
 const ProjectCard = (props: Project) => {
     const { id, icon, topic, title, tags, date } = props;
     const projectIcon = cardIcons[icon as keyof typeof cardIcons];
-    const iconElement = projectIcon ? projectIcon : cardIcons.document;
+    const iconElement = projectIcon || cardIcons.document;
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -68,34 +65,34 @@ const ProjectCard = (props: Project) => {
         <Icon as={ImShrink2} w={7} h={7} color="brand.darkBlue" />
     );
     const modalContent = (
-        <Modal onClose={onClose} size={"full"} isOpen={isOpen}>
+        <Modal onClose={onClose} size="full" isOpen={isOpen}>
             <ModalOverlay />
             <ModalContent>
-                <ModalBody bg={"brand.white"}>
+                <ModalBody bg="brand.white">
                     <Flex padding={2} width="100%" direction="row">
                         <Heading color="brand.mediumBlue">{title}</Heading>
                         <Spacer />
                         <IconButton
                             onClick={onClose}
                             variant="outline"
-                            border={"2px"}
+                            border="2px"
                             rounded="none"
-                            borderColor={"brand.darkBlue"}
+                            borderColor="brand.darkBlue"
                             aria-label="Close Modal"
                             icon={closeIcon}
                         />
                     </Flex>
                     <ProjectPage projectId={id} />
                 </ModalBody>
-                <ModalFooter></ModalFooter>
+                <ModalFooter />
             </ModalContent>
         </Modal>
     );
-    const tagElements = tags.map((tagText, idx) => {
+    const tagElements = tags.map((tagText) => {
         return (
             <Tag
                 bg="brand.lightBlue"
-                key={tagText + idx}
+                key={tagText}
                 borderRadius="full"
                 color="brand.darkBlue"
                 variant="solid"
@@ -110,12 +107,12 @@ const ProjectCard = (props: Project) => {
     });
 
     const cardHeader = (
-        <React.Fragment>
+        <>
             <Box
                 height="60px"
                 width="60px"
                 border="solid"
-                borderWidth={"30px"}
+                borderWidth="30px"
                 onClick={onOpen}
                 background="brand.white"
                 float="right"
@@ -141,13 +138,13 @@ const ProjectCard = (props: Project) => {
                     fontSize={15}
                     letterSpacing={3}
                     paddingLeft={4}
-                    textTransform={"uppercase"}
+                    textTransform="uppercase"
                     color="brand.lightBlue"
                 >
                     {topic}
                 </Text>
             </HStack>
-        </React.Fragment>
+        </>
     );
     const cardFooter = (
         <Box
@@ -190,7 +187,7 @@ const ProjectCard = (props: Project) => {
                     h="350px"
                     w="400px"
                     bg="brand.darkBlue"
-                    position={"relative"}
+                    position="relative"
                     margin={6}
                 >
                     {cardHeader}
@@ -199,7 +196,7 @@ const ProjectCard = (props: Project) => {
                         h="inherit"
                         width="100%"
                         maxHeight="290px"
-                        position={"relative"}
+                        position="relative"
                         sx={{
                             boxShadow:
                                 "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;",
@@ -210,7 +207,7 @@ const ProjectCard = (props: Project) => {
                             fontSize={30}
                             p={5}
                             color="brand.white"
-                            cursor={"pointer"}
+                            cursor="pointer"
                             marginTop="5"
                             letterSpacing={1}
                         >

@@ -1,12 +1,13 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React from "react";
 
 interface ProjectId {
     projectId: string;
 }
 const ProjectPage = (props: ProjectId) => {
-    const projectId: string = props && props.projectId;
-    return <Box height="100%" width="100%"></Box>;
+    // TODO: Add project id functionality to retrieve project info
+    const projectId: string = props && props.projectId; // eslint-disable-line
+    return <Box height="100%" width="100%" />;
 };
 
 export default ProjectPage;

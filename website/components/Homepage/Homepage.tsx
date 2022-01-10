@@ -4,7 +4,7 @@ import { Box, Center, Heading, Stack } from "@chakra-ui/react";
 import Sidebar from "../Sidebar/Sidebar";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
 
-function HomePage() {
+const HomePage = () => {
     return (
         <Box bg="brand.darkBlue" className={styles.pageContainer}>
             <div className={styles.leftNav}>
@@ -36,6 +36,6 @@ function HomePage() {
             </div>
         </Box>
     );
-}
+};
 
 export default HomePage;
