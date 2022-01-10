@@ -166,7 +166,7 @@ const ProjectCard = (props: Project) => {
                     <Heading float="left" color="brand.red" fontSize={15}>
                         {date}
                     </Heading>
-                    <Icon
+                    {/* <Icon
                         as={ImEnter}
                         w={7}
                         h={7}
@@ -177,7 +177,7 @@ const ProjectCard = (props: Project) => {
                         sx={{
                             cursor: "pointer",
                         }}
-                    />
+                    /> */}
                 </Flex>
             </Flex>
         </Box>
@@ -206,9 +206,11 @@ const ProjectCard = (props: Project) => {
                         }}
                     >
                         <Heading
+                            onClick={onOpen}
                             fontSize={30}
                             p={5}
                             color="brand.white"
+                            cursor={"pointer"}
                             marginTop="5"
                             letterSpacing={1}
                         >

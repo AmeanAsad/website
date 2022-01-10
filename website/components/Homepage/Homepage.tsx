@@ -1,21 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import styles from "./Homepage.module.scss";
-import {
-    Box,
-    Center,
-    Heading,
-    Stack,
-    Fade,
-    useDisclosure,
-    Button,
-} from "@chakra-ui/react";
+import { Box, Center, Heading, Stack } from "@chakra-ui/react";
 import Sidebar from "../Sidebar/Sidebar";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
-import PropTypes from "prop-types";
-import Example from "./HomeTitle/HomeTitle";
-import { Canvas, useFrame } from "@react-three/fiber";
 
-const HomePage = () => {
+function HomePage() {
     return (
         <Box bg="brand.darkBlue" className={styles.pageContainer}>
             <div className={styles.leftNav}>
@@ -29,7 +18,7 @@ const HomePage = () => {
                 className={styles.pageContent}
             >
                 <Center h="100%" w="100%">
-                    <Stack marginLeft="20px" justifyContent={"center"}>
+                    <Stack marginLeft="20px" justifyContent="center">
                         <Heading fontSize="15vmin" color="brand.white">
                             Amean
                         </Heading>
@@ -47,6 +36,6 @@ const HomePage = () => {
             </div>
         </Box>
     );
-};
+}
 
 export default HomePage;

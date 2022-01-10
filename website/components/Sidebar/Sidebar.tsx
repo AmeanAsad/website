@@ -40,7 +40,7 @@ export default function SideBar() {
             className="Box"
             w="100%"
             h={{ base: 70, md: "100vh" }}
-            bg={useColorModeValue("brand.lightBlue", "gray.900")}
+            bg={useColorModeValue("brand.white", "gray.900")}
         >
             <SidebarContent
                 onClose={() => onClose}
