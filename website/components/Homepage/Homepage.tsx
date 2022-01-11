@@ -1,10 +1,13 @@
-import React from "react";
+// import React from "react";
 import styles from "./Homepage.module.scss";
 import { Box, Flex, Heading, Stack } from "@chakra-ui/react";
 import Sidebar from "../Sidebar/Sidebar";
-import TestimonialCard from "./TestimonialCard/TestimonialCard";
-import AnimationComponent from "./Animation";
+// import TestimonialCard from "./TestimonialCard/TestimonialCard";
+import dynamic from "next/dynamic";
+// import AnimationComponent from "./Animation";
 
+const AnimationComponent = dynamic(() => import("./Animation"), { ssr: false });
+const TestimonialCard = dynamic(() => import("./TestimonialCard/TestimonialCard"));
 const HomePage = () => {
     return (
         <Box position="relative" zIndex="10" className={styles.pageContainer}>

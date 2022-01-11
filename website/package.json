@@ -13,7 +13,6 @@
         "@emotion/styled": "^11.6.0",
         "@fontsource/gilda-display": "^4.5.0",
         "@fontsource/pt-sans-caption": "^4.5.0",
-        "@react-three/fiber": "7.0.24",
         "framer-motion": "^4.1.17",
         "next": "12.0.7",
         "pts": "^0.10.9",
@@ -22,8 +21,7 @@
         "react-icons": "^4.3.1",
         "react-pts-canvas": "^0.2.9",
         "react-vertical-timeline-component": "^3.5.2",
-        "sass": "1.45.0",
-        "three": "0.135.0"
+        "sass": "1.45.0"
     },
     "devDependencies": {
         "@next/bundle-analyzer": "^12.0.7",

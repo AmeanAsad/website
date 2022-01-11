@@ -1,5 +1,5 @@
 import { PtsCanvas } from "react-pts-canvas";
-import { Line, Group, Polygon, Create, Pt } from "pts";
+import { Line, Group, Polygon, Create, Pt } from "pts/dist/es5";
 
 interface Bound {
     topLeft: Array<number>;
@@ -7,7 +7,7 @@ interface Bound {
 }
 class AnimationComponent extends PtsCanvas {
     // Use type definitions to make the constructor types defined on component
-    pts: Group;
+    pts: any;
 
     bound: Bound;
 
@@ -100,7 +100,7 @@ class AnimationComponent extends PtsCanvas {
 
         this.pts.rotate2D(0.0008, this.space.center);
 
-        this.pts.forEach((p: Pt, i: number) => {
+        this.pts.forEach((p: any, i: number) => {
             // for each point, find the perpendicular to the line
             const lp = perpend(p);
             const ratio = Math.min(
