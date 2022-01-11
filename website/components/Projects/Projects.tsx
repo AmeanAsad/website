@@ -1,11 +1,10 @@
 import { Box, Flex } from "@chakra-ui/react";
-
-import React from "react";
 import projectsInfo from "./ProjectCards.json";
 import { ProjectCards } from "./ProjectTypes";
 import ProjectCard from "./ProjectCard";
+import { NextPage } from "next";
 
-const Projects = () => {
+const Projects: NextPage = () => {
     const projectCards: ProjectCards = projectsInfo;
 
     const projectCardElements = projectCards.map((projectInfo) => (

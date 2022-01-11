@@ -10,7 +10,6 @@ import {
     Text,
 } from "@chakra-ui/react";
 import themeExtension from "../../styles/theme";
-import React from "react";
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -19,10 +18,11 @@ import "react-vertical-timeline-component/style.min.css";
 import { ImBriefcase } from "react-icons/im";
 import styles from "./Experience.module.scss";
 import experiences from "./Experiences.json";
+import { NextPage } from "next";
 
 const brand = themeExtension.colors.brand;
 
-const TimeLineElement = (props: any) => {
+const TimeLineElement: NextPage = (props: any) => {
     const { title, location, date, company, description } = props;
     return (
         <VerticalTimelineElement

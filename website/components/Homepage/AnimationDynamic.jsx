@@ -1,25 +1,17 @@
-export {};
-// import { PtsCanvas } from "react-pts-canvas";
+// // import { PtsCanvas } from "react-pts-canvas";
 
-// import dynamic from "next/dynamic";
+// // import dynamic from "next/dynamic";
+
 // // import { Line, Group, Polygon, Create, Pt } from "pts/dist/es5";
-// const PtsCanvas = dynamic(
-//     () => import("react-pts-canvas")
-//             .then((module) => module.PtsCanvas));
+// const PtsCanvas = await import("react-pts-canvas").then((mod) => mod.PtsCanvas);
 
-// let Line: any; let Group: any; let Polygon: any; let Create: any; let
-//     Pt: any;
-// interface Bound {
-//     topLeft: Array<number>;
-//     bottomRight: Array<number>;
-// }
+// let Line; let Group; let Polygon; let Create; let
+//     Pt;
+
 // class AnimationComponent extends PtsCanvas {
 //     // Use type definitions to make the constructor types defined on component
-//     pts: any;
 
-//     bound: Bound;
-
-//     constructor(props: Record<any, any>) {
+//     constructor(props) {
 //         super(props);
 
 //         this.pts = null;
@@ -40,7 +32,8 @@ export {};
 //     }
 
 //     start() {
-//         import(/* webpackExports: ["Line", "Polygon"] */ "pts/dist/es5").then((module) => {
+//     import(/* webpackExports: ["Line", "Polygon", "Create, "Pt", "Group"] */ "pts/dist/es5")
+//     .then((module) => {
 //             Line = module.Line;
 //             Group = module.Group;
 //             Polygon = module.Polygon;
@@ -119,7 +112,7 @@ export {};
 
 //             this.pts.rotate2D(0.0008, this.space.center);
 
-//             this.pts.forEach((p: any, i: number) => {
+//             this.pts.forEach((p, i) => {
 //             // for each point, find the perpendicular to the line
 //                 const lp = perpend(p);
 //                 const ratio = Math.min(
@@ -136,3 +129,5 @@ export {};
 // }
 
 // export default AnimationComponent;
+
+export {};

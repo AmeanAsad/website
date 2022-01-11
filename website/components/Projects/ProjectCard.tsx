@@ -27,7 +27,7 @@ import {
 } from "react-icons/im";
 import { Project } from "./ProjectTypes";
 import ProjectPage from "./ProjectPage";
-import React from "react";
+import { NextPage } from "next";
 
 const cardIcons = {
     code: (
@@ -54,7 +54,7 @@ const cardIcons = {
     ),
 };
 
-const ProjectCard = (props: Project) => {
+const ProjectCard: NextPage<Project> = (props: Project) => {
     const { id, icon, topic, title, tags, date } = props;
     const projectIcon = cardIcons[icon as keyof typeof cardIcons];
     const iconElement = projectIcon || cardIcons.document;
@@ -163,18 +163,6 @@ const ProjectCard = (props: Project) => {
                     <Heading float="left" color="brand.red" fontSize={15}>
                         {date}
                     </Heading>
-                    {/* <Icon
-                        as={ImEnter}
-                        w={7}
-                        h={7}
-                        position="absolute"
-                        right={0}
-                        bottom={1}
-                        color="brand.lightBlue"
-                        sx={{
-                            cursor: "pointer",
-                        }}
-                    /> */}
                 </Flex>
             </Flex>
         </Box>

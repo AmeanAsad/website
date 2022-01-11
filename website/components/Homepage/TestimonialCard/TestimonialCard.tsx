@@ -16,7 +16,6 @@ import {
     Box,
     Heading,
 } from "@chakra-ui/react";
-
 import { BiChevronsRight, BiChevronsLeft, BiInfoCircle } from "react-icons/bi";
 import testimonials from "./Testimonials.json";
 
@@ -29,7 +28,7 @@ interface Testimonial {
 
 type TestimonialList = Array<Testimonial>;
 
-const TestimonialCard = () => {
+const TestimonialCard: React.FC = () => {
     const [text, setText] = useState<TestimonialList>(testimonials);
     const [direction, setDirection] = useState<number>(1);
     const { isOpen, onToggle } = useDisclosure();
@@ -68,7 +67,6 @@ const TestimonialCard = () => {
             borderTop="1px"
             borderBottom="1px"
             borderColor="brand.lightBlue"
-            // maxW="600px"
             backgroundColor="rgba(255,255,255,0.2)"
 
         >

@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import "@fontsource/pt-sans-caption";
 import "@fontsource/gilda-display";
 import { ChakraProvider } from "@chakra-ui/react";
