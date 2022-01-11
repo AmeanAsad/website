@@ -73,24 +73,20 @@ const TestimonialCard: React.FC = () => {
                 <Icon
                     as={BiChevronsLeft}
                     onClick={() => toggle(-1)}
-                    w={20}
-                    h={20}
+                    w={{ base: "32px", sm: 20 }}
+                    h={{ base: "32px", sm: 20 }}
                     color="brand.darkBlue"
                     style={{ cursor: "pointer" }}
                 />
             </Center>
             <Fade
-                style={{
-                    margin: "10px",
-                    padding: "10px",
-                }}
                 in={isOpen}
             >
                 <Flex
                     direction={{ base: "column-reverse", md: "row" }}
                     width="full"
-                    m="10px"
-                    p={3}
+                    margin={{ base: 0, sm: "10px" }}
+                    padding={{ base: 2, sm: 6 }}
                     justifyContent="space-between"
                     position="relative"
                 >
@@ -114,7 +110,7 @@ const TestimonialCard: React.FC = () => {
                                 as="em"
                                 color="brand.white"
                                 fontWeight="bold"
-                                marginRight={2}
+                                marginRight={{ base: 0, sm: 2 }}
                                 fontSize={18}
                             >
                                 - {name}
@@ -157,12 +153,17 @@ const TestimonialCard: React.FC = () => {
                 </Flex>
             </Fade>
 
-            <Center height="auto" float="left" width="40px" marginRight="-50px">
+            <Center
+                height="auto"
+                float="left"
+                width="40px"
+                marginRight={{ base: "-40px", sm: "-50px" }}
+            >
                 <Icon
                     as={BiChevronsRight}
                     onClick={() => toggle(1)}
-                    w={20}
-                    h={20}
+                    w={{ base: "32px", sm: 20 }}
+                    h={{ base: "32px", sm: 20 }}
                     color="brand.darkBlue"
                     style={{ cursor: "pointer" }}
                 />
