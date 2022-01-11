@@ -68,7 +68,6 @@ const TestimonialCard: React.FC = () => {
             borderBottom="1px"
             borderColor="brand.lightBlue"
             backgroundColor="rgba(255,255,255,0.2)"
-
         >
             <Center height="auto" float="left" width="40px" marginLeft="-50px">
                 <Icon

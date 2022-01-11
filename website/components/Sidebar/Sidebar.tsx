@@ -3,16 +3,17 @@ import {
     Box,
     CloseButton,
     Flex,
-    Button,
     useColorModeValue,
     Drawer,
     DrawerContent,
-    Text,
     useDisclosure,
     BoxProps,
     FlexProps,
     Heading,
+    IconButton,
 } from "@chakra-ui/react";
+
+import { ImMenu } from "react-icons/im";
 
 interface LinkItemProps {
     name: string;
@@ -99,16 +100,20 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
             justifyContent="flex-start"
             {...rest}
         >
-            <Button variant="outline" onClick={onOpen} aria-label="open menu" />
-
-            <Text
-                fontSize="2xl"
+            <IconButton
+                colorScheme="gray"
+                aria-label="Menu"
+                size="lg"
+                icon={<ImMenu />}
+                onClick={onOpen}
+            />
+            <Heading
+                fontSize="4xl"
                 ml="8"
-                fontFamily="monospace"
-                fontWeight="bold"
+                color="brand.mediumBlue"
             >
-                Logo
-            </Text>
+                Menu
+            </Heading>
         </Flex>
     );
 };

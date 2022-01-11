@@ -172,8 +172,8 @@ const ProjectCard: NextPage<Project> = (props: Project) => {
             {modalContent}
             <motion.div whileHover={{ y: -10 }}>
                 <Box
-                    h="350px"
-                    w="400px"
+                    h={{ base: "380px", sm: "350px" }}
+                    w={{ base: "350px", sm: "400px" }}
                     bg="brand.darkBlue"
                     position="relative"
                     margin={6}
@@ -183,7 +183,7 @@ const ProjectCard: NextPage<Project> = (props: Project) => {
                         bg="brand.darkBlue"
                         h="inherit"
                         width="100%"
-                        maxHeight="290px"
+                        maxHeight={{ base: "330px", sm: "290px" }}
                         position="relative"
                         sx={{
                             boxShadow:

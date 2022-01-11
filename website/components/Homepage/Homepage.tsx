@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 
 const AnimationComponent = dynamic(() => import("./Animation"), { ssr: false });
 const TestimonialCard = dynamic(() => import("./TestimonialCard/TestimonialCard"));
+
 const HomePage: NextPage = () => {
     return (
         <Box position="relative" zIndex="10" className={styles.pageContainer}>
@@ -28,13 +29,20 @@ const HomePage: NextPage = () => {
                 className={styles.pageContent}
             >
 
-                <Flex width="fit-content" top={200} margin="auto" zIndex="1000" position="relative">
-                    <Stack marginLeft="20px" justifyContent="center">
-                        <Heading textAlign="center" fontSize="15vmin" color="brand.white">
+                <Flex
+                    width="fit-content"
+                    top={{ md: "50%", base: "0" }}
+                    transform={{ md: "translateY(-50%)", base: "0" }}
+                    margin="auto"
+                    zIndex="1000"
+                    position="relative"
+                >
+                    <Stack justifyContent="center">
+                        <Heading textAlign="center" fontSize="16vmin" color="brand.white">
                             Amean
                         </Heading>
 
-                        <Heading textAlign="center" fontSize="15vmin" color="brand.white">
+                        <Heading textAlign="center" fontSize="16vmin" color="brand.white">
                             Asad
                         </Heading>
 
