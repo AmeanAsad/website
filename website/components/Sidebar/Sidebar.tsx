@@ -11,27 +11,33 @@ import {
     FlexProps,
     Heading,
     IconButton,
+    Icon,
 } from "@chakra-ui/react";
 
 import { ImMenu } from "react-icons/im";
+import { NextPage } from "next";
+import { FaFighterJet } from "react-icons/fa";
 
 interface LinkItemProps {
     name: string;
     icon: any;
+    id: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-    { name: "Home", icon: null },
-    { name: "About", icon: null },
-    { name: "Projects", icon: null },
-    { name: "Experience", icon: null },
-    { name: "Contact", icon: null },
-    { name: "Blog", icon: null },
+    { name: "Home", icon: null, id: "home" },
+    { name: "About", icon: null, id: "about" },
+    { name: "Projects", icon: null, id: "projects" },
+    { name: "Experience", icon: null, id: "experience" },
+    { name: "Contact", icon: null, id: "contact" },
+    { name: "Blog", icon: null, id: "blog" },
 ];
 
 interface NavItemProps extends FlexProps {
     children: ReactNode;
+    selected: boolean;
 }
-const NavItem = ({ children, ...rest }: NavItemProps) => {
+const NavItem = ({ children, selected, ...rest }: NavItemProps) => {
+    const color = selected ? "brand.red" : "none";
     return (
         <Flex
             align="center"
@@ -42,6 +48,8 @@ const NavItem = ({ children, ...rest }: NavItemProps) => {
             border="solid"
             borderWidth="1px"
             borderColor="brand.darkBlue"
+            borderBottom="none"
+            backgroundColor={color}
             _hover={{
                 bg: "brand.red",
                 color: "brand.darkBlue",
@@ -56,9 +64,10 @@ const NavItem = ({ children, ...rest }: NavItemProps) => {
 
 interface SidebarProps extends BoxProps {
     onClose: () => void;
+    pageId: string
 }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
     return (
         <Box
             className="Test"
@@ -76,12 +85,24 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
                         display={{ base: "flex", md: "none" }}
                         onClick={onClose}
                     />
+                    <Icon
+                        margin="auto"
+                        transform="rotate(-90deg)"
+                        display={{ base: "none", md: "flex" }}
+                        as={FaFighterJet}
+                        color="brand.darkBlue"
+                        w={16}
+                        h={16}
+                    />
                 </Flex>
-                {LinkItems.map((link) => (
-                    <NavItem key={link.name}>
-                        <Heading size="md">{link.name} </Heading>
-                    </NavItem>
-                ))}
+                {LinkItems.map((link) => {
+                    const isSelected = link.id === pageId;
+                    return (
+                        <NavItem selected={isSelected} key={link.name}>
+                            <Heading size="md">{link.name} </Heading>
+                        </NavItem>
+                    );
+                })}
             </Flex>
         </Box>
     );
@@ -121,7 +142,11 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     );
 };
 
-const SideBar = () => {
+interface SideBarProps {
+    pageId: string
+}
+
+const SideBar: NextPage<SideBarProps> = ({ pageId }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Box
@@ -132,6 +157,7 @@ const SideBar = () => {
         >
             <SidebarContent
                 onClose={() => onClose}
+                pageId={pageId}
                 display={{ base: "none", md: "block" }}
                 width="100%"
             />
@@ -145,7 +171,7 @@ const SideBar = () => {
                 size="full"
             >
                 <DrawerContent>
-                    <SidebarContent onClose={onClose} />
+                    <SidebarContent pageId={pageId} onClose={onClose} />
                 </DrawerContent>
             </Drawer>
 

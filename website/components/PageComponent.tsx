@@ -12,7 +12,7 @@ const PageComponent: NextPage<Props> = ({ pageId, Component }) => { // eslint-di
     return (
         <Box position="relative" zIndex="10" className={styles.pageContainer}>
             <div className={styles.leftNav}>
-                <Sidebar />
+                <Sidebar pageId={pageId} />
             </div>
             {Component}
 

@@ -1,7 +1,7 @@
 .pageContainer {
     display: grid;
     height: 100vh;
-    width: 100vw;
+    // width: 100vw;
     grid-template-rows: 100px 1fr;
 
     @media (min-width: 760px) {

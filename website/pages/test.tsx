@@ -6,7 +6,7 @@ import type { NextPage } from "next";
 const Test: NextPage = () => {
     return (
         <PageComponent
-            pageId="test"
+            pageId="projects"
             Component={<Projects />}
         />
     );

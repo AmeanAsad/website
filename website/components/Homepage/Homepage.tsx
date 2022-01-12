@@ -11,7 +11,7 @@ const HomePage: NextPage = () => {
     return (
         <Box position="relative" zIndex="10" className={styles.pageContainer}>
             <div className={styles.leftNav}>
-                <Sidebar />
+                <Sidebar pageId="home" />
             </div>
             <Box className="animation" zIndex="5" position="absolute" top={0}>
                 <AnimationComponent
