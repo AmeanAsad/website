@@ -23,14 +23,15 @@ interface LinkItemProps {
     name: string;
     icon: any;
     id: string;
+    href: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-    { name: "Home", icon: null, id: "home" },
-    { name: "About", icon: null, id: "about" },
-    { name: "Projects", icon: null, id: "projects" },
-    { name: "Experience", icon: null, id: "experience" },
-    { name: "Contact", icon: null, id: "contact" },
-    { name: "Blog", icon: null, id: "blog" },
+    { name: "Home", icon: null, href: "/home", id: "home", },
+    { name: "About", icon: null, href: "/about", id: "about", },
+    { name: "Projects", icon: null, href: "/projects", id: "projects", },
+    { name: "Experience", icon: null, href: "/experience", id: "experience", },
+    { name: "Contact", icon: null, href: "/contact", id: "contact", },
+    { name: "Blog", icon: null, href: "/blog", id: "blog", },
 ];
 
 interface NavItemProps extends FlexProps {
@@ -47,10 +48,8 @@ const NavItem = ({ children, selected, ...rest }: NavItemProps) => {
             w="100%"
             role="group"
             cursor="pointer"
-            border="solid"
-            borderWidth="1px"
             borderColor="brand.darkBlue"
-            borderBottom="none"
+            borderTop="1px"
             backgroundColor={backgroundColor}
             color={color}
             _hover={{
@@ -101,7 +100,7 @@ const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
                 {LinkItems.map((link) => {
                     const isSelected = link.id === pageId;
                     return (
-                        <Link key={link.name} passHref href={link.id}>
+                        <Link key={link.name} passHref href={link.href}>
                             <NavItem selected={isSelected}>
                                 <Heading size="md">{link.name} </Heading>
                             </NavItem>
@@ -166,6 +165,9 @@ const SideBar: NextPage<SideBarProps> = ({ pageId }) => {
                 pageId={pageId}
                 display={{ base: "none", md: "block" }}
                 width="100%"
+                borderRight="1px"
+                borderColor="brand.darkBlue"
+
             />
             <Drawer
                 autoFocus={false}

@@ -6,7 +6,7 @@ const themeExtension: Record<any, any> = extendTheme({
             darkBlue: "#151247",
             red: "#FF4D5B",
             lightBlue: "#EAF0FF",
-            mediumBlue: "#262153",
+            mediumBlue: "#3C3483",
             white: "#FFFFF7",
         },
     },
