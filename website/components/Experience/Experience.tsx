@@ -108,6 +108,7 @@ const Experience = () => {
             background="brand.darkBlue"
             className={styles.wrapper}
         >
+
             <div style={{ width: "100%", height: "100%" }}>
                 <VerticalTimeline
                     lineColor={brand.lightBlue}

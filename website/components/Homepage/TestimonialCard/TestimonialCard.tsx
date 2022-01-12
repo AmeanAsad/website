@@ -67,7 +67,8 @@ const TestimonialCard: React.FC = () => {
             borderTop="1px"
             borderBottom="1px"
             borderColor="brand.lightBlue"
-            backgroundColor="rgba(255,255,255,0.2)"
+            maxWidth="600px"
+            backgroundColor="rgba(255,255,255,0.15)"
         >
             <Center height="auto" float="left" width="40px" marginLeft="-50px">
                 <Icon
@@ -84,15 +85,16 @@ const TestimonialCard: React.FC = () => {
             >
                 <Flex
                     direction={{ base: "column-reverse", md: "row" }}
-                    width="full"
+                    width="fit-content"
                     margin={{ base: 0, sm: "10px" }}
-                    padding={{ base: 2, sm: 6 }}
-                    justifyContent="space-between"
-                    position="relative"
+                    className="tesst"
+                    padding={{ base: 6, sm: 3 }}
+                    justifyContent="center"
+                    // position="relative"
                 >
                     <Flex
                         direction="column"
-                        p="4"
+                        p="2"
                         textAlign="left"
                         justifyContent="space-between"
                     >
@@ -145,7 +147,7 @@ const TestimonialCard: React.FC = () => {
                         size="xl"
                         loading="eager"
                         alignSelf="center"
-                        m={{ base: "0 0 20px 0", md: "0 0 0 20px" }}
+                        m={{ base: "0 0 20px 0", md: "0 0 0 10px" }}
                         borderWidth="4px"
                         borderColor="brand.darkBlue"
 

@@ -176,7 +176,9 @@ const ProjectCard: NextPage<Project> = (props: Project) => {
                     w={{ base: "350px", sm: "400px" }}
                     bg="brand.darkBlue"
                     position="relative"
-                    margin={6}
+                    marginRight={6}
+                    marginBottom={6}
+                    marginTop={6}
                 >
                     {cardHeader}
                     <Box

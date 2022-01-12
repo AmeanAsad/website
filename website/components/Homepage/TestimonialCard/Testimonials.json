@@ -2,19 +2,19 @@
     {
         "name": "Alan Turing",
         "role": "Chief Cryptographer at Bletchley Park",
-        "content": "Some sample text to fill up space",
+        "content": "The decision problem was inspired by Amean's ability to answer any question",
         "avatar": "https://pbs.twimg.com/media/E4kbSE0WQAcpowX.jpg"
     },
     {
-        "name": "Someone Else",
-        "role": "Chief Cryptographer at Bletchley Park",
-        "content": "Some sample text to fill up space",
-        "avatar": "https://pbs.twimg.com/media/E4kbSE0WQAcpowX.jpg"
+        "name": "John Von Neumann",
+        "role": "Mathematician",
+        "content": "The next John Von Neumann",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"
     },
     {
-        "name": "Another Else",
-        "role": "Chief Cryptographer at Bletchley Park",
-        "content": "Some sample text to fill up space",
-        "avatar": "https://pbs.twimg.com/media/E4kbSE0WQAcpowX.jpg"
+        "name": "Claude Shannon",
+        "role": "Founder at Info Theory",
+        "content": "He put the 'Information' in Information Theory",
+        "avatar": "https://www.bbvaopenmind.com/wp-content/uploads/2021/04/BBVA-OpenMind-Gonzalo-Suard%C3%ADaz-Claude-Shannon-inventor-de-la-era-digital-2.jpg"
     }
 ]

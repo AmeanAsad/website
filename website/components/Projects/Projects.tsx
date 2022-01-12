@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import projectsInfo from "./ProjectCards.json";
 import { ProjectCards } from "./ProjectTypes";
 import ProjectCard from "./ProjectCard";
@@ -13,6 +13,9 @@ const Projects: NextPage = () => {
 
     return (
         <Box p="3%" height="100vh" width="100%" bg="brand.white">
+            <Heading color="brand.darkBlue" fontSize="5xl">
+                Notable Projects
+            </Heading>
             <Flex
                 justifyContent={{ base: "center", lg: "left" }}
                 direction="row"

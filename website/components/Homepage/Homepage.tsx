@@ -16,7 +16,7 @@ const HomePage: NextPage = () => {
             <Box className="animation" zIndex="5" position="absolute" top={0}>
                 <AnimationComponent
                     background="#151247"
-                    name="pts-tester"
+                    name="homepageAnimation"
                     style={{ opacity: 0.9, height: "100vh", width: "100vw" }}
                 />
             </Box>

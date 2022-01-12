@@ -17,6 +17,7 @@ import {
 import { ImMenu } from "react-icons/im";
 import { NextPage } from "next";
 import { FaFighterJet } from "react-icons/fa";
+import Link from "next/link";
 
 interface LinkItemProps {
     name: string;
@@ -37,7 +38,8 @@ interface NavItemProps extends FlexProps {
     selected: boolean;
 }
 const NavItem = ({ children, selected, ...rest }: NavItemProps) => {
-    const color = selected ? "brand.red" : "none";
+    const backgroundColor = selected ? "brand.red" : "none";
+    const color = selected ? "brand.white" : "brand.darkBlue";
     return (
         <Flex
             align="center"
@@ -49,10 +51,11 @@ const NavItem = ({ children, selected, ...rest }: NavItemProps) => {
             borderWidth="1px"
             borderColor="brand.darkBlue"
             borderBottom="none"
-            backgroundColor={color}
+            backgroundColor={backgroundColor}
+            color={color}
             _hover={{
                 bg: "brand.red",
-                color: "brand.darkBlue",
+                color: "brand.white",
             }}
             flex="1"
             {...rest}
@@ -98,9 +101,12 @@ const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
                 {LinkItems.map((link) => {
                     const isSelected = link.id === pageId;
                     return (
-                        <NavItem selected={isSelected} key={link.name}>
-                            <Heading size="md">{link.name} </Heading>
-                        </NavItem>
+                        <Link key={link.name} passHref href={link.id}>
+                            <NavItem selected={isSelected}>
+                                <Heading size="md">{link.name} </Heading>
+                            </NavItem>
+                        </Link>
+
                     );
                 })}
             </Flex>
