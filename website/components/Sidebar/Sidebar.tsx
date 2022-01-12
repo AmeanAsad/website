@@ -39,6 +39,9 @@ const NavItem = ({ children, ...rest }: NavItemProps) => {
             w="100%"
             role="group"
             cursor="pointer"
+            border="solid"
+            borderWidth="1px"
+            borderColor="brand.darkBlue"
             _hover={{
                 bg: "brand.red",
                 color: "brand.darkBlue",
