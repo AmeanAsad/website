@@ -38,11 +38,21 @@ const HomePage: NextPage = () => {
                     position="relative"
                 >
                     <Stack justifyContent="center">
-                        <Heading textAlign="center" fontSize="16vmin" color="brand.white">
+                        <Heading
+                            pointerEvents="none"
+                            textAlign="center"
+                            fontSize="16vmin"
+                            color="brand.white"
+                        >
                             Amean
                         </Heading>
 
-                        <Heading textAlign="center" fontSize="16vmin" color="brand.white">
+                        <Heading
+                            pointerEvents="none"
+                            textAlign="center"
+                            fontSize="16vmin"
+                            color="brand.white"
+                        >
                             Asad
                         </Heading>
 

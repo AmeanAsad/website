@@ -19,11 +19,27 @@ import { ImBriefcase } from "react-icons/im";
 import styles from "./Experience.module.scss";
 import experiences from "./Experiences.json";
 import { NextPage } from "next";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { FaUniversity, FaGraduationCap, FaScroll } from "react-icons/fa";
+import { IoRocketSharp } from "react-icons/io5";
+import { BsCodeSlash } from "react-icons/bs";
 
 const brand = themeExtension.colors.brand;
 
+const timelineIcons = {
+    work: ImBriefcase,
+    travel: GiCommercialAirplane,
+    study: FaUniversity,
+    code: BsCodeSlash,
+    grad: FaGraduationCap,
+    rocket: IoRocketSharp,
+    scroll: FaScroll
+
+};
+
 const TimeLineElement: NextPage = (props: any) => {
-    const { title, location, date, company, description } = props;
+    const { title, location, date, company, icon, description } = props;
+    const iconElement = timelineIcons[icon as keyof typeof timelineIcons];
     return (
         <VerticalTimelineElement
             className={styles.experience}
@@ -47,7 +63,7 @@ const TimeLineElement: NextPage = (props: any) => {
                 border: "2px solid",
                 borderColor: brand.lightBlue,
             }}
-            icon={<Icon as={ImBriefcase} />}
+            icon={<Icon as={iconElement} />}
         >
             <Text
                 fontSize={17}

@@ -54,7 +54,7 @@ const TestimonialCard: React.FC = () => {
     }, [isOpen]); // eslint-disable-line
 
     const popoverIcon = (
-        <Icon as={BiInfoCircle} color="brand.lightBlue" w={6} h={6} />
+        <Icon as={BiInfoCircle} color="brand.darkBlue" w={6} h={6} />
     );
     const { name, content, avatar } = currentText;
     return (
@@ -68,7 +68,7 @@ const TestimonialCard: React.FC = () => {
             borderBottom="1px"
             borderColor="brand.lightBlue"
             maxWidth="600px"
-            backgroundColor="rgba(255,255,255,0.15)"
+            backgroundColor="rgba(255,255,255,0.6)"
         >
             <Center height="auto" float="left" width="40px" marginLeft="-50px">
                 <Icon
@@ -87,10 +87,8 @@ const TestimonialCard: React.FC = () => {
                     direction={{ base: "column-reverse", md: "row" }}
                     width="fit-content"
                     margin={{ base: 0, sm: "10px" }}
-                    className="tesst"
                     padding={{ base: 6, sm: 3 }}
                     justifyContent="center"
-                    // position="relative"
                 >
                     <Flex
                         direction="column"
@@ -102,7 +100,7 @@ const TestimonialCard: React.FC = () => {
                         <Text
                             fontSize={17}
                             fontWeight="30"
-                            color="brand.white"
+                            color="brand.darkBlue"
                             pb={4}
                         >
                             {content}
@@ -110,7 +108,7 @@ const TestimonialCard: React.FC = () => {
                         <Flex direction="row">
                             <Heading
                                 as="em"
-                                color="brand.white"
+                                color="brand.darkBlue"
                                 fontWeight="bold"
                                 marginRight={{ base: 0, sm: 2 }}
                                 fontSize={18}
@@ -128,13 +126,13 @@ const TestimonialCard: React.FC = () => {
                                 </PopoverTrigger>
                                 <PopoverContent
                                     rounded="sm"
-                                    bg="brand.lightBlue"
+                                    bg="brand.white"
                                 >
                                     <PopoverArrow />
                                     <PopoverBody>
-                                        <Box bg="brand.lightBlue" padding={4}>
+                                        <Box bg="brand.white" padding={4}>
                                             <Text color="brand.darkBlue">
-                                                Content goes here my friend
+                                                This quoute are not true, or are they?
                                             </Text>
                                         </Box>
                                     </PopoverBody>
