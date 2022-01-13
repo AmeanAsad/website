@@ -1,5 +1,5 @@
 import { PtsCanvas } from "react-pts-canvas";
-import { Line, Group, Polygon, Create, Pt } from "pts/dist/es5";
+import { Line, Group, Polygon, Create, Pt, Const, Num, Geom } from "pts/dist/es5";
 
 interface Bound {
     topLeft: Array<number>;
@@ -11,10 +11,11 @@ class AnimationComponent extends PtsCanvas {
 
     bound: Bound;
 
+    pps:any;
+
     constructor(props: Record<any, any>) {
         super(props);
 
-        this.pts = new Group();
         this.bound = {
             topLeft: [0, 0],
             bottomRight: [0, 0],
@@ -23,10 +24,33 @@ class AnimationComponent extends PtsCanvas {
 
     initialize() {
         this.pts = new Group();
-        this.pts = Create.distributeRandom(this.space.innerBound, 200);
+        this.pts = Create.distributeRandom(this.space.innerBound, 100);
 
         this.bound.topLeft = this.space.innerBound._topLeft;
         this.bound.bottomRight = this.space.innerBound._bottomRight;
+        const angle = (this.space.size.x) * Const.two_pi * 0.5;
+        const offset = this.space.size.$multiply(0.2).y;
+        const line = new Group(
+            new Pt(0, offset),
+            new Pt(this.space.size.x, this.space.size.y - offset)
+        );
+        const pts = Line.subpoints(line, 200);
+
+        pts.rotate2D(0.0008, this.space.center);
+        this.pps = pts.map(
+            (p: any) => Geom.perpendicular(p.$subtract(line[0]).unit()).add(p)
+        );
+        this.pps.forEach((p: any, i: number) => {
+            const t = (i / 50) * Const.two_pi + angle + Num.cycle(10);
+
+            if (i % 2 === 0) {
+                p[0].to(Geom.interpolate(pts[i], p[0], Math.sin(t) * offset * 2));
+                p[1].to(pts[i]);
+            } else {
+                p[0].to(pts[i]);
+                p[1].to(Geom.interpolate(pts[i], p[1], Math.cos(t) * offset * 2));
+            }
+        });
     }
 
     start() {
@@ -56,6 +80,7 @@ class AnimationComponent extends PtsCanvas {
         const corner3 = new Pt([bottomRight[0], 0]);
         const corner4 = new Pt([0, bottomRight[1]]);
         const set = [corner1, corner2, corner3, corner4];
+        // const cornerGroup = Polygon.convexHull(set);
 
         // Find direction (right or left) the corners are relative to the centerLine
         const cornerDirections = set.map((pt) => {
@@ -98,19 +123,29 @@ class AnimationComponent extends PtsCanvas {
             // will be undefined, triggering an error
         }
 
-        this.pts.rotate2D(0.0008, this.space.center);
+        this.pps.rotate2D(0.0008, this.space.center);
 
-        this.pts.forEach((p: any, i: number) => {
-            // for each point, find the perpendicular to the line
-            const lp = perpend(p);
-            const ratio = Math.min(
+        this.pps.forEach((p: any, i: number) => {
+            const lp = perpend(p[1]);
+            const lp2 = perpend(p[0]);
+
+            let ratio = Math.min(
                 1,
-                1 - lp.$subtract(p).magnitude() / (this.space.size.x / 2)
+                1 - lp.$subtract(p[1]).magnitude() / (this.space.size.x / 2)
             );
             this.form
                 .stroke(`rgba(255, 77, 91,${ratio}`, ratio * 2)
-                .line([p, lp]);
-            this.form.fillOnly(["#f03", "#09f", "#0c6"][i % 3]).point(p, 1);
+                .line([p[1], lp2]);
+            this.form.fillOnly(["#f03", "#09f", "#0c6"][i % 3]).point(p[1], 1);
+
+            ratio = Math.min(
+                1,
+                1 - lp.$subtract(p[0]).magnitude() / (this.space.size.x / 2)
+            );
+            this.form
+                .stroke(`rgba(255, 255, 255,${ratio}`, ratio * 2)
+                .line([p[0], lp]);
+            this.form.fillOnly(["#f03", "#09f", "#0c6"][i % 3]).point(p[0], 1);
         });
     }
 }
