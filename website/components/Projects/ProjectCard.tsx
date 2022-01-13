@@ -160,7 +160,7 @@ const ProjectCard: NextPage<Project> = (props: Project) => {
                 </Flex>
 
                 <Flex position="relative" direction="row">
-                    <Heading float="left" color="brand.red" fontSize={15}>
+                    <Heading float="left" color="brand.red" fontSize={16}>
                         {date}
                     </Heading>
                 </Flex>

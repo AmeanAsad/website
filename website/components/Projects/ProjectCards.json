@@ -2,9 +2,9 @@
     {
         "id": "convergences",
         "icon": "document",
-        "topic": "Machine Learning",
-        "title": "Convergence of Stochastic Gradient Descent",
-        "tags": ["Visualization", "Python", "Stochastic Simulations"],
+        "topic": "Mathematics",
+        "title": "Convergence Rates of Stochastic Gradient Descent",
+        "tags": ["Convex Optimization", "Python", "Machine Learning"],
         "date": "April, 2021"
     },
     {
@@ -12,15 +12,15 @@
         "icon": "code",
         "topic": "Open Source",
         "title": "Covid 19 World Project",
-        "tags": ["Visualization", "Django", "React"],
+        "tags": ["D3.js", "Django", "React", "Projective Geometry"],
         "date": "May, 2020"
     },
     {
         "id": "covidSimulations",
         "icon": "code",
         "topic": "Simulations",
-        "title": "Stochastic Disease Spread Simulations",
-        "tags": ["Optimization Theory", "Convergence Analysis"],
+        "title": "Stochastic Disease Spread Simulation Module",
+        "tags": ["Simulation", "Python", "Graphics"],
         "date": "June, 2021"
     },
    
@@ -52,7 +52,7 @@
         "id": "guassSolver",
         "icon": "code",
         "topic": "Mathematics",
-        "title": "Gaussian Elimination to Solve Linear Systems",
+        "title": "Gaussian Elimination Module to Solve Linear Systems",
         "tags": ["Linear Algebra", "Python"],
         "date": "March, 2018"
     },

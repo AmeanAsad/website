@@ -34,21 +34,21 @@ class AnimationComponent extends PtsCanvas {
             new Pt(0, offset),
             new Pt(this.space.size.x, this.space.size.y - offset)
         );
-        const pts = Line.subpoints(line, 200);
+        const pts = Line.subpoints(line, 220);
 
         pts.rotate2D(0.0008, this.space.center);
         this.pps = pts.map(
             (p: any) => Geom.perpendicular(p.$subtract(line[0]).unit()).add(p)
         );
         this.pps.forEach((p: any, i: number) => {
-            const t = (i / 100) * Const.two_pi + angle + Num.cycle(100);
+            const t = (i / 150) * Const.two_pi + angle + Num.cycle(100);
 
             if (i % 2 === 0) {
                 p[0].to(Geom.interpolate(pts[i], p[0], Math.sin(t) * offset * 3));
                 p[1].to(pts[i]);
             } else {
                 p[0].to(pts[i]);
-                p[1].to(Geom.interpolate(pts[i], p[1], Math.cos(t) * offset * 2));
+                p[1].to(Geom.interpolate(pts[i], p[1], Math.cos(t) * offset * 3));
             }
         });
     }
