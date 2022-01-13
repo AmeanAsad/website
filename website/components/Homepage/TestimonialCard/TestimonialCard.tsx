@@ -132,7 +132,7 @@ const TestimonialCard: React.FC = () => {
                                     <PopoverBody>
                                         <Box bg="brand.white" padding={4}>
                                             <Text color="brand.darkBlue">
-                                                This quoute are not true, or are they?
+                                                Disclaimer: These quoutes may or may not be true
                                             </Text>
                                         </Box>
                                     </PopoverBody>

@@ -16,5 +16,11 @@
         "role": "Founder at Info Theory",
         "content": "He put the 'Information' in Information Theory",
         "avatar": "https://www.bbvaopenmind.com/wp-content/uploads/2021/04/BBVA-OpenMind-Gonzalo-Suard%C3%ADaz-Claude-Shannon-inventor-de-la-era-digital-2.jpg"
+    },
+    {
+        "name": "John Nash",
+        "role": "Game Theorist",
+        "content": "I decided to pursue Game Theory after consistently losing to Amean in monopoly deal",
+        "avatar": "https://media.springernature.com/relative-r300-703_m1050/springer-static/image/art%3A10.1038%2F522420a/MediaObjects/41586_2015_Article_BF522420a_Figa_HTML.jpg"
     }
 ]

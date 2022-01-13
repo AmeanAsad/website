@@ -9,7 +9,7 @@ const TestimonialCard = dynamic(() => import("./TestimonialCard/TestimonialCard"
 
 const HomePage: NextPage = () => {
     return (
-        <Box position="relative" zIndex="10" className={styles.pageContainer}>
+        <Box minHeight="100%" position="relative" zIndex="10" className={styles.pageContainer}>
             <div className={styles.leftNav}>
                 <Sidebar pageId="home" />
             </div>
@@ -17,12 +17,12 @@ const HomePage: NextPage = () => {
                 <AnimationComponent
                     background="#151247"
                     name="homepageAnimation"
-                    style={{ opacity: 0.9, height: "100vh", width: "100vw" }}
+                    style={{ opacity: 0.9, minHeight: "600px", height: "100vh", width: "100vw" }}
                 />
             </Box>
             <Box
                 marginTop={{
-                    base: "100px",
+                    base: "0",
                     md: "0",
                 }}
                 position="relative"
@@ -31,11 +31,13 @@ const HomePage: NextPage = () => {
 
                 <Flex
                     width="fit-content"
-                    top={{ md: "50%", base: "0" }}
+                    top={{ md: "40%", base: "0" }}
                     transform={{ md: "translateY(-50%)", base: "0" }}
                     margin="auto"
                     zIndex="1000"
                     position="relative"
+                    // minHeight="300px"
+                    pointerEvents="none"
                 >
                     <Stack justifyContent="center">
                         <Heading
@@ -56,8 +58,20 @@ const HomePage: NextPage = () => {
                             Asad
                         </Heading>
 
-                        <TestimonialCard />
                     </Stack>
+                </Flex>
+
+                <Flex
+                    zIndex="1000"
+                    position="relative"
+                    width="fit-content"
+                    margin="auto"
+                    top={{ base: "20%", sm: "35%" }}
+                    transform={{ md: "translateY(-55%)", base: "translateY(-60%)" }}
+
+                >
+                    <TestimonialCard />
+
                 </Flex>
 
             </Box>

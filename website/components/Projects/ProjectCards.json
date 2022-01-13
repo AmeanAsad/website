@@ -1,35 +1,67 @@
 [
     {
+        "id": "convergences",
+        "icon": "document",
+        "topic": "Machine Learning",
+        "title": "Convergence of Stochastic Gradient Descent",
+        "tags": ["Visualization", "Python", "Stochastic Simulations"],
+        "date": "April, 2021"
+    },
+    {
+        "id": "covidProject",
+        "icon": "code",
+        "topic": "Open Source",
+        "title": "Covid 19 World Project",
+        "tags": ["Visualization", "Django", "React"],
+        "date": "May, 2020"
+    },
+    {
+        "id": "covidSimulations",
+        "icon": "code",
+        "topic": "Simulations",
+        "title": "Stochastic Disease Spread Simulations",
+        "tags": ["Optimization Theory", "Convergence Analysis"],
+        "date": "June, 2021"
+    },
+   
+    {
         "id": "hammingDecoding",
         "icon": "code",
         "topic": "Mathematics",
-        "title": "Title",
-        "tags": ["tag1", "tag2"],
-        "date": "April 5, 2021"
+        "title": "Hamming Error Decoding in Python",
+        "tags": ["Coding Theory", "Python"],
+        "date": "February, 2019"
     },
     {
-        "id": "someting",
-        "icon": "document",
+        "id": "turnover",
+        "icon": "code",
+        "topic": "Machine Learning",
+        "title": "Turnover Analysis using Machine Learning",
+        "tags": ["Machine Learning", "Python", "Plotly"],
+        "date": "November, 2020"
+    },
+    {
+        "id": "linearOpt",
+        "icon": "code",
+        "topic": "Mathematics & Finance",
+        "title": "Thrift: Financial Savings using Linear Optimization",
+        "tags": ["Optimization", "Django", "React"],
+        "date": "September, 2019"
+    },
+    {
+        "id": "guassSolver",
+        "icon": "code",
         "topic": "Mathematics",
-        "title": "Linear Optimization Savings",
-        "tags": ["Optimization Theory", "Machine Learning", "React"],
-        "date": "April 5, 2019"
+        "title": "Gaussian Elimination to Solve Linear Systems",
+        "tags": ["Linear Algebra", "Python"],
+        "date": "March, 2018"
     },
     {
-        "id": "someting",
-        "icon": "hardware",
-        "topic": "Machine Vision",
-        "title": "Linear Optimization",
-        "tags": ["Optimization", "Python", "React"],
-        "date": "April 5, 2019"
-    },
-
-    {
-        "id": "someting",
-        "icon": "document",
-        "topic": "Mathematics",
-        "title": "Linear  Savings",
-        "tags": ["Optimization Theory", "Machine Learning", "React"],
-        "date": "April 5, 2019"
+        "id": "fireSpread",
+        "icon": "code",
+        "topic": "Simulations",
+        "title": "Wildfire Spread Simulator",
+        "tags": ["Cellular Automaton", "Python", "Visualization"],
+        "date": "March, 2019"
     }
 ]

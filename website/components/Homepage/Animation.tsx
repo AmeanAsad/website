@@ -41,10 +41,10 @@ class AnimationComponent extends PtsCanvas {
             (p: any) => Geom.perpendicular(p.$subtract(line[0]).unit()).add(p)
         );
         this.pps.forEach((p: any, i: number) => {
-            const t = (i / 50) * Const.two_pi + angle + Num.cycle(10);
+            const t = (i / 100) * Const.two_pi + angle + Num.cycle(100);
 
             if (i % 2 === 0) {
-                p[0].to(Geom.interpolate(pts[i], p[0], Math.sin(t) * offset * 2));
+                p[0].to(Geom.interpolate(pts[i], p[0], Math.sin(t) * offset * 3));
                 p[1].to(pts[i]);
             } else {
                 p[0].to(pts[i]);

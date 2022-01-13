@@ -3,7 +3,7 @@
         "title": "Junior Data Scientist",
         "location": "Cairo, Egypt",
         "company": "DLC Tech",
-        "date": "January 2017 - First Professional Work",
+        "date": "January 2017, First Professional Work",
         "icon": "work",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -11,7 +11,7 @@
         "title": "Queen's University",
         "location": "Kingston, CA",
         "company": "Bachelor in Mathematics and Computer Engineering",
-        "date": "September 2017 - Moving to Canada",
+        "date": "September 2017, Moving to Canada",
         "icon": "travel",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -27,7 +27,7 @@
         "title": "Covid 19 World Project",
         "location": "Toronto, CA",
         "company": "Open Source",
-        "date": "May 2019, My first major side project",
+        "date": "May 2020, My first major side project",
         "icon": "code",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -35,7 +35,7 @@
         "title": "Software Engineer",
         "location": "Toronto, CA",
         "company": "IBM Ltd",
-        "date": "May 2019 - August 2020",
+        "date": "May 2020 - August 2021",
         "icon": "work",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -63,8 +63,5 @@
         "icon": "grad",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
-
-
-
 
 ]

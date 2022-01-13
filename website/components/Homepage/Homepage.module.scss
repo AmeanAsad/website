@@ -1,10 +1,10 @@
 .pageContainer {
     display: grid;
-    height: 100vh;
+    height: 100%;
     // width: 100vw;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 80px 1fr;
 
-    @media (min-width: 760px) {
+    @media (min-width: 767px) {
         grid-template-columns: 120px 1fr;
         grid-template-rows: 1fr;
     }
