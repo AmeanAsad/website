@@ -5,7 +5,7 @@
         "company": "DLC Tech",
         "date": "January 2017, First Professional Work",
         "icon": "work",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "I managed to somehow get myself a software position when I was in my last semester of high school. At the time DLC was led by Mohamed AbdElTawab, my supervisors were Maged Shalaby and Sherif AbdEl Karim. I worked on two big projects when I was there. I started with a visualization dashboard that was used to visualize a large dataset containing numerous properties on platform usage from 60+ countries."
     },
     {
         "title": "Queen's University",
@@ -13,7 +13,7 @@
         "company": "Bachelor in Mathematics and Computer Engineering",
         "date": "September 2017, Moving to Canada",
         "icon": "travel",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "After 17 eventful years in Egypt, I got an offer to study at Queen's university in Canada. At the time I was sure I was going to study Aerospace Engineering, but I took a linear algebra class in first year and decided to switch to a joint degree Queen's offers in Mathematics and Computer Engineering. "
     },
     {
         "title": "Lead Software Developer",
@@ -21,7 +21,7 @@
         "company": "DLC Tech",
         "date": "April 2019",
         "icon": "work",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "I worked on developing a instructional video platform using React and Django."
     },
     {
         "title": "Covid 19 World Project",
@@ -29,7 +29,7 @@
         "company": "Open Source",
         "date": "May 2020, My first major side project",
         "icon": "code",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "In March 2019, Covid was beginning to become a problem in Canada and my university had just shut down. I started working on a project to track cases worldwide. It took me a few months to finish it, but I ended up creating a web application that does tracking and created a Python module that does disease spread simulations. By the time I finished in May, there were already tons of trackers out there, but my little website got a few thousand hits to it felt good to inform some people."
     },
     {
         "title": "Software Engineer",
@@ -37,7 +37,7 @@
         "company": "IBM Ltd",
         "date": "May 2020 - August 2021",
         "icon": "work",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "IBM was my big break into the big tech world as a Software Engineer. It was a great learning experience technically and professionally. I worked on developing software features for the Watson Studio platform under the supervision of Lin Ju and Dejan Glozic. I owned one of their microservices where I overhauled a lot of the backend and worked regularly on fixing bugs and developing feature requests. I was also responsible for doing service integrations from other teams on Watson Studio. During my internship, I integrated 9 new services in Watson Studio. I worked on developing new pages and UI features for Watson Studio's new UI known as Projects 3.0. This included doing a lot front end development for the new UI and I created a reusable data panel module for my team. Additionally, I new foundations for bundle optimization and dependency sharing by adding Webpack 5 to my team's code base, introducing concepts such as code splitting, module fedaration, and treeshaking"
     },
     {
         "title": "Founder at Yasa",
@@ -45,7 +45,7 @@
         "company": "Yasa Technologies Inc.",
         "date": "May 2020",
         "icon": "rocket",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "Early 2020 I Co-Founded a company called Yasa "
     },
     {
         "title": "First Patent",
