@@ -1,6 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
 import Image from "next/image";
-
 import styles from "../MarkdownFiles/markdown.module.scss";
 import Test from "../MarkdownFiles/test.mdx";
 

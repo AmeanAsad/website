@@ -1,15 +1,104 @@
 import { Button, Heading } from "@chakra-ui/react"
 
-## Test markdown 
+## About This Project
+ 
+ This project is a web application that represents Covid 19 world wide statistics. It includes 4 major
+ components:
+ - An interactive worldwide map that contains information on each country.
+ - A per country dashboard that shows relevant statistics about the status of Covid-19 in the country. 
+ - A simulations section that demonstrates the theoretical impact of certain measures on mitigating infectious
+ disease spread.
+ - A searchable table for worldwide statistics.
+
+ I started working on this in March 2019, when my university just shutdown
+ due to the first cases of Covid-19 in Canada. My plan was to create a comprehensive worldwide tracker
+ for cases using an interactive map. In early May I was ready to publish a version of this project that
+ included everything but the simulations. However, by that time there had been already tons of other trackers
+ that have been developed and published, many with significantly higher quality than mine. In some sense, 
+ I felt that my project was useless because it offered nothing new, so I decided to add a simulation section
+ to offer something new with my website at the time. I saw that a lot of informational Covid-19 websites
+ do mention the importance of certain measures at mitigating disease spread, but none really (at least from
+ what I came across at the time) provided a visual explanation of why these measures work so well.
+ Even though I developed the simulations, I was very surprised with how revealing the results were and it 
+ certainly made me more meticulous with the preventative measures I took towards the pandemic. 
+
+ The site gained a few thousand views and reached a bunch of countries around the world according to my 
+ Google Analytics dashboard. I had a few hunder reoccuring visitors, so it made me happy to know that 
+ I provided useful information to someone around the world. After a year when traffic really dwindeled,
+ I decided to stop paying for theoriginal domain, however the project is still hosted on Heroku. 
 
 
-### Test title
+## Technology behind the Website:
+
+Developing this had a bit of a learning curve for me to learn new technologies and also website design.
+Here is the tech stack for the website:
+
+- React for the frontend 
+- Django for the backend API
+- D3 for visualizations
+- Semantic UI as a component library
+- Python to develop the simulations
+- Heroku for Deployment
+
+I was already familiar with React, Django, and Heroku Deployment when I started this project.
+D3 was the most time-consuming/difficult to learn. What I wanted to do with my map visualization
+was really specific so there was not a ton of examples to build off of. It involved a lot of geometry and
+projection calculations so it was a lot of time spent to get the right numbers. 
+
+Another difficult technicality I had to deal with was combining the Django API and my React front end in one bundled
+application. Ideally I would have hosted the API separate from the frontend and just whitelist my frontend domain. However,
+I did not want to pay for two Heroku deployments. What I did is that I redirected my Django root index file to be the same
+as the React index file. I also had to point Django to the React build files, and change the location of the React build
+directory so Django can read it.
+
+Design was also hard. Even tough I was using a component library, I found design to be really difficult to make
+things look professional and visually appealing. I still think the published website design was not great, but 
+it was good enough given the time I had to finish it.
+
+Finally, the simulations were a ton of work. However, that on its own was a project, so I'll leave the details
+for that out of this post.
 
 
-list:
- - item 1
- - item 2 
+## Takeaways and Mistakes:
 
- <Button rounded="sm" color="brand.red"> Test </Button> 
+I considered this project as my first major intentional Open Source contribution. I had good intentions of wanting
+to provide useful information to people as well as open sourcing my code, but my execution was a bit naive which 
+really reduced the potential impact of my work. I should not have worked on something like this alone. I was 
+way too slow to publish this and also working alone probably slowed down my learning rate by a lot. If I were 
+to do this again now, I would try to find an existing open source project or group up with a bunch of developers who
+have the same goals in mind to build something like this. 
+
+The project was a great learning opporunity and it felt great to see some interaction from different communities with 
+my website. 
+
+### Some Technical Takeaways:
+
+- I didn't really know about bundle optimization at the time. I added too many assets in my source files
+and it really bloated up the final size of my website. I good time trying to figure out why Heroku was
+not accepting my 500mb deployment while I had my animation videos included in the source files. Not 
+my brightest moment. 
+- Combining React and Django under one app saved me money but it was a lot of development pain. It was my first
+time working with webpack and it was such an unecessary modification given how much time it took me to setup. 
+It also made the deployment more complicated and also contributed to making my deployed site very large. 
+- Since I used React, my content was loaded through client side rendering which probably
+significantly impacted my SEO. I should have probably looked into server-side rendering to increase
+the traffic through my site.
+- I really underestimated the importance of design in making important information look presentable. I tried 
+to learn some design skills but it was not nearly enough to make things look as good as I wanted them to be. 
+- I had some code formatting plugins to help my code looking clean but I did not have any code quality 
+plugins (eg. Eslint) so I have a lot of full on tortellini code in a bunch of places in my repo. My 
+code quality was not great at all and it made it really annoying to make edits after sometime. 
+
+
+
+## Status of this Project
+
+I have sunsetted this project after site traffic really decreased after a year or so. I still have the website
+hosted on Heroku and the repository on my website. The state of the code is really dire and I do not plan to
+maintain it moving forward. There are some useful pieces of code that I might refactor for later projects
+such as the map visualizations, the dashboard, and the search functionality.
+
+
+ <Button rounded="lg" color="brand.red"> Test </Button> 
 
  <Heading> Test Heading </Heading>
