@@ -68,7 +68,7 @@ const ProjectCard: NextPage<Project> = (props: Project) => {
         <Modal onClose={onClose} size="full" isOpen={isOpen}>
             <ModalOverlay />
             <ModalContent>
-                <ModalBody bg="brand.white">
+                <ModalBody bg="white">
                     <Flex padding={2} width="100%" direction="row">
                         <Heading color="brand.mediumBlue">{title}</Heading>
                         <Spacer />

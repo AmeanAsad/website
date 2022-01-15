@@ -1,6 +1,6 @@
 [
     {
-        "id": "convergences",
+        "id": "convergence-of-sgd",
         "icon": "document",
         "topic": "Mathematics",
         "title": "Convergence Rates of Stochastic Gradient Descent",
@@ -8,7 +8,7 @@
         "date": "April, 2021"
     },
     {
-        "id": "covidProject",
+        "id": "covid-19-tracker",
         "icon": "code",
         "topic": "Open Source",
         "title": "Covid 19 World Project",
@@ -16,7 +16,7 @@
         "date": "May, 2020"
     },
     {
-        "id": "covidSimulations",
+        "id": "disease-simulation-module",
         "icon": "code",
         "topic": "Simulations",
         "title": "Stochastic Disease Spread Simulation Module",
@@ -25,7 +25,7 @@
     },
    
     {
-        "id": "hammingDecoding",
+        "id": "hamming-error-decoding",
         "icon": "code",
         "topic": "Mathematics",
         "title": "Hamming Error Decoding in Python",
@@ -33,7 +33,7 @@
         "date": "February, 2019"
     },
     {
-        "id": "turnover",
+        "id": "turnover-analysis",
         "icon": "code",
         "topic": "Machine Learning",
         "title": "Turnover Analysis using Machine Learning",
@@ -41,7 +41,7 @@
         "date": "November, 2020"
     },
     {
-        "id": "linearOpt",
+        "id": "linear-optimization",
         "icon": "code",
         "topic": "Mathematics & Finance",
         "title": "Thrift: Financial Savings using Linear Optimization",
@@ -49,7 +49,7 @@
         "date": "September, 2019"
     },
     {
-        "id": "guassSolver",
+        "id": "gaussian-elimination-solver",
         "icon": "code",
         "topic": "Mathematics",
         "title": "Gaussian Elimination Module to Solve Linear Systems",
@@ -57,7 +57,7 @@
         "date": "March, 2018"
     },
     {
-        "id": "fireSpread",
+        "id": "firespread-simulator",
         "icon": "code",
         "topic": "Simulations",
         "title": "Wildfire Spread Simulator",

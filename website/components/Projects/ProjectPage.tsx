@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { NextPage } from "next";
-import Test from "./test";
+import MarkdownPage from "./MarkdownPage";
 
 interface ProjectId {
     projectId: string;
@@ -9,8 +9,8 @@ const ProjectPage: NextPage<ProjectId> = (props: ProjectId) => {
     // TODO: Add project id functionality to retrieve project info
     const projectId: string = props && props.projectId; // eslint-disable-line
     return (
-        <Box height="100%" width="100%" maxWidth="800px">
-            <Test />
+        <Box height="100%" width="100%" margin="auto" paddingTop={6} maxWidth="800px">
+            <MarkdownPage projectId={projectId} />
         </Box>
     );
 };
