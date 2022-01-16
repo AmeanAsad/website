@@ -7,12 +7,38 @@
  At first I was interested in seeing how I can test the effectiveness of various
  measures against mitigating disease spread. I watched Steve Brunton's series on 
  simple mathematical modelling of disease spread and I started writing some code
- to get some results. I wrote a module that basically simulates a bunch of nodes
+ to get some results. I wrote a module that simulates a bunch of nodes
  that move randomly inside a confined space. I assigned values to speed of movement
  , probability of infection, radius of infection, etc. that I tried my best to estimate
  from doing some research. The program then simulates disease spread until all nodes 
- contact the disease. Obviously, this is a very simple model of disease spread, but I
+ contact the disease where there are 4 possible states to a node at a given time:
+ infected, diseases, recovered, susceptible. Obviously, this is a very simple model of disease spread, but I
  intended for this module to be something small and very easy to use to produce some 
  meaningful simulations.
 
- 
+ ## Technical Information
+
+ One obvious issue I ran into while creating the module is the performance of the animation.
+ Part of determining  the disease spread is determining the status of each node at each
+ time stamp. The most perfomance consuming task was checking for each node, which are the 
+ neighboring nodes that are within an infectious radius. To implement that this
+ checking method, I used a K-dimensional
+ tree to store the node positions and then queried for the closest nodes using that. 
+
+ I used `matplotlib` to generate all my animations. One thing I tried is saving and exporting 
+ the pandemic data so I can use a front-end animation library such as D3.js to create 
+ the animations on the client-side. The idea was to run the pandemic module on a server
+ were users can create there own simulations and the data would be returned through a 
+ REST API were a client-side animation library does the work. I ran into some performance
+ issues attempting to run each users' requested animation on 7$ hobby server. I also wanted
+ to couple the animations with the actual simulation module so I just genereated all the
+ animations in Python and exported them as video files.
+
+ ## Status of Project
+
+I have not made edits to the project recently. Some things I might do down the road is improve
+the performance of simulation to allow for bigger sized simulations. I can also add more realistic
+factors that impact disease spread.
+
+Another thing I wanted to do is maybe do an accompanying Javascript library that performs simulations
+on client side which would make the usage more usage/developer friendly. 

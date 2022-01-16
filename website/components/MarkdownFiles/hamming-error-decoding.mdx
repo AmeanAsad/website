@@ -1,0 +1,28 @@
+## About this Project:
+
+In my second year of university, I took an Algebraic Structures course taught by Professor
+Fady Alajaji. The course went over various Number Theory and Group Theory topics and 
+showed their application in Error Correction. In the course we were taught about Hamming
+Error Correction and also error correction using Syndrome Error Decoding. For those curious,
+Syndrome Error Decoding is pillar of developing Golay Codes which were an instrumental
+part of NASA's Voyager spacecraft communication systems. 
+
+I was really interested in syndrome error decoding, so I decided to write a program
+that does error correction on text data. My research showed that there no general
+Python libraries that developed a general (n, k) linear code. Most of the code examples
+I found implemented parity bit checking of a specific sized linear or were just
+manual implementations of a Golay code.
+
+I developed an open source module that automatically generates any (n,k) linear code. This includes
+automatically generating a generator matrix, a syndrom error decoding table along with 
+functions to encode and decode information. 
+
+Accompanied with my module is an example of its application of ASCII text by converting
+the ASCII text to fixed length binary codes. 
+
+## Status of Project:
+
+I have not really revisited the module since I created the working code. Recently  I took
+a course about information theory so I might use the module to add a compression layer
+to compress ASCII data using fixed length block codes and see how that impacts
+overall performance. 
