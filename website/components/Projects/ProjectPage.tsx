@@ -8,8 +8,7 @@ interface ProjectId {
     projectId: string;
 }
 const ProjectPage: NextPage<ProjectId> = (props: ProjectId) => {
-    // TODO: Add project id functionality to retrieve project info
-    const projectId: string = props && props.projectId; // eslint-disable-line
+    const projectId: string = props && props.projectId;
     return (
 
         <Center className="center" width="100%" height="100%">
