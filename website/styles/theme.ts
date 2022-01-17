@@ -8,6 +8,7 @@ const breakpoints = createBreakpoints({
     lg: "62em",
     xl: "80em",
     xl2: "86em",
+    pageWrap: "1150px",
 });
 
 const themeExtension: Record<any, any> = extendTheme({

@@ -112,7 +112,7 @@ const ProjectPage: NextPage<Project> = (props: Project) => {
                 justifyContent="center"
                 width="100%"
                 height="100%"
-                marginLeft={{ base: 0, xl2: "-300px" }}
+                marginLeft={{ base: 0, xl2: "-250px" }}
                 flexWrap="wrap"
                 maxWidth="1100px"
             >
@@ -121,7 +121,7 @@ const ProjectPage: NextPage<Project> = (props: Project) => {
                     width="300px"
                     padding={4}
                     paddingTop={20}
-                    position="sticky"
+                    position={{ base: "unset", pageWrap: "sticky" }}
                     top={0}
                     justifyContent="center"
                 >
