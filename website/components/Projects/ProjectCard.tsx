@@ -55,7 +55,7 @@ const cardIcons = {
 };
 
 const ProjectCard: NextPage<Project> = (props: Project) => {
-    const { id, icon, topic, title, tags, date } = props;
+    const { icon, topic, title, tags, date } = props;
     const projectIcon = cardIcons[icon as keyof typeof cardIcons];
     const iconElement = projectIcon || cardIcons.document;
 
@@ -82,7 +82,7 @@ const ProjectCard: NextPage<Project> = (props: Project) => {
                             icon={closeIcon}
                         />
                     </Flex>
-                    <ProjectPage projectId={id} />
+                    <ProjectPage {...props} />
                 </ModalBody>
                 <ModalFooter />
             </ModalContent>
