@@ -48,7 +48,7 @@ const ProjectPage: NextPage<Project> = (props: Project) => {
         gitLink = (
             <ListItem>
                 <ListIcon as={IoGitBranchOutline} color="brand.red" />
-                <Link isExternal href={links.github}>
+                <Link color="brand.mediumBlue" isExternal href={links.github}>
                     Github Link
                 </Link>
             </ListItem>
@@ -59,7 +59,7 @@ const ProjectPage: NextPage<Project> = (props: Project) => {
         webLink = (
             <ListItem>
                 <ListIcon as={ImLink} color="brand.red" />
-                <Link isExternal href={links.github}>
+                <Link color="brand.mediumBlue" isExternal href={links.github}>
                     Web Link
                 </Link>
             </ListItem>
@@ -85,7 +85,7 @@ const ProjectPage: NextPage<Project> = (props: Project) => {
         return (
             <ListItem key={person.name}>
                 <ListIcon as={IoPersonSharp} color="brand.red" />
-                <Link isExternal href={person.link}>
+                <Link color="brand.mediumBlue" isExternal href={person.link}>
                     {person.name}
                 </Link>
             </ListItem>
