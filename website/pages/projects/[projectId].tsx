@@ -26,7 +26,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const postFilePath = path.join(POSTS_PATH, `${params?.projectId}.mdx`);
     const source = fs.readFileSync(postFilePath, "utf-8");
     const mdxSource = await serialize(source, {
-        // Optionally pass remark/rehype plugins
         mdxOptions: {
             remarkPlugins: [],
             rehypePlugins: [],
