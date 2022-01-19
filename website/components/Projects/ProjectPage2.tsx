@@ -1,4 +1,18 @@
-import { Box, Center, Divider, Flex, Heading, Tag, List, ListIcon, ListItem, Link, IconButton, Spacer, Icon } from "@chakra-ui/react";
+import {
+    Box,
+    Center,
+    Divider,
+    Flex,
+    Heading,
+    Tag,
+    List,
+    ListIcon,
+    ListItem,
+    Link,
+    IconButton,
+    Spacer,
+    Icon,
+} from "@chakra-ui/react";
 import { NextPage } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { IoPersonSharp, IoGitBranchOutline } from "react-icons/io5";
@@ -19,7 +33,8 @@ interface Person {
 const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
     const id = projectId;
     const mdxSource = source;
-    const { title, tags, links, acknowledgements } = ProjectInfo[id as keyof typeof ProjectInfo];
+    const { title, tags, links, acknowledgements } =
+        ProjectInfo[id as keyof typeof ProjectInfo];
     let gitLink;
     let webLink;
     let linkSection;
@@ -110,9 +125,7 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
             <Heading marginBottom={3} marginTop={3} size="sm">
                 Acknowledgements
             </Heading>
-            <List>
-                {acknowledgementElements}
-            </List>
+            <List>{acknowledgementElements}</List>
             {divider}
         </>
     );
@@ -122,7 +135,14 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
     );
     return (
         <>
-            <Flex padding={2} paddingTop={5} width="80%" maxWidth="1500px" margin="auto" direction="row">
+            <Flex
+                padding={2}
+                paddingTop={5}
+                width="80%"
+                maxWidth="1500px"
+                margin="auto"
+                direction="row"
+            >
                 <Heading color="brand.mediumBlue">{title}</Heading>
                 <Spacer />
                 <NextLink passHref href="/projects">
@@ -138,7 +158,6 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
                 </NextLink>
             </Flex>
             <Center className="center" width="100%" height="100%">
-
                 <Flex
                     justifyContent="center"
                     width="100%"
@@ -158,10 +177,15 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
                     >
                         {infoSection}
                         {linkSection}
-                        {acknowledgementElements.length > 0 && acknowledgementSection}
+                        {acknowledgementElements.length > 0 &&
+                            acknowledgementSection}
                     </Box>
-                    <Box margin="auto" padding={3} marginTop={5} maxWidth="800px">
-
+                    <Box
+                        margin="auto"
+                        padding={3}
+                        marginTop={5}
+                        maxWidth="800px"
+                    >
                         <div className={styles["markdown-body"]}>
                             <MDXRemote {...mdxSource} />
                         </div>
@@ -169,7 +193,6 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
                 </Flex>
             </Center>
         </>
-
     );
 };
 
