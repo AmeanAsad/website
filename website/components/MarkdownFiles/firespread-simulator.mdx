@@ -1,0 +1,19 @@
+## About the Project:
+
+I developed this module to simulate wildfire spread as a helper tool for one of the projects
+I worked on during university. The project involved using Lloyd's deployment algorithm to optimize
+how a bunch of drones can optimally fight a wildfire. In order to test if our algorithm works or not 
+we had to find some way of simulating a fire. Finding an existing real wildfire progression data and
+loading it proved a difficult task. Even then, we would have to find numerous datasets that test
+our algorithm in various fire spreads. Therefore, I decided to write this module to stochastically
+model fire spread, allowing us to test the algorithm in very randomized scenarios. 
+
+## Technical Information:
+
+I developed the module in Python. The fire spread is based on cellular automaton concepts. The 
+area of spread is defined as a matrix. Then a few overlapping matrices are defined to indicate
+each cell's vegetation, moisture levels, and population density. These factors impact the intensity
+of the fire in different areas as it spreads, creating more parameters for our algorithm to optimize
+where to fight the fire from. I also added wind speed as a parameter as well, which adds another layer
+of randomness for the fire spread. 
+

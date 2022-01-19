@@ -6,12 +6,17 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 module.exports = withBundleAnalyzer({
     reactStrictMode: true,
+
+    images: {
+        domains: ["www.salk.edu"],
+    },
+
     webpack: (config, options) => {
         config.experiments = {
             topLevelAwait: true,
-            layers: true
+            layers: true,
         };
-      
+
         return config;
     },
 });
