@@ -8,15 +8,20 @@ import React from "react";
 interface Props {
     pageId: string,
     Component: React.ReactNode
+    noSideBar?: boolean
 }
-const PageComponent: NextPage<Props> = ({ pageId, Component }) => { // eslint-disable-line
+const PageComponent: NextPage<Props> = ({ pageId, Component, noSideBar }) => { // eslint-disable-line
+    const sideBar = (
+        <div className={styles.leftNav}>
+            <Sidebar pageId={pageId} />
+        </div>
+    );
+    const classN = noSideBar ? styles.projectPage : styles.pageContainer;
     return (
         <ChakraProvider theme={themeExtension}>
 
-            <Box position="relative" zIndex="10" className={styles.pageContainer}>
-                <div className={styles.leftNav}>
-                    <Sidebar pageId={pageId} />
-                </div>
+            <Box position="relative" zIndex="10" className={classN}>
+                {!noSideBar && sideBar}
                 {Component}
 
             </Box>

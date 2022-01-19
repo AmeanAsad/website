@@ -1,15 +1,20 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import projectsInfo from "./ProjectCards.json";
-import { ProjectCards } from "./ProjectTypes";
+// import projectsInfo from "./ProjectCards.json";
+import projectsInfo from "./ProjectCard2.json";
+// import { ProjectCards } from "./ProjectTypes";
 import ProjectCard from "./ProjectCard";
 import { NextPage } from "next";
 
 const Projects: NextPage = () => {
-    const projectCards: ProjectCards = projectsInfo;
+    // const projectCards = new Object(projectsInfo);
+    const keys = Object.keys(projectsInfo);
+    const projectCardElements = keys.map((key) => {
+        const projectInfo = projectsInfo[key as keyof typeof projectsInfo];
+        return (
 
-    const projectCardElements = projectCards.map((projectInfo) => (
-        <ProjectCard key={projectInfo.title} {...projectInfo} />
-    ));
+            <ProjectCard key={projectInfo.title} id={key} {...projectInfo} />
+        );
+    });
 
     return (
         <Box p="3%" height="100vh" width="100%" bg="brand.white">
