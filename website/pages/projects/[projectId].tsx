@@ -4,6 +4,8 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import ProjectPage2 from "../../components/Projects/ProjectPage2";
 import PageComponent from "../../components/PageComponent";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
+
+// Server-Side Imports -- cannot be used in ProjectPage component
 import fs from "fs";
 import path from "path";
 
@@ -12,7 +14,7 @@ interface pageProps {
     source: MDXRemoteSerializeResult;
 }
 
-const Page: NextPage<pageProps> = (props) => {
+const ProjectPage: NextPage<pageProps> = (props) => {
     return (
         <PageComponent
             pageId="project-page"
@@ -53,4 +55,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export default Page;
+export default ProjectPage;
