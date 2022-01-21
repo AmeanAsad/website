@@ -8,7 +8,7 @@ module.exports = withBundleAnalyzer({
     reactStrictMode: true,
 
     images: {
-        domains: ["www.salk.edu"],
+        domains: ["www.salk.edu", "f004.backblazeb2.com"],
     },
 
     webpack: (config, options) => {

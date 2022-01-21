@@ -5,6 +5,7 @@ import {
     Flex,
     Heading,
     Tag,
+    Text,
     List,
     ListIcon,
     ListItem,
@@ -20,6 +21,7 @@ import { ImArrowLeft2, ImLink } from "react-icons/im";
 import NextLink from "next/link";
 import ProjectInfo from "./ProjectCard2.json";
 import styles from "../MarkdownFiles/markdown.module.scss";
+import Image from "next/image";
 
 interface pageProps {
     projectId: string;
@@ -30,6 +32,50 @@ interface Person {
     name: string;
     link: string;
 }
+
+interface mediaProps {
+    src: string;
+    caption: string;
+}
+const Video = ({ src, caption }: mediaProps) => {
+    return (
+        <Box textAlign="center" width="100%" margin="auto" maxWidth="500px">
+            <Box border="1px">
+
+                <video controls autoPlay loop style={{ width: "100%", margin: "auto" }}>
+
+                    <source src={src} />
+                </video>
+            </Box>
+            <Text color="gray.500"> {caption}</Text>
+        </Box>
+
+    );
+};
+
+const ImageSrc = ({ src, caption }: mediaProps) => {
+    return (
+        <Box textAlign="center" width="100%" margin="auto" maxWidth="500px">
+            <Box position="relative" width="100%" border="1px">
+                <Image
+                    layout="fill"
+                    objectFit="contain"
+                    width="100%"
+                    // height="100%"
+                    src={src}
+
+                />
+            </Box>
+            <Text color="gray.500"> {caption}</Text>
+        </Box>
+    );
+};
+
+const components = {
+    Video,
+    ImageSrc,
+};
+
 const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
     const id = projectId;
     const mdxSource = source;
@@ -187,7 +233,7 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
                         maxWidth="800px"
                     >
                         <div className={styles["markdown-body"]}>
-                            <MDXRemote {...mdxSource} />
+                            <MDXRemote {...mdxSource} components={components} />
                         </div>
                     </Box>
                 </Flex>

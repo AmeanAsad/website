@@ -11,6 +11,9 @@ const AboutPage: NextPage = () => {
         <Box p={5}>
             <Heading marginBottom={8}> Hello! This is Amean Asad </Heading>
             <Image height="32px" width="32px" src={svgCa} />
+            <video controls autoPlay loop style={{ width: "500px" }}>
+                <source src="https://f004.backblazeb2.com/file/websitev1/Agent-0.5-14-1.9.mp4" />
+            </video>
             <Flex direction={{ base: "column", md: "row" }}>
                 <Box margin={{ base: "auto", md: "0" }} maxWidth="480px">
                     <Image
