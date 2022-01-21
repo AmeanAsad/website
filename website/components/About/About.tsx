@@ -1,6 +1,7 @@
 import { Box, Divider, Flex, Heading } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Image from "next/image";
+import svgCa from "../../public/test.svg";
 
 const AboutPage: NextPage = () => {
     const divider = (
@@ -9,6 +10,7 @@ const AboutPage: NextPage = () => {
     return (
         <Box p={5}>
             <Heading marginBottom={8}> Hello! This is Amean Asad </Heading>
+            <Image height="32px" width="32px" src={svgCa} />
             <Flex direction={{ base: "column", md: "row" }}>
                 <Box margin={{ base: "auto", md: "0" }} maxWidth="480px">
                     <Image

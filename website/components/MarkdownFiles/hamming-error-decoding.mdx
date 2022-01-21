@@ -10,14 +10,14 @@ part of NASA's Voyager spacecraft communication systems.
 I was really interested in syndrome error decoding, so I decided to write a program
 that does error correction on text data. My research showed that there no general
 Python libraries that developed a general (n, k) linear code. Most of the code examples
-I found implemented parity bit checking of a specific sized linear or were just
-manual implementations of a Golay code.
+I found implemented parity bit checking of a specific sized linear code or were just
+implementations of a Golay code.
 
 I developed an open source module that automatically generates any (n,k) linear code. This includes
 automatically generating a generator matrix, a syndrom error decoding table along with 
 functions to encode and decode information. 
 
-Accompanied with my module is an example of its application of ASCII text by converting
+Accompanied with my module is an example of its application to ASCII text by converting
 the ASCII text to fixed length binary codes. 
 
 ## Status of Project:
