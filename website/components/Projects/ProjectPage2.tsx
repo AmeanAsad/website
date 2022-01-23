@@ -35,8 +35,9 @@ interface Person {
 
 interface mediaProps {
     src: string;
-    caption: string;
+    caption?: string;
 }
+
 const Video = ({ src, caption }: mediaProps) => {
     return (
         <Box textAlign="center" width="100%" margin="auto" maxWidth="500px">
@@ -71,9 +72,26 @@ const ImageSrc = ({ src, caption }: mediaProps) => {
     );
 };
 
+const PDF = ({ src }: mediaProps) => {
+    return (
+        <Box position="relative" width="100%" height="100vh">
+
+            <object
+                data={src}
+                style={{ position: "absolute" }}
+                width="100%"
+                height="100%"
+                type="application/pdf"
+                aria-label="Pdf Document"
+            />
+        </Box>
+    );
+};
+
 const components = {
     Video,
     ImageSrc,
+    PDF
 };
 
 const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {

@@ -35,6 +35,7 @@ module.exports = {
         "operator-linebreak": "off",
         "react/prop-types": "off",
         "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
         "react/prefer-stateless-function": "off",
         "array-callback-return": "off",
         "prettier/prettier": "off",
