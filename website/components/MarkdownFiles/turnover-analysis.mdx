@@ -18,13 +18,28 @@ are there ethical concerns to doing so.
 
 ## What I did:
 I want to start by saying that I am not an expert on machine learning, business analytics, or data privacy laws.
-I was just doing some trivial experimentation that barely scratches the surface of a vastly open ended question. 
+I just did some trivial experimentation that barely scratches the surface of a vastly open ended question. 
 
 
-I decided to place myself in the position of an organization that wants to run more effectively. I collected
+I decided to place myself in the position of an organization that wants to run more effectively. I found
 a dataset that represents employee turnover. This dataset contains personal information about each employee
-and identifies whether the employee has left the company or not. I fed the processed data to a machine learning model
-and then looked for 
+and identifies whether the employee has resigned. I fed the processed data to a machine learning model
+and then tried to come up with ways the information from the model can be interpreted to optimize business decisions. 
+
+
+I trained a logistic classifier using `scikit-learn` that predicts the turnover status of employees. The takes 
+in an employee's data as an input and outputs a turnover prediction. The classifier has internal weightings on 
+each category of data. 
+
+Here are my results dashboard:
+
+<ImageSrc src="https://f004.backblazeb2.com/file/websitev1/Unessay1.png"caption="Figure: Feature Weightings from Classifier" />
+<ImageSrc src="https://f004.backblazeb2.com/file/websitev1/Unessay2.png"  caption="Figure: Turnover inducing factors" />
+
+
+
+
+
 
 The core of this problem is data. Companies already have stored tons of data with regards to their employees.
 Things like marital status, race, department, years working, health information, etc. 

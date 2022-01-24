@@ -11,13 +11,13 @@ import {
     FlexProps,
     Heading,
     IconButton,
-    Icon,
 } from "@chakra-ui/react";
 
 import { ImMenu } from "react-icons/im";
 import { NextPage } from "next";
-import { FaFighterJet } from "react-icons/fa";
 import Link from "next/link";
+import svgCa from "../../public/test.svg";
+import Image from "next/image";
 
 interface LinkItemProps {
     name: string;
@@ -38,6 +38,7 @@ interface NavItemProps extends FlexProps {
     children: ReactNode;
     selected: boolean;
 }
+
 const NavItem = ({ children, selected, ...rest }: NavItemProps) => {
     const backgroundColor = selected ? "brand.red" : "none";
     const color = selected ? "brand.white" : "brand.darkBlue";
@@ -87,15 +88,10 @@ const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
                         display={{ base: "flex", md: "none" }}
                         onClick={onClose}
                     />
-                    <Icon
-                        margin="auto"
-                        transform="rotate(-90deg)"
-                        display={{ base: "none", md: "flex" }}
-                        as={FaFighterJet}
-                        color="brand.darkBlue"
-                        w={16}
-                        h={16}
-                    />
+                    <Box marginTop={2} margin="auto">
+                        <Image src={svgCa} height="70px" width="70px" />
+                    </Box>
+
                 </Flex>
                 {LinkItems.map((link) => {
                     const isSelected = link.id === pageId;

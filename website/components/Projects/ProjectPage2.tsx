@@ -35,7 +35,8 @@ interface Person {
 
 interface mediaProps {
     src: string;
-    caption?: string;
+    caption?: string; // eslint-disable-line
+    height?:string; // eslint-disable-line
 }
 
 const Video = ({ src, caption }: mediaProps) => {
@@ -56,15 +57,15 @@ const Video = ({ src, caption }: mediaProps) => {
 
 const ImageSrc = ({ src, caption }: mediaProps) => {
     return (
-        <Box textAlign="center" width="100%" margin="auto" maxWidth="500px">
+        <Box textAlign="center" width="100%" margin="auto" maxWidth="600px">
             <Box position="relative" width="100%" border="1px">
                 <Image
-                    layout="fill"
+                    // layout="responsive"
                     objectFit="contain"
-                    width="100%"
-                    // height="100%"
+                    width="600px"
+                    height="400px"
                     src={src}
-
+                    quality={100}
                 />
             </Box>
             <Text color="gray.500"> {caption}</Text>
