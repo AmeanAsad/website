@@ -1,4 +1,5 @@
 ## About This Project
+
 I started working on this project
 when I was learning about Organizational Behavior (OB). Organizational Behavior is the academic 
 study of how people interact within groups. Concepts from OB are primarily applied by companies and businesses
@@ -16,8 +17,8 @@ are there ethical concerns to doing so.
 
 
 
-## What I did:
-I want to start by saying that I am not an expert on machine learning, business analytics, or data privacy laws.
+## What I did
+I am not an expert on machine learning, business analytics, or data privacy laws.
 I just did some trivial experimentation that barely scratches the surface of a vastly open ended question. 
 
 
@@ -27,19 +28,42 @@ and identifies whether the employee has resigned. I fed the processed data to a 
 and then tried to come up with ways the information from the model can be interpreted to optimize business decisions. 
 
 
-I trained a logistic classifier using `scikit-learn` that predicts the turnover status of employees. The takes 
+I trained a logistic classifier using `scikit-learn` that predicts the turnover status of employees. The model takes 
 in an employee's data as an input and outputs a turnover prediction. The classifier has internal weightings on 
 each category of data. 
 
-Here are my results dashboard:
+<ImageSrc src="https://f004.backblazeb2.com/file/websitev1/Unessay1.png"caption="Figure: Visualization of Weightings" />
 
-<ImageSrc src="https://f004.backblazeb2.com/file/websitev1/Unessay1.png"caption="Figure: Feature Weightings from Classifier" />
-<ImageSrc src="https://f004.backblazeb2.com/file/websitev1/Unessay2.png"  caption="Figure: Turnover inducing factors" />
+The image above shows the weightings placed by the model on each category of personal data. 
+The red bars represent factors inducing turnover and the blue bars are the opposite. 
+
+This model could definitely be used for a good cause. If you are an organization that wants to address
+its turnover issues then you can use the model weightings to find possible factors that induce 
+turnover. The model suggests that the most prominent factor behind employees leaving is a promotion issue. 
+As an organization, you might want to put some focus on planning how to integrate more promotions to retain 
+your employees.
 
 
+The model can also have unethical applications to company policy. As mentioned before, force termination is
+something that companies used to unethically do to cut down on business costs, which is now illegal in a 
+lot of places. Companies can use a model like this to delibrately induce turnover in a subtle manner that 
+is difficult to expose. Let's assume that you're an employee who is close to retirement and the company wants
+to avoid severance pay by making you resign. The company can use the results from 
+this dashboard, and try to modify the features surrounding your work conditions
+until the machine learning model predicts that you are highly
+likely to leave by yourself then start implementing those modifications in real life. 
 
+Another big issue to consider is bias. Most machine learning models are trained on data from the real world.
+This means that bias in the data usually translates to bias in the model. For example, if a company has a 
+history of discriminating against a certain group of people, then the model is gonna have some form of bias towards
+that group. A company can use that information to attempt to identify the issues that cause this discrimination and 
+fix it. On the other hand, if a company decides to employ this model to help with making hiring decisions without
+inspecting potential bias, then the model will most certainly discriminate. 
 
+## Takeaways:
 
-
-The core of this problem is data. Companies already have stored tons of data with regards to their employees.
-Things like marital status, race, department, years working, health information, etc. 
+The project is a very small example the demonstrates what AI integration in business decisions might look like. 
+There are useful applications but there are also lots of unethical ways this technology can be used. It will be 
+up to governing bodies around the world to create new laws and safegaurds to regulate the use of AI in our lives.
+It is a very delicate problem though. How do you regulate the use such that we're able to extract all the benefits
+but avoid the potential harm?
