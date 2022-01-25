@@ -1,0 +1,65 @@
+## About Project
+
+I started working on Thrift at Hack The North 2019. This project is about optimizing how people can save 
+money through a web application that connects with your bank information through an API.
+Lets say you want to save `X` amount of money in `Y` amount of time. The web app analyzes your
+spending habits, income streams, and priority payments in order to give you a close estimate of whether
+it is possible or not to save that amount of money in the given time. If it is possible to save that 
+money, the web application provides a monthly savings plan where it makes budget cuts on 
+spending categories based on their priority. 
+
+
+At the core, this project is a constrained optimization problem that can be solved using 
+Linear Programming. Priority payments such as tuition, medicine, bills, etc. all act as constraints
+that must be satisfied each month. Spending habits such as entertainment, take out, gifts, etc. are
+all variable expenditures that can be optimized. The optimization problem can be stated as following:
+Given a monthly income, what is the minimum amount of budget cuts that we can make to our 
+spending habits such that we can save `X` amount of money in `Y` months and still afford
+priority payments. 
+
+## How the Project was Built:
+
+As mentioned, the project was a web application. The main components of the project are:
+- Django for Backend and Financial Analysis.
+- React for Frontend.
+- Bootstrap as a Component Library.
+- PuLP as a Linear Programming Library. 
+- TD's DaVinci API for bank customer data (no longer exists)
+
+The main component that allowed this project to be possible was the availibility of 
+TD's DaVinci API which included a database of 1 million + randomly generated customer data.
+Unfortunately, the DaVinci API is no longer active, so a major portion of the web application
+is no longer available.
+
+
+Python was used to perform analysis to find reoccuring patterns in customer payments. Each customer
+had a history of payments available and patterns in spending were established based on monthly spending. 
+This analysis identified consistent income streams, priority payments, spending habits, and some 
+estimate of miscellaneous payments. The longer the customer history, the more accurate the identified 
+patterns were. The analysis also identified all the categories the customer makes expenditures on such 
+as shopping, dining, sports, etc. 
+
+
+Next was solving the constrained optimization problem. This was done using `PuLP`, a linear programming
+library available in Python. Each user had the ability to insert some weighting on their spending 
+habits (eg how much do you care about entertainment, take out, etc. ). These weightings impacted
+the budget cuts in the sense that higher budget cuts are taken out of low weighted categories if 
+possible. The Linear program then takes into account all the category spendings from the Financial
+analysis, the category weightings, and reoccuring payments and outputs an answer. It can output
+no possible if the income streams are not sufficient for the amount of money being saved. This
+can be adjusted by adjusting the savings period, savings amount, or changing the weightings on 
+the spending categories. Otherwise, it will output a monthly savings plan identifying the amount
+of money that could be spent on each category, including miscellaneous payments. Of course, the 
+output is an estimate so it gaurantees to get you close enough to that savings amount, but 
+necessarily the exact amount. 
+
+Finally was developing a front-end for all the calculations that are occuring. This was done
+with Django + React. A REST API was developed in Django that calculated savings plans per 
+user request on the client side. A dashboard was developed to represent the customer data
+and output the tables that contain the saving plans for customers. Some parts of the 
+dashboard are represented in the images bellow.
+
+<ImageSrc src="https://f004.backblazeb2.com/file/websitev1/thrift_dashboar.png"
+    caption="Customer information and extracted spending categories" />
+<ImageSrc src="https://f004.backblazeb2.com/file/websitev1/thrift_tables.png"
+    caption="Savings Plan tables" />
