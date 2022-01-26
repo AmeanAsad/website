@@ -6,7 +6,7 @@ how a bunch of drones can optimally fight a wildfire. In order to test if our al
 we had to find some way of simulating a fire. Finding an existing real wildfire progression data and
 loading it proved a difficult task. Even then, we would have to find numerous datasets that test
 our algorithm in various fire spreads. Therefore, I decided to write this module to stochastically
-model fire spread, allowing us to test the algorithm in very randomized scenarios. 
+model fire spread, allowing us to test the algorithm in very randomized scenarios.
 
 <Video src="https://f004.backblazeb2.com/file/websitev1/fire_animation.mp4" 
     caption="Figure: Fire simulation. Darker regions indicate higher intensity" />
@@ -26,3 +26,11 @@ of randomness for the fire spread.
 
 <Video src="https://f004.backblazeb2.com/file/websitev1/fire_animation_2.mp4"
     caption="Figure: Fire simulation with high speed wind directed North" />
+
+## Status of Project:
+
+The simulation obviously misses a lot of real factors that impact fire spread. One thing that I wanted
+to add is a dynamic wind vector field that changes over time instead of a constant wind direction. 
+Another major missing component is some sort of elevation to the terrain of the fire. I am not sure 
+if I will revisit the project anytime soon but will I hope to get the opportunity to reuse this 
+module and improve it for a future project. 
