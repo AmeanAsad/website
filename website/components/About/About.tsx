@@ -37,7 +37,7 @@ const AboutPage: NextPage = () => {
     const currentWork = (
         <Text>
             Currently I am working on a thesis group project that involves using deep neural nets
-            to estimate the function of dendritic tree in cortical neurons. I am also experimenting
+            to estimate the function of dendritic trees in cortical neurons. I am also experimenting
             with handwriting recognition to generate Latex documents from my class notes.
         </Text>
     );
@@ -45,12 +45,12 @@ const AboutPage: NextPage = () => {
         <Box p={5}>
             <Heading marginBottom={8}> Hello! This is Amean Asad </Heading>
 
-            <Flex direction={{ base: "column", md: "row" }}>
-                <Box margin={{ base: "auto", md: "0" }} minWidth={360} maxWidth={700}>
+            <Flex direction={{ base: "column", lg: "row" }}>
+                <Box margin={{ base: "auto", lg: "0" }} minWidth={360} maxWidth={700}>
                     <Image
                         layout="intrinsic"
-                        width={643}
-                        height={800}
+                        width={562}
+                        height={700}
                         src="https://f004.backblazeb2.com/file/websitev1/portrait.jpg"
                         quality={100}
                     />

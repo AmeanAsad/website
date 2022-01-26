@@ -5,7 +5,7 @@
         "company": "DLC Tech",
         "date": "January 2017, First Professional Work",
         "icon": "work",
-        "description": "I managed to somehow get myself a software position when I was in my last semester of high school. At the time DLC was led by Mohamed AbdElTawab, my supervisors were Maged Shalaby and Sherif AbdEl Karim. I worked on two big projects when I was there. I started with a visualization dashboard that was used to visualize a large dataset containing numerous properties on platform usage from 60+ countries."
+        "description": "This my first professional software engineering experience. My supervisors were Maged Shalaby and Sherif AbdEl Karim. There I mainly worked on developing visualization dashboards, clustering algorithms, and building server-side applications in Django"
     },
     {
         "title": "Queen's University",
@@ -13,7 +13,7 @@
         "company": "Bachelor in Mathematics and Computer Engineering",
         "date": "September 2017, Moving to Canada",
         "icon": "travel",
-        "description": "After 17 eventful years in Egypt, I got an offer to study at Queen's university in Canada. At the time I was sure I was going to study Aerospace Engineering, but I took a linear algebra class in first year and decided to switch to a joint degree Queen's offers in Mathematics and Computer Engineering. "
+        "description": "After 17 eventful years in Egypt, I was offered two scholarships to study at Queen's University in Canada. I am currently in in my final year of Mathematics and Computer Engineering expected to graduate May 2022. "
     },
     {
         "title": "Lead Software Developer",
@@ -29,7 +29,7 @@
         "company": "Open Source",
         "date": "May 2020, My first major side project",
         "icon": "code",
-        "description": "In March 2019, Covid was beginning to become a problem in Canada and my university had just shut down. I started working on a project to track cases worldwide. It took me a few months to finish it, but I ended up creating a web application that does tracking and created a Python module that does disease spread simulations. By the time I finished in May, there were already tons of trackers out there, but my little website got a few thousand hits to it felt good to inform some people."
+        "description": "This is probably my biggest open source contribution so far. I built a worlwide Covid-19 statistics tracker along with a set of simulations that show the impact of safety measures against vaccine spread."
     },
     {
         "title": "Software Engineer",
@@ -37,15 +37,15 @@
         "company": "IBM Ltd",
         "date": "May 2020 - August 2021",
         "icon": "work",
-        "description": "IBM was my big break into the big tech world as a Software Engineer. It was a great learning experience technically and professionally. I worked on developing software features for the Watson Studio platform under the supervision of Lin Ju and Dejan Glozic. I owned one of their microservices where I overhauled a lot of the backend and worked regularly on fixing bugs and developing feature requests. I was also responsible for doing service integrations from other teams on Watson Studio. During my internship, I integrated 9 new services in Watson Studio. I worked on developing new pages and UI features for Watson Studio's new UI known as Projects 3.0. This included doing a lot front end development for the new UI and I created a reusable data panel module for my team. Additionally, I new foundations for bundle optimization and dependency sharing by adding Webpack 5 to my team's code base, introducing concepts such as code splitting, module fedaration, and treeshaking"
+        "description": "I worked as part of the Watson Studio Team led by Lin Ju and Dejan Glozic. It was an amazing experience and I grew a lot as a developer. I worked on multiple microservices as part of the Watson Studio architecture. My work involved mainly full-stack development. I also filed my first patent under IBM!"
     },
     {
-        "title": "Founder at Yasa",
+        "title": "Co-Founder and CTO at Yasa",
         "location": "Toronto, CA",
         "company": "Yasa Technologies Inc.",
         "date": "May 2020",
         "icon": "rocket",
-        "description": "Early 2020 I Co-Founded a company called Yasa "
+        "description": "Early 2020 I Co-Founded a company called Yasa. The goal was to democratize fitness for online users. We used computer vision to provide real time corrections for users performing exercises using on demand videos. We raised 20k last summer, and I led a team of three developers to develop our correction algorithm and platform. Unfortunately, we had to sunset the project due to numerous reasons. There will be more in the future for sure :) "
     },
     {
         "title": "First Patent",
@@ -53,7 +53,7 @@
         "company": "IBM Ltd.",
         "date": "July 2020",
         "icon": "scroll",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "When I was interning at IBM in 2020 I filed my first patent for finding a novel process to perform internationalization assessments on web applications using NLP. It never crossed my mind that I would be able to do something like that so early in my career, let alone on my first professional internship."
     },
     {
         "title": "Graduation?",
@@ -61,7 +61,7 @@
         "company": "Queen's University",
         "date": "May 2022",
         "icon": "grad",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": ""
     }
 
 ]

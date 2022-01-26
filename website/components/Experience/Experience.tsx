@@ -40,6 +40,30 @@ const timelineIcons = {
 const TimeLineElement: NextPage = (props: any) => {
     const { title, location, date, company, icon, description } = props;
     const iconElement = timelineIcons[icon as keyof typeof timelineIcons];
+    let accordion;
+    if (description && description.length > 1) {
+        accordion = (
+            <Accordion marginTop={3} allowMultiple>
+                <AccordionItem>
+                    {({ isExpanded }) => (
+                        <>
+                            <Text color="brand.white">
+                                <AccordionButton>
+                                    <Box flex="1" textAlign="left">
+                                        {isExpanded ? "Read Less" : "Read More"}
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                            </Text>
+                            <AccordionPanel pb={3}>
+                                {description}
+                            </AccordionPanel>
+                        </>
+                    )}
+                </AccordionItem>
+            </Accordion>
+        );
+    }
     return (
         <VerticalTimelineElement
             className={styles.experience}
@@ -89,25 +113,7 @@ const TimeLineElement: NextPage = (props: any) => {
             >
                 {location}
             </Heading>
-            <Accordion marginTop={3} allowMultiple>
-                <AccordionItem>
-                    {({ isExpanded }) => (
-                        <>
-                            <Text color="brand.white">
-                                <AccordionButton>
-                                    <Box flex="1" textAlign="left">
-                                        {isExpanded ? "Read Less" : "Read More"}
-                                    </Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                            </Text>
-                            <AccordionPanel pb={3}>
-                                {description}
-                            </AccordionPanel>
-                        </>
-                    )}
-                </AccordionItem>
-            </Accordion>
+            {accordion}
         </VerticalTimelineElement>
     );
 };

@@ -1,7 +1,6 @@
 import { MDXProvider } from "@mdx-js/react";
 import Image from "next/image";
 import styles from "../MarkdownFiles/markdown.module.scss";
-// import Test from "../MarkdownFiles/test.mdx";
 import dynamic from "next/dynamic";
 import { Spinner } from "@chakra-ui/react";
 
