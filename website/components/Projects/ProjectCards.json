@@ -1,6 +1,5 @@
-[
-    {
-        "id": "convergence-of-sgd",
+{
+    "convergence-of-sgd": {
         "icon": "document",
         "topic": "Mathematics",
         "title": "Convergence Rates of Stochastic Gradient Descent",
@@ -14,8 +13,7 @@
         "links": { "web": "pdf link", "github": "git" },
         "date": "April, 2021"
     },
-    {
-        "id": "covid-19-tracker",
+    "covid-19-tracker": {
         "icon": "code",
         "topic": "Open Source",
         "title": "Covid 19 World Project",
@@ -32,8 +30,8 @@
         },
         "date": "May, 2020"
     },
-    {
-        "id": "disease-simulation-module",
+
+    "disease-simulation-module": {
         "icon": "code",
         "topic": "Simulations",
         "title": "Stochastic Disease Spread Simulation Module",
@@ -46,11 +44,10 @@
         "date": "June, 2021"
     },
 
-    {
-        "id": "hamming-error-decoding",
+    "hamming-error-decoding": {
         "icon": "code",
         "topic": "Mathematics",
-        "title": "Hamming Error Decoding in Python",
+        "title": "Syndrome Error Decoding in Python",
         "tags": ["Coding Theory", "Python"],
         "acknowledgements": [
             { "name": "Fady Alajaji", "link": "https://mast.queensu.ca/~fady/" }
@@ -61,11 +58,23 @@
         },
         "date": "February, 2019"
     },
-    {
-        "id": "turnover-analysis",
+
+    "firespread-simulator": {
+        "icon": "code",
+        "topic": "Simulations",
+        "title": "Wildfire Spread Simulator",
+        "tags": ["Cellular Automaton", "Python", "Visualization"],
+        "acknowledgements": [],
+        "links": {
+            "web": "web",
+            "github": "https://github.com/AmeanAsad/Fire-Spread-Model"
+        },
+        "date": "March, 2019"
+    },
+    "turnover-analysis": {
         "icon": "code",
         "topic": "Machine Learning",
-        "title": "Turnover Analysis using Machine Learning",
+        "title": "Machine Learning in Organizations",
         "tags": ["Machine Learning", "Python", "Plotly"],
         "acknowledgements": [
             {
@@ -79,8 +88,7 @@
         },
         "date": "November, 2020"
     },
-    {
-        "id": "linear-optimization",
+    "linear-optimization": {
         "icon": "code",
         "topic": "Mathematics & Finance",
         "title": "Thrift: Financial Savings using Linear Optimization",
@@ -97,8 +105,8 @@
         },
         "date": "September, 2019"
     },
-    {
-        "id": "gaussian-elimination-solver",
+
+    "gaussian-elimination-solver": {
         "icon": "code",
         "topic": "Mathematics",
         "title": "Gaussian Elimination Module to Solve Linear Systems",
@@ -111,19 +119,5 @@
         "links": { "web": "web", "github": "git" },
         "tags": ["Linear Algebra", "Python"],
         "date": "March, 2018"
-    },
-    {
-        "id": "firespread-simulator",
-        "icon": "code",
-        "topic": "Simulations",
-        "title": "Wildfire Spread Simulator",
-        "tags": ["Cellular Automaton", "Python", "Visualization"],
-        "acknowledgements": [],
-        "links": {
-            "web": "web",
-            "github": "https://github.com/AmeanAsad/Fire-Spread-Model"
-        },
-        "date": "March, 2019"
     }
-]
-  
+}

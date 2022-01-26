@@ -1,6 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 // import projectsInfo from "./ProjectCards.json";
-import projectsInfo from "./ProjectCard2.json";
+import projectsInfo from "./ProjectCards.json";
 // import { ProjectCards } from "./ProjectTypes";
 import ProjectCard from "./ProjectCard";
 import { NextPage } from "next";

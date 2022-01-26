@@ -1,7 +1,7 @@
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
-import ProjectPage2 from "../../components/Projects/ProjectPage2";
+import ProjectPageComponent from "../../components/Projects/ProjectPage";
 import PageComponent from "../../components/PageComponent";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 
@@ -18,7 +18,7 @@ const ProjectPage: NextPage<pageProps> = (props) => {
     return (
         <PageComponent
             pageId="project-page"
-            Component={<ProjectPage2 {...props} />}
+            Component={<ProjectPageComponent {...props} />}
             noSideBar
         />
     );

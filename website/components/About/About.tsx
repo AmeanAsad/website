@@ -46,7 +46,7 @@ const AboutPage: NextPage = () => {
             <Heading marginBottom={8}> Hello! This is Amean Asad </Heading>
 
             <Flex direction={{ base: "column", md: "row" }}>
-                <Box margin={{ base: "auto", md: "0" }} minWidth={360} maxWidth={643}>
+                <Box margin={{ base: "auto", md: "0" }} minWidth={360} maxWidth={700}>
                     <Image
                         layout="intrinsic"
                         width={643}
