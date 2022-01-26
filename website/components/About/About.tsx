@@ -1,46 +1,82 @@
-import { Box, Divider, Flex, Heading } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, Text } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Image from "next/image";
-import svgCa from "../../public/test.svg";
 
 const AboutPage: NextPage = () => {
     const divider = (
-        <Divider marginTop={8} marginBottom={8} />
+        <Divider marginTop={5} marginBottom={3} />
+    );
+
+    const aboutMeText = (
+        <Text>
+            I moved to Canada 4 years ago from Egypt to study.
+            Currently, I am in my final year of Mathematics and Computer Engineering at
+            Queen&apos;s, graduating in May 2022 (hopefully). Last year I completed
+            a 16 month internship at IBM working as a Software Engineer as part of the
+            Watson Studio Core team. I also Co-Founded a startup that uses computer vision
+            to real time corrections for fitness users.
+        </Text>
+    );
+
+    const interests = (
+        <Text>
+            Im really interested in working on technology that helps progress society in
+            an ehtical, sustainable manner. I am always working on some sort of tech side
+            project that interests me and has a good learning value. I also
+            love to collaborate on projects when I get the
+            chance. Currently, I am learning about the topics of computer vision, blockchain,
+            computational neuroscience, and
+            geometric algebra. I like the open source aspect of blockchain technologies
+            and interested to work on a blockchain related project soon.
+            <br />
+            <br />
+            Outside of work, I like shawarma, standup, and playing football/soccer.
+        </Text>
+    );
+
+    const currentWork = (
+        <Text>
+            Currently I am working on a thesis group project that involves using deep neural nets
+            to estimate the function of dendritic tree in cortical neurons. I am also experimenting
+            with handwriting recognition to generate Latex documents from my class notes.
+        </Text>
     );
     return (
         <Box p={5}>
             <Heading marginBottom={8}> Hello! This is Amean Asad </Heading>
-            <Image height="32px" width="32px" src={svgCa} />
-            <video controls autoPlay loop style={{ width: "500px" }}>
-                <source src="https://f004.backblazeb2.com/file/websitev1/Agent-0.5-14-1.9.mp4" />
-            </video>
+
             <Flex direction={{ base: "column", md: "row" }}>
-                <Box margin={{ base: "auto", md: "0" }} maxWidth="480px">
+                <Box margin={{ base: "auto", md: "0" }} minWidth={360} maxWidth={643}>
                     <Image
                         layout="intrinsic"
-                        width={480}
-                        height={700}
-                        src="https://www.salk.edu/wp-content/uploads/2019/06/Patrick-Hsu-1500.jpg"
+                        width={643}
+                        height={800}
+                        src="https://f004.backblazeb2.com/file/websitev1/portrait.jpg"
+                        quality={100}
                     />
 
                 </Box>
 
-                <Box paddingLeft={{ base: 0, md: 8 }}>
+                <Box maxWidth="800px" paddingLeft={{ base: 0, md: 8 }}>
                     <Heading>
                         About Me
                     </Heading>
+                    {aboutMeText}
 
-                    Some descriptive text about meself.
+                    {divider}
+
+                    <Heading> Interests </Heading>
+                    {interests}
+
+                    {divider}
+
+                    <Heading> Current Work</Heading>
+                    {currentWork}
+
                 </Box>
+
             </Flex>
-            {divider}
-            <Box>
-                <Heading> Interests </Heading>
-            </Box>
-            {divider}
-            <Box>
-                <Heading> What I am working on now</Heading>
-            </Box>
+
         </Box>
     );
 };
