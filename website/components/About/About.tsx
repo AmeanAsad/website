@@ -8,7 +8,7 @@ const AboutPage: NextPage = () => {
     );
 
     const aboutMeText = (
-        <Text>
+        <Text color="brand.darkBlue">
             I moved to Canada five years ago from Egypt to study at Queen&apos;s University.
             Currently I am in my final year of Mathematics and Computer Engineering at
             Queen&apos;s, graduating in May 2022 (hopefully). Last year I completed
@@ -19,7 +19,7 @@ const AboutPage: NextPage = () => {
     );
 
     const interests = (
-        <Text>
+        <Text color="brand.darkBlue">
             Im really interested in working on technology that helps progress society in
             an ehtical and sustainable manner. I am always working on some sort of tech side
             project that interests me and has a good learning value. I also
@@ -35,15 +35,15 @@ const AboutPage: NextPage = () => {
     );
 
     const currentWork = (
-        <Text>
+        <Text color="brand.darkBlue">
             Currently I am working on a thesis group project that involves using deep neural nets
             to estimate the function of dendritic trees in cortical neurons. I am also experimenting
             with handwriting recognition to generate Latex documents from my class notes.
         </Text>
     );
     return (
-        <Box p={5}>
-            <Heading marginBottom={8}> Hello! I am Amean Asad </Heading>
+        <Box backgroundColor="brand.white" p={5}>
+            <Heading size="2xl" color="brand.mediumBlue" marginBottom={8}> Hello! I am Amean Asad </Heading>
 
             <Flex direction={{ base: "column", lg: "row" }}>
                 <Box margin={{ base: "auto", lg: "0" }} minWidth={360} maxWidth={700}>
@@ -58,19 +58,19 @@ const AboutPage: NextPage = () => {
                 </Box>
 
                 <Box maxWidth="800px" paddingLeft={{ base: 0, md: 8 }}>
-                    <Heading>
+                    <Heading color="brand.mediumBlue">
                         About Me
                     </Heading>
                     {aboutMeText}
 
                     {divider}
 
-                    <Heading> Interests </Heading>
+                    <Heading color="brand.mediumBlue"> Interests </Heading>
                     {interests}
 
                     {divider}
 
-                    <Heading> Current Work</Heading>
+                    <Heading color="brand.mediumBlue"> Current Work</Heading>
                     {currentWork}
 
                 </Box>

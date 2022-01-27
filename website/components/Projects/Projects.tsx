@@ -18,7 +18,7 @@ const Projects: NextPage = () => {
 
     return (
         <Box p="3%" height="100vh" width="100%" bg="brand.white">
-            <Heading color="brand.darkBlue" fontSize="5xl">
+            <Heading color="brand.mediumBlue" fontSize="5xl">
                 Notable Projects
             </Heading>
             <Flex
