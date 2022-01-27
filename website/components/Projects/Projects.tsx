@@ -17,7 +17,7 @@ const Projects: NextPage = () => {
     });
 
     return (
-        <Box p="3%" height="100vh" width="100%" bg="brand.white">
+        <Box p="3%" pr="0" height="100vh" width="100%" bg="brand.white">
             <Heading color="brand.mediumBlue" fontSize="5xl">
                 Notable Projects
             </Heading>
