@@ -43,7 +43,7 @@ const AboutPage: NextPage = () => {
     );
     return (
         <Box p={5}>
-            <Heading marginBottom={8}> Hello! This is Amean Asad </Heading>
+            <Heading marginBottom={8}> Hello! I am Amean Asad </Heading>
 
             <Flex direction={{ base: "column", lg: "row" }}>
                 <Box margin={{ base: "auto", lg: "0" }} minWidth={360} maxWidth={700}>
