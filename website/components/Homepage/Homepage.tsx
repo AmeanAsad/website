@@ -27,7 +27,7 @@ const HomePage: NextPage = () => {
 
                 <Flex
                     width="fit-content"
-                    top={{ md: "40%", base: "0" }}
+                    top={{ md: "40%", base: "40%", sm: "0" }}
                     transform={{ md: "translateY(-50%)", base: "0" }}
                     margin="auto"
                     zIndex="1000"
@@ -38,7 +38,7 @@ const HomePage: NextPage = () => {
                         <Heading
                             pointerEvents="none"
                             textAlign="center"
-                            fontSize="16vmin"
+                            fontSize={{ base: "25vmin", sm: "17vmin" }}
                             color="brand.white"
                         >
                             Amean
@@ -47,7 +47,7 @@ const HomePage: NextPage = () => {
                         <Heading
                             pointerEvents="none"
                             textAlign="center"
-                            fontSize="16vmin"
+                            fontSize={{ base: "25vmin", sm: "17vmin" }}
                             color="brand.white"
                         >
                             Asad
@@ -61,6 +61,7 @@ const HomePage: NextPage = () => {
                     position="relative"
                     width="fit-content"
                     margin="auto"
+                    visibility={{ base: "hidden", sm: "visible" }}
                     top={{ base: "20%", sm: "35%" }}
                     transform={{ md: "translateY(-55%)", base: "translateY(-60%)" }}
 
