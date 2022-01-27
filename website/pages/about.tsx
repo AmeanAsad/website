@@ -2,13 +2,23 @@ import AboutPage from "../components/About/About";
 import PageComponent from "../components/PageComponent";
 import React from "react";
 import type { NextPage } from "next";
+import Head from "next/head";
 
 const About: NextPage = () => {
     return (
-        <PageComponent
-            pageId="about"
-            Component={<AboutPage />}
-        />
+        <>
+            <Head>
+                <title>About</title>
+                <meta
+                    name="description"
+                    content="Amean Asad general information"
+                />
+            </Head>
+            <PageComponent
+                pageId="about"
+                Component={<AboutPage />}
+            />
+        </>
     );
 };
 export default About;

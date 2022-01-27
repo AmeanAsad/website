@@ -16,7 +16,7 @@ import {
 import { ImMenu } from "react-icons/im";
 import { NextPage } from "next";
 import Link from "next/link";
-import svgCa from "../../public/test.svg";
+import svgCa from "../../public/icon.svg";
 import Image from "next/image";
 
 interface LinkItemProps {
@@ -89,7 +89,7 @@ const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
                         onClick={onClose}
                     />
                     <Box marginTop={2} margin="auto">
-                        <Image src={svgCa} height="70px" width="70px" />
+                        <Image alt="Amean Asad Logo" src={svgCa} height="70px" width="70px" />
                     </Box>
 
                 </Flex>

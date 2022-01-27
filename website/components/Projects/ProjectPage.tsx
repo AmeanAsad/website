@@ -63,6 +63,7 @@ const ImageSrc = ({ src, caption }: mediaProps) => {
                     // layout="responsive"
                     objectFit="contain"
                     width="600px"
+                    alt={caption}
                     height="400px"
                     src={src}
                     quality={100}

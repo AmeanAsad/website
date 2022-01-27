@@ -143,6 +143,7 @@ const TestimonialCard: React.FC = () => {
                     <Avatar
                         src={avatar}
                         size="xl"
+                        description={name}
                         loading="eager"
                         alignSelf="center"
                         m={{ base: "0 0 20px 0", md: "0 0 0 10px" }}

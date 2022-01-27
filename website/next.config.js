@@ -6,7 +6,10 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 module.exports = withBundleAnalyzer({
     reactStrictMode: true,
-
+    i18n: {
+        locales: ["en"],
+        defaultLocale: "en",
+      },
     images: {
         domains: ["www.salk.edu", "f004.backblazeb2.com"],
     },

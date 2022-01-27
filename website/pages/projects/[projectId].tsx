@@ -4,10 +4,12 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import ProjectPageComponent from "../../components/Projects/ProjectPage";
 import PageComponent from "../../components/PageComponent";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
+import projectInfo from "../../components/Projects/ProjectCards.json";
 
 // Server-Side Imports -- cannot be used in ProjectPage component
 import fs from "fs";
 import path from "path";
+import Head from "next/head";
 
 interface pageProps {
     projectId: string;
@@ -15,12 +17,24 @@ interface pageProps {
 }
 
 const ProjectPage: NextPage<pageProps> = (props) => {
+    const projectId = props && props.projectId;
+    const project = projectInfo[projectId as keyof typeof projectInfo];
+
     return (
-        <PageComponent
-            pageId="project-page"
-            Component={<ProjectPageComponent {...props} />}
-            noSideBar
-        />
+        <>
+            <Head>
+                <title>{project.title}</title>
+                <meta
+                    name="description"
+                    content={`Amean Asad project information for ${project.title}`}
+                />
+            </Head>
+            <PageComponent
+                pageId="project-page"
+                Component={<ProjectPageComponent {...props} />}
+                noSideBar
+            />
+        </>
     );
 };
 
