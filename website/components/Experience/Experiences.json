@@ -29,7 +29,7 @@
         "company": "Open Source",
         "date": "May 2020, My first major side project",
         "icon": "code",
-        "description": "This is probably my biggest open source contribution so far. I built a worlwide Covid-19 statistics tracker along with a set of simulations that show the impact of safety measures against vaccine spread."
+        "description": "This is probably my biggest open source contribution so far. I built a worldwide Covid-19 statistics tracker along with a set of simulations that show the impact of safety measures against disease spread."
     },
     {
         "title": "Software Engineer",
@@ -45,7 +45,7 @@
         "company": "Yasa Technologies Inc.",
         "date": "May 2020",
         "icon": "rocket",
-        "description": "Early 2020 I Co-Founded a company called Yasa. The goal was to democratize fitness for online users. We used computer vision to provide real time corrections for users performing exercises using on demand videos. We raised 20k last summer, and I led a team of three developers to develop our correction algorithm and platform. Unfortunately, we had to sunset the project due to numerous reasons. There will be more in the future for sure :) "
+        "description": "Early 2020 I Co-Founded a company called Yasa. The goal was to democratize personalized fitness for online users. We used computer vision to provide real time corrections for users performing exercises using on demand videos. We raised 20k last summer, and I led a team of three engineers to develop our correction algorithm and platform. Unfortunately, we had to sunset the project due to numerous reasons. There will be more in the future for sure :) "
     },
     {
         "title": "First Patent",

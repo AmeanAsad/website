@@ -9,19 +9,19 @@ const AboutPage: NextPage = () => {
 
     const aboutMeText = (
         <Text>
-            I moved to Canada 4 years ago from Egypt to study.
-            Currently, I am in my final year of Mathematics and Computer Engineering at
+            I moved to Canada five years ago from Egypt to study at Queen&apos;s University.
+            Currently I am in my final year of Mathematics and Computer Engineering at
             Queen&apos;s, graduating in May 2022 (hopefully). Last year I completed
             a 16 month internship at IBM working as a Software Engineer as part of the
-            Watson Studio Core team. I also Co-Founded a startup that uses computer vision
-            to real time corrections for fitness users.
+            Watson Studio Core team. I also Co-founded a computer vision startup that aimed
+            to democratize peronsalized fitness for online users.
         </Text>
     );
 
     const interests = (
         <Text>
             Im really interested in working on technology that helps progress society in
-            an ehtical, sustainable manner. I am always working on some sort of tech side
+            an ehtical and sustainable manner. I am always working on some sort of tech side
             project that interests me and has a good learning value. I also
             love to collaborate on projects when I get the
             chance. Currently, I am learning about the topics of computer vision, blockchain,
