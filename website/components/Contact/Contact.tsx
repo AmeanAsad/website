@@ -99,6 +99,11 @@ const Contact = () => {
                         </Button>
                         <Box bg="brand.mediumBlue" borderRadius="sm" p={3}>
                             <Box m={8} color="brand.white">
+                                <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+                                    <input type="text" name="name" />
+                                    <input type="email" name="email" />
+                                    <textarea name="message" />
+                                </form>
                                 <VStack spacing={5}>
                                     <form name="contact" method="POST" data-netlify="true">
                                         <input type="hidden" name="contact" value="contact" />
@@ -129,6 +134,7 @@ const Contact = () => {
                                             <FormLabel>Message</FormLabel>
                                             <Textarea
                                                 rounded="sm"
+                                                name="message"
                                                 type="text"
                                                 borderColor="gray.300"
                                                 _hover={{
