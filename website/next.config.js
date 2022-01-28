@@ -11,8 +11,9 @@ module.exports = withBundleAnalyzer({
         defaultLocale: "en",
       },
     images: {
-        domains: ["www.salk.edu", "f004.backblazeb2.com"],
+        domains: ["f004.backblazeb2.com"],
     },
+    target: "serverless",
 
     webpack: (config, options) => {
         config.experiments = {
