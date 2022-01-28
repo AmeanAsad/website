@@ -101,6 +101,7 @@ const Contact = () => {
                             <Box m={8} color="brand.white">
                                 <VStack spacing={5}>
                                     <form name="contact" method="POST" data-netlify="true">
+                                        <input type="hidden" name="contact" value="contact" />
                                         <FormControl isRequired id="name">
                                             <FormLabel>Your Name</FormLabel>
                                             <InputGroup borderColor="#E0E1E7">
@@ -113,7 +114,7 @@ const Contact = () => {
                                                 <Input maxWidth="300px" rounded="sm" name="name" type="text" size="md" />
                                             </InputGroup>
                                         </FormControl>
-                                        <FormControl id="name">
+                                        <FormControl id="email">
                                             <FormLabel> Your Email </FormLabel>
                                             <InputGroup maxWidth="300px" border="sm" borderColor="#E0E1E7">
                                                 <InputLeftElement
@@ -124,7 +125,7 @@ const Contact = () => {
                                                 <Input name="email" rounded="sm" type="email" size="md" />
                                             </InputGroup>
                                         </FormControl>
-                                        <FormControl isRequired id="name">
+                                        <FormControl isRequired id="message">
                                             <FormLabel>Message</FormLabel>
                                             <Textarea
                                                 rounded="sm"
@@ -136,10 +137,10 @@ const Contact = () => {
                                                 placeholder="Insert Message"
                                             />
                                         </FormControl>
-                                        <FormControl id="name" float="right">
+                                        <FormControl id="submit" float="right">
                                             <Button
                                                 variant="solid"
-                                                rounded="none"
+                                                rounded="sm"
                                                 type="submit"
                                                 bg="brand.red"
                                                 color="brand.white"
