@@ -105,8 +105,8 @@ const Contact = () => {
                                     <textarea name="message" />
                                 </form>
                                 <VStack spacing={5}>
-                                    <form name="contact" method="POST" data-netlify="true">
-                                        <input type="hidden" name="contact" value="contact" />
+                                    <form name="contact" method="POST" action="/" data-netlify="true">
+                                        <input type="hidden" name="form-name" value="contact" />
                                         <FormControl isRequired id="name">
                                             <FormLabel>Your Name</FormLabel>
                                             <InputGroup borderColor="#E0E1E7">
