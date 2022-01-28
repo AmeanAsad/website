@@ -31,7 +31,7 @@ const LinkItems: Array<LinkItemProps> = [
     { name: "Projects", icon: null, href: "/projects", id: "projects", },
     { name: "Experience", icon: null, href: "/experience", id: "experience", },
     { name: "Contact", icon: null, href: "/contact", id: "contact", },
-    { name: "Blog", icon: null, href: "/blog", id: "blog", },
+    { name: "Articles", icon: null, href: "/articles", id: "articles", },
 ];
 
 interface NavItemProps extends FlexProps {

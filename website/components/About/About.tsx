@@ -1,10 +1,57 @@
-import { Box, Divider, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, HStack, IconButton, Link, Text } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Image from "next/image";
+import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 const AboutPage: NextPage = () => {
     const divider = (
         <Divider marginTop={5} marginBottom={3} />
+    );
+
+    const social = (
+        <HStack
+            mt={{ lg: 2, md: 2 }}
+            spacing={5}
+            mb={4}
+            alignItems="flex-start"
+
+        >
+            <Link isExternal href="https://www.linkedin.com/in/ameanasad/">
+                <IconButton
+                    aria-label="LinkedIn Link"
+                    variant="ghost"
+                    size="lg"
+                    color="brand.mediumBlue"
+                    isRound
+                    _hover={{ bg: "brand.red", color: "brand.white" }}
+                    icon={<BsLinkedin size="28px" />}
+                />
+            </Link>
+            <Link isExternal href="https://github.com/AmeanAsad">
+
+                <IconButton
+                    aria-label="Github Link"
+                    variant="ghost"
+                    color="brand.mediumBlue"
+                    size="lg"
+                    isRound
+                    _hover={{ bg: "brand.red", color: "brand.white" }}
+                    icon={<BsGithub size="28px" />}
+                />
+            </Link>
+            <Link isExternal href="https://twitter.com/ameanasad1">
+
+                <IconButton
+                    aria-label="Twitter Link"
+                    variant="ghost"
+                    size="lg"
+                    color="brand.mediumBlue"
+                    isRound
+                    _hover={{ bg: "brand.red", color: "brand.white" }}
+                    icon={<BsTwitter size="28px" />}
+                />
+            </Link>
+        </HStack>
     );
 
     const aboutMeText = (
@@ -53,11 +100,14 @@ const AboutPage: NextPage = () => {
                         height={700}
                         src="https://f004.backblazeb2.com/file/websitev1/portrait.jpg"
                         quality={100}
+                        loading="eager"
                     />
 
                 </Box>
 
                 <Box maxWidth="800px" paddingLeft={{ base: 0, md: 8 }}>
+                    {social}
+
                     <Heading color="brand.mediumBlue">
                         About Me
                     </Heading>

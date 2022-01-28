@@ -9,6 +9,7 @@ import {
     VStack,
     HStack,
     FormControl,
+    Link,
     FormLabel,
     Input,
     InputGroup,
@@ -18,10 +19,9 @@ import {
 } from "@chakra-ui/react";
 import {
     MdEmail,
-    MdFacebook,
     MdOutlineEmail,
 } from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
+import { BsGithub, BsPerson, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 const info = {
     email: "amean.asad@queensu.ca",
@@ -62,30 +62,38 @@ const Contact = () => {
                             px={5}
                             alignItems="flex-start"
                         >
-                            <IconButton
-                                aria-label="facebook"
-                                variant="ghost"
-                                size="lg"
-                                isRound
-                                _hover={{ bg: "brand.red" }}
-                                icon={<MdFacebook size="28px" />}
-                            />
-                            <IconButton
-                                aria-label="github"
-                                variant="ghost"
-                                size="lg"
-                                isRound
-                                _hover={{ bg: "brand.red" }}
-                                icon={<BsGithub size="28px" />}
-                            />
-                            <IconButton
-                                aria-label="discord"
-                                variant="ghost"
-                                size="lg"
-                                isRound
-                                _hover={{ bg: "brand.red" }}
-                                icon={<BsDiscord size="28px" />}
-                            />
+                            <Link isExternal href="https://www.linkedin.com/in/ameanasad/">
+                                <IconButton
+                                    aria-label="LinkedIn Link"
+                                    variant="ghost"
+                                    size="lg"
+                                    isRound
+                                    _hover={{ bg: "brand.red" }}
+                                    icon={<BsLinkedin size="28px" />}
+                                />
+                            </Link>
+                            <Link isExternal href="https://github.com/AmeanAsad">
+
+                                <IconButton
+                                    aria-label="Github Link"
+                                    variant="ghost"
+                                    size="lg"
+                                    isRound
+                                    _hover={{ bg: "brand.red" }}
+                                    icon={<BsGithub size="28px" />}
+                                />
+                            </Link>
+                            <Link isExternal href="https://twitter.com/ameanasad1">
+
+                                <IconButton
+                                    aria-label="Twitter Link"
+                                    variant="ghost"
+                                    size="lg"
+                                    isRound
+                                    _hover={{ bg: "brand.red" }}
+                                    icon={<BsTwitter size="28px" />}
+                                />
+                            </Link>
                         </HStack>
                         <Button
                             size="md"
@@ -148,6 +156,7 @@ const Contact = () => {
                                                 variant="solid"
                                                 rounded="sm"
                                                 type="submit"
+                                                marginTop={3}
                                                 bg="brand.red"
                                                 color="brand.white"
                                                 _hover={{}}
