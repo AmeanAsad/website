@@ -14,7 +14,7 @@ const ArticlesPage: NextPage = () => {
                     content="Amean Asad personal website articles"
                 />
             </Head>
-            <PageComponent pageId="articles" noSideBar Component={<Articles />} />
+            <PageComponent pageId="articles" Component={<Articles />} />
         </>
     );
 };
