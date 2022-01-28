@@ -100,7 +100,7 @@ const Contact = () => {
                         <Box bg="brand.mediumBlue" borderRadius="sm" p={3}>
                             <Box m={8} color="brand.white">
                                 <VStack spacing={5}>
-                                    <form name="contact" action="/" method="POST" data-netlify="true">
+                                    <form name="contact" method="POST" data-netlify="true">
                                         <FormControl isRequired id="name">
                                             <FormLabel>Your Name</FormLabel>
                                             <InputGroup borderColor="#E0E1E7">
@@ -110,7 +110,7 @@ const Contact = () => {
                                                     <BsPerson color="brand.red" />
                                                 </InputLeftElement>
 
-                                                <Input maxWidth="300px" rounded="sm" type="text" size="md" />
+                                                <Input maxWidth="300px" rounded="sm" name="name" type="text" size="md" />
                                             </InputGroup>
                                         </FormControl>
                                         <FormControl id="name">
@@ -121,13 +121,14 @@ const Contact = () => {
                                                 >
                                                     <MdOutlineEmail color="brand.red" />
                                                 </InputLeftElement>
-                                                <Input rounded="sm" type="text" size="md" />
+                                                <Input name="email" rounded="sm" type="email" size="md" />
                                             </InputGroup>
                                         </FormControl>
                                         <FormControl isRequired id="name">
                                             <FormLabel>Message</FormLabel>
                                             <Textarea
                                                 rounded="sm"
+                                                type="text"
                                                 borderColor="gray.300"
                                                 _hover={{
                                                     borderRadius: "gray.300",
@@ -139,9 +140,9 @@ const Contact = () => {
                                             <Button
                                                 variant="solid"
                                                 rounded="none"
+                                                type="submit"
                                                 bg="brand.red"
                                                 color="brand.white"
-                                                type="submit"
                                                 _hover={{}}
                                             >
                                                 <Text
