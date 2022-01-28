@@ -100,56 +100,59 @@ const Contact = () => {
                         <Box bg="brand.mediumBlue" borderRadius="sm" p={3}>
                             <Box m={8} color="brand.white">
                                 <VStack spacing={5}>
-                                    <FormControl isRequired id="name">
-                                        <FormLabel>Your Name</FormLabel>
-                                        <InputGroup borderColor="#E0E1E7">
-                                            <InputLeftElement
-                                                pointerEvents="none"
-                                            >
-                                                <BsPerson color="brand.red" />
-                                            </InputLeftElement>
+                                    <form name="contact" action="/" method="POST" data-netlify="true">
+                                        <FormControl isRequired id="name">
+                                            <FormLabel>Your Name</FormLabel>
+                                            <InputGroup borderColor="#E0E1E7">
+                                                <InputLeftElement
+                                                    pointerEvents="none"
+                                                >
+                                                    <BsPerson color="brand.red" />
+                                                </InputLeftElement>
 
-                                            <Input maxWidth="300px" rounded="sm" type="text" size="md" />
-                                        </InputGroup>
-                                    </FormControl>
-                                    <FormControl id="name">
-                                        <FormLabel> Your Email </FormLabel>
-                                        <InputGroup maxWidth="300px" border="sm" borderColor="#E0E1E7">
-                                            <InputLeftElement
-                                                pointerEvents="none"
+                                                <Input maxWidth="300px" rounded="sm" type="text" size="md" />
+                                            </InputGroup>
+                                        </FormControl>
+                                        <FormControl id="name">
+                                            <FormLabel> Your Email </FormLabel>
+                                            <InputGroup maxWidth="300px" border="sm" borderColor="#E0E1E7">
+                                                <InputLeftElement
+                                                    pointerEvents="none"
+                                                >
+                                                    <MdOutlineEmail color="brand.red" />
+                                                </InputLeftElement>
+                                                <Input rounded="sm" type="text" size="md" />
+                                            </InputGroup>
+                                        </FormControl>
+                                        <FormControl isRequired id="name">
+                                            <FormLabel>Message</FormLabel>
+                                            <Textarea
+                                                rounded="sm"
+                                                borderColor="gray.300"
+                                                _hover={{
+                                                    borderRadius: "gray.300",
+                                                }}
+                                                placeholder="Insert Message"
+                                            />
+                                        </FormControl>
+                                        <FormControl id="name" float="right">
+                                            <Button
+                                                variant="solid"
+                                                rounded="none"
+                                                bg="brand.red"
+                                                color="brand.white"
+                                                type="submit"
+                                                _hover={{}}
                                             >
-                                                <MdOutlineEmail color="brand.red" />
-                                            </InputLeftElement>
-                                            <Input rounded="sm" type="text" size="md" />
-                                        </InputGroup>
-                                    </FormControl>
-                                    <FormControl isRequired id="name">
-                                        <FormLabel>Message</FormLabel>
-                                        <Textarea
-                                            rounded="sm"
-                                            borderColor="gray.300"
-                                            _hover={{
-                                                borderRadius: "gray.300",
-                                            }}
-                                            placeholder="Insert Message"
-                                        />
-                                    </FormControl>
-                                    <FormControl id="name" float="right">
-                                        <Button
-                                            variant="solid"
-                                            rounded="none"
-                                            bg="brand.red"
-                                            color="brand.white"
-                                            _hover={{}}
-                                        >
-                                            <Text
-                                                fontSize={17}
-                                                fontWeight={1}
-                                            >
+                                                <Text
+                                                    fontSize={17}
+                                                    fontWeight={1}
+                                                >
                                                 Send Message
-                                            </Text>
-                                        </Button>
-                                    </FormControl>
+                                                </Text>
+                                            </Button>
+                                        </FormControl>
+                                    </form>
                                 </VStack>
                             </Box>
                         </Box>
