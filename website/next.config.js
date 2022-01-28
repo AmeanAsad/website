@@ -13,8 +13,6 @@ module.exports = withBundleAnalyzer({
     images: {
         domains: ["f004.backblazeb2.com"],
     },
-    target: "serverless",
-
     webpack: (config, options) => {
         config.experiments = {
             topLevelAwait: true,
