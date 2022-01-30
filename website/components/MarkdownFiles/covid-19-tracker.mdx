@@ -15,18 +15,18 @@
 
  I started working on this in March 2019, when my university just shutdown
  due to the first cases of Covid-19 in Canada. My plan was to create a comprehensive worldwide tracker
- for cases using an interactive map. In early May I was ready to publish a version of this project that
- included everything but the simulations. However, by that time there had been already tons of other trackers
- that have been developed and published, many with significantly higher quality than mine. In some sense, 
- I felt that my project was useless because it offered nothing new, so I decided to add a simulation section
- to offer something new with my website at the time. I saw that a lot of informational Covid-19 websites
+ for cases around the world using an interactive map. In early May I was ready to publish a version of this project that
+ included everything but the simulations. However, by that time thre was already tons of other trackers
+ that have been developed and published. In some sense, 
+ I felt that my project was not as impactful because it offered nothing new, so I decided to add a simulation section. 
+ I saw that a lot of informational Covid-19 websites
  do mention the importance of certain measures at mitigating disease spread, but none really (at least from
  what I came across at the time) provided a visual explanation of why these measures work so well.
  Even though I developed the simulations, I was very surprised with how revealing the results were and it 
  certainly made me more meticulous with the preventative measures I took towards the pandemic. 
 
- The site gained a few thousand views and reached a bunch of countries around the world according to my 
- Google Analytics dashboard. I had a few hunder reoccuring visitors, so it made me happy to know that 
+ The site gained a thousands of views and reached a bunch of countries around the world according to my 
+ analytics dashboard. It did feel good to know that 
  I provided useful information to someone around the world. After a year when traffic really dwindeled,
  I decided to stop paying for the original domain, however the project is still hosted on Heroku. 
 
@@ -44,7 +44,7 @@ Here is the tech stack for the website:
 - Heroku for Deployment
 
 I was already familiar with React, Django, and Heroku Deployment when I started this project.
-D3 was the most time-consuming/difficult to learn. What I wanted to do with my map visualization
+D3 was the most time-consuming/difficult to implement. What I wanted to do with my map visualization
 was really specific so there was not a ton of examples to build off of. It involved a lot of geometry and
 projection calculations so it was a lot of time spent to get the right numbers. 
 
@@ -55,49 +55,52 @@ as the React index file. I also had to point Django to the React build files, an
 directory so Django can read it.
 
 Design was also hard. Even tough I was using a component library, I found design to be really difficult to make
-things look professional and visually appealing. I still think the published website design was not great, but 
+things look professional and visually appealing. I still think the published website design was not ideal, but 
 it was good enough given the time I had to finish it.
 
 Finally, the simulations were a ton of work. However, that on its own was a project, so I'll leave the details
-for that out of this post.
+for that out of this post. You can read about the simulations [Here](https://ameanasad.xyz/projects/disease-simulation-module).
 
 
 ## Takeaways and Mistakes:
 
-I considered this project as my first major intentional Open Source contribution. I had good intentions of wanting
-to provide useful information to people as well as open sourcing my code, but my execution was a bit naive which 
-really reduced the potential impact of my work. I should not have worked on something like this alone. I was 
-way too slow to publish this and also working alone probably slowed down my learning rate by a lot. If I were 
-to do this again now, I would try to find an existing open source project or group up with a bunch of developers who
-have the same goals in mind to build something like this. 
+I considered this project as my biggest Open Source contribution. I had good intentions of wanting
+to provide useful information to people as well as open sourcing my code, but if I would do this again I woud 
+have a totally different approach. Mainly,  I should not have worked on something like this alone. I was 
+way a bit slow to publish this because I was working alone. In the future, I would try to find an existing open source project 
+or group up with a bunch of developers who have the same goals in mind to build something like this. 
 
 The project was a great learning opporunity and it felt great to see some interaction from different communities with 
 my website. 
 
 ### Some Technical Takeaways:
 
-- I didn't really know about bundle optimization at the time. I added too many assets in my source files
-and it really bloated up the final size of my website. I good time trying to figure out why Heroku was
-not accepting my 500mb deployment while I had my animation videos included in the source files. Not 
-my brightest moment. 
+- I was not well versed on bundle optimization at the time. I added too many assets in my source files
+and it really bloated up the final size of my website. I also did not have a way to cache my assets 
+which slowed down my simulation page a lot. Now I know better to use some storage service to host 
+static files. 
+
 - Combining React and Django under one app saved me money but it was a lot of development pain. It was my first
 time working with webpack and it was such an unecessary modification given how much time it took me to setup. 
 It also made the deployment more complicated and also contributed to making my deployed site very large. 
+
 - Since I used React, my content was loaded through client side rendering which probably
 significantly impacted my SEO. I should have used server side rendering or static rendering (with interval updates) 
 for the website since the data only updated a few times a day.
-- I really underestimated the importance of design in making important information look presentable. I tried 
-to learn some design skills but it was not nearly enough to make things look as good as I wanted them to be. 
+
+- This project really made me appreciate website design as a developer. Design was one of the hardest tasks
+to implement and learn during this project.  
+
 - I had some code formatting plugins to help my code looking clean but I did not have any code quality 
-plugins (eg. Eslint) so I have a lot of full on tortellini code in a bunch of places in my repo. My 
-code quality was not great at all and it made it really annoying to make edits after sometime. 
+plugins (eg. Eslint) so I have a lot of full on tortellini code in a bunch of places in my repo. This
+made it really annoying to make edits later on. I have since learned to use eslint and learned Typescript.  
 
 
 
 ## Status of this Project
 
 I have sunsetted this project after site traffic really decreased after a year or so. I still have the website
-hosted on Heroku and the repository on my website. The state of the code is really dire and I do not plan to
-maintain it moving forward. There are some useful pieces of code that I might refactor for later projects
+hosted on Heroku and the repository on my website. I am not planning to maintain the code moving 
+forward. There are some useful pieces of code that I might refactor for later projects
 such as the map visualizations, the dashboard, and the search functionality.
 
