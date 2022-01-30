@@ -11,10 +11,10 @@
  to get some results. I wrote a module that simulates a bunch of nodes
  that move randomly inside a confined space. I assigned values to speed of movement
  , probability of infection, radius of infection, etc. that I tried my best to estimate
- from doing some research. The program then simulates disease spread until all nodes 
- contact the disease where there are 4 possible states to a node at a given time:
- infected, diseases, recovered, susceptible. Obviously, this is a very simple model of disease spread, but I
- intended for this module to be something small and very easy to use to produce some 
+ from doing some research. The program then simulates disease spread until the infected 
+ number of nodes reach zero where there are 4 possible states to a node at a given time:
+ infected, diseased, recovered, susceptible. Obviously, this is a simple model of disease spread, but I
+ intended for this module to be something small and easy to use to produce some 
  meaningful simulations.
 
  ## Technical Information
@@ -30,8 +30,8 @@
  the pandemic data so I can use a front-end animation library such as D3.js to create 
  the animations on the client-side. The idea was to run the pandemic module on a server
  were users can create there own simulations and the data would be returned through a 
- REST API were a client-side animation library does the work. I ran into some performance
- issues attempting to run each users' requested animation on 7$ hobby server. I also wanted
+ REST API where a client-side animation library does the work. I ran into some performance
+ issues attempting to run each users' requested animation on my 7$ Heroku hobby server. I also wanted
  to couple the animations with the actual simulation module so I just genereated all the
  animations in Python and exported them as video files.
 
