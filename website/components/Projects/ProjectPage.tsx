@@ -76,17 +76,21 @@ const ImageSrc = ({ src, caption }: mediaProps) => {
 
 const PDF = ({ src }: mediaProps) => {
     return (
-        <Box position="relative" width="100%" height="100vh">
-
-            <object
-                data={src}
-                style={{ position: "absolute" }}
-                width="100%"
-                height="100%"
-                type="application/pdf"
-                aria-label="Pdf Document"
-            />
-        </Box>
+        <>
+            <Link isExternal href={src}>
+                <Text paddingBottom={6}> This is the direct link to the PDF of the paper</Text>
+            </Link>
+            <Box visibility={{ base: "hidden", lg: "visible" }} position="relative" width="100%" height="100vh">
+                <object
+                    data={src}
+                    style={{ position: "absolute" }}
+                    width="100%"
+                    height="100%"
+                    type="application/pdf"
+                    aria-label="Pdf Document"
+                />
+            </Box>
+        </>
     );
 };
 
