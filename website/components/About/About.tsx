@@ -11,9 +11,11 @@ const AboutPage: NextPage = () => {
     const social = (
         <HStack
             mt={{ lg: 2, md: 2 }}
-            spacing={5}
+            spacing={7}
             mb={4}
-            alignItems="flex-start"
+            paddingTop={3}
+            justifyContent="center"
+            width="100%"
 
         >
             <Link isExternal href="https://www.linkedin.com/in/ameanasad/">
@@ -56,28 +58,30 @@ const AboutPage: NextPage = () => {
 
     const aboutMeText = (
         <Text color="brand.darkBlue">
-            I moved to Canada five years ago from Egypt to study at Queen&apos;s University.
-            Currently I am in my final year of Mathematics and Computer Engineering at
-            Queen&apos;s, graduating in May 2022 (hopefully). Last year I completed
+            I am in my final year of Mathematics and Computer Engineering at
+            Queen&apos;s, graduating in May 2022. I lived in Egypt for 17 years prior to
+            returning to Canada four years ago to pursue my education. Last year I completed
             a 16 month internship at IBM working as a Software Engineer as part of the
-            Watson Studio Core team. I also Co-founded a computer vision startup that aimed
-            to democratize peronsalized fitness for online users.
+            Watson Studio Core team. I also Co-founded a computer vision startup called Yasa
+            with Liam Hough that aimed to democratize peronsalized fitness for online users.
         </Text>
     );
 
     const interests = (
         <Text color="brand.darkBlue">
             Im really interested in working on technology that helps progress society in
-            an ehtical and sustainable manner. I am always working on some sort of tech side
-            project that interests me and has a good learning value. I also
-            love to collaborate on projects when I get the
-            chance. Currently, I am learning about the topics of computer vision, blockchain,
+            an ehtical and sustainable manner. I am continuously working on side projects
+            that provide me with opportunities to learn and apply new technologies.
+            Currently, I am learning about the topics of computer vision, blockchain,
             computational neuroscience, and
-            geometric algebra. I like the open source aspect of blockchain technologies
-            and interested to work on a blockchain related project soon.
+            geometric algebra. I have been trying to explore the area of Web3 and Blockchain
+            and I am planning to start a related project soon in that area to explore various
+            concepts related to that space.
+            I also enjoy working with hardware a lot, mainly embedded systems and RC models.
             <br />
             <br />
-            Outside of work, I like shawarma, standup, and playing football/soccer.
+            Outside of work, I like food, standup comedy, and I play and watch a lot of
+            football/soccer.
         </Text>
     );
 
@@ -85,7 +89,7 @@ const AboutPage: NextPage = () => {
         <Text color="brand.darkBlue">
             Currently I am working on a thesis group project that involves using deep neural nets
             to estimate the function of dendritic trees in cortical neurons. I am also experimenting
-            with handwriting recognition to generate Latex documents from my class notes.
+            with computer vision to generate Latex documents from my class notes.
         </Text>
     );
     return (
@@ -102,11 +106,11 @@ const AboutPage: NextPage = () => {
                         quality={100}
                         loading="eager"
                     />
+                    {social}
 
                 </Box>
 
                 <Box maxWidth="800px" paddingLeft={{ base: 0, md: 8 }}>
-                    {social}
 
                     <Heading color="brand.mediumBlue">
                         About Me
