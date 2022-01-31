@@ -5,6 +5,9 @@ interface Bound {
     topLeft: Array<number>;
     bottomRight: Array<number>;
 }
+
+const MOBILE_ROTATION = 0.002;
+const DESKTOP_ROTATION = 0.0008;
 class AnimationComponent extends PtsCanvas {
     // Use type definitions to make the constructor types defined on component
     pts: any;
@@ -124,7 +127,8 @@ class AnimationComponent extends PtsCanvas {
             // will be undefined, triggering an error
         }
 
-        this.pps.rotate2D(0.0008, this.space.center);
+        const rotationSpeed = this.space.size.x < 600 ? MOBILE_ROTATION : DESKTOP_ROTATION;
+        this.pps.rotate2D(rotationSpeed, this.space.center);
 
         this.pps.forEach((p: any, i: number) => {
             const lp = perpend(p[1]);
