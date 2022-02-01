@@ -157,7 +157,7 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
         webLink = (
             <ListItem>
                 <ListIcon as={ImLink} color="brand.red" />
-                <Link color="brand.mediumBlue" isExternal href={links.github}>
+                <Link color="brand.mediumBlue" isExternal href={links.web}>
                     Web Link
                 </Link>
             </ListItem>

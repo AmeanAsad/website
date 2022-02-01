@@ -1,6 +1,6 @@
 export interface Link {
-    github: any;
-    web: any;
+    github?: string;
+    web?: string;
 }
 
 export interface Project {
@@ -10,7 +10,7 @@ export interface Project {
     title: string;
     tags: Array<string>;
     acknowledgements: Array<any>;
-    links: Link;
+    links?: Link;
     date: string;
 }
 

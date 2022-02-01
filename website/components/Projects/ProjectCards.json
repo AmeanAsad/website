@@ -10,7 +10,10 @@
                 "link": "https://gharesifard.github.io/"
             }
         ],
-        "links": { "web": "pdf link", "github": "git" },
+        "links": {
+            "web": "https://f004.backblazeb2.com/file/websitev1/MTHE_434_Project__Web_.pdf",
+            "github": null
+        },
         "date": "April, 2021"
     },
     "covid-19-tracker": {
@@ -25,7 +28,7 @@
             }
         ],
         "links": {
-            "web": "web",
+            "web": "https://covid19-informatics.herokuapp.com/",
             "github": "https://github.com/AmeanAsad/Covid-19-Tracker"
         },
         "date": "May, 2020"
@@ -38,7 +41,7 @@
         "tags": ["Simulation", "Python", "Graphics"],
         "acknowledgements": [],
         "links": {
-            "web": "web",
+            "web": "https://covid19-informatics.herokuapp.com/simulations",
             "github": "https://github.com/AmeanAsad/stochastic-disease-simulation"
         },
         "date": "June, 2021"
@@ -53,8 +56,8 @@
             { "name": "Fady Alajaji", "link": "https://mast.queensu.ca/~fady/" }
         ],
         "links": {
-            "web": "",
-            "github": "https://github.com/AmeanAsad/Hamming-Error-Decoding"
+            "github": "https://github.com/AmeanAsad/Hamming-Error-Decoding",
+            "web": null
         },
         "date": "February, 2019"
     },
@@ -66,8 +69,8 @@
         "tags": ["Cellular Automaton", "Python", "Visualization"],
         "acknowledgements": [],
         "links": {
-            "web": "web",
-            "github": "https://github.com/AmeanAsad/Fire-Spread-Model"
+            "github": "https://github.com/AmeanAsad/Fire-Spread-Model",
+            "web": null
         },
         "date": "March, 2019"
     },
@@ -83,7 +86,7 @@
             }
         ],
         "links": {
-            "web": "web",
+            "web": "https://unessay.herokuapp.com/",
             "github": "https://github.com/AmeanAsad/ML-HR-analytics"
         },
         "date": "November, 2020"
@@ -100,8 +103,8 @@
             }
         ],
         "links": {
-            "web": "web",
-            "github": "https://github.com/AmeanAsad/ThriftV2"
+            "github": "https://github.com/AmeanAsad/ThriftV2",
+            "web": null
         },
         "date": "September, 2019"
     },
@@ -116,7 +119,10 @@
                 "link": "https://mast.queensu.ca/~mansouri/"
             }
         ],
-        "links": { "web": "web", "github": "git" },
+        "links": {
+            "github": "https://github.com/AmeanAsad/linear-system-solver",
+            "web": null
+        },
         "tags": ["Linear Algebra", "Python"],
         "date": "March, 2018"
     }
