@@ -60,16 +60,21 @@ const AboutPage: NextPage = () => {
         <Text color="brand.darkBlue">
             I am in my final year of Mathematics and Computer Engineering at
             Queen&apos;s, graduating in May 2022. I lived in Egypt for 17 years prior to
-            returning to Canada four years ago to pursue my education. Last year I completed
+            returning to Canada four years ago to pursue my post-secondary education.
+            The past four years have been filled with a lot new connections, new projects,
+            and new experiences. Last year I completed
             a 16 month internship at IBM working as a Software Engineer as part of the
-            Watson Studio Core team. I also Co-founded a computer vision startup called Yasa
+            Watson Studio Core team. It was an amazing experience and I filed my first ever
+            patent! I also Co-founded a computer vision startup called Yasa
             with Liam Hough that aimed to democratize peronsalized fitness for online users.
+            This last summer, we raised 20K to develop and I lead a team of three engineers
+            to develop our platform.
         </Text>
     );
 
     const interests = (
         <Text color="brand.darkBlue">
-            Im really interested in working on technology that helps progress society in
+            I am really interested in working on technology that helps progress society in
             an ehtical and sustainable manner. I am continuously working on side projects
             that provide me with opportunities to learn and apply new technologies.
             Currently, I am learning about the topics of computer vision, blockchain,
@@ -78,6 +83,8 @@ const AboutPage: NextPage = () => {
             and I am planning to start a related project soon in that area to explore various
             concepts related to that space.
             I also enjoy working with hardware a lot, mainly embedded systems and RC models.
+            I am always interested to collaborate on new projects on ideas, feel free to
+            reach out to me <Link color="brand.mediumBlue" href="/contact"> here</Link> !
             <br />
             <br />
             Outside of work, I like food, standup comedy, and I play and watch a lot of
