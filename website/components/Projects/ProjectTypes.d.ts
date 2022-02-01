@@ -1,6 +1,6 @@
 export interface Link {
-    github?: string;
-    web?: string;
+    github?: any;
+    web?: any;
 }
 
 export interface Project {
