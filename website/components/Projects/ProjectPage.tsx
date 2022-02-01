@@ -33,10 +33,12 @@ interface Person {
     link: string;
 }
 
+// TODO: Fix these eslint disables
 interface mediaProps {
     src: string;
     caption?: string; // eslint-disable-line
     height?:string; // eslint-disable-line
+    border?: boolean; // eslint-disable-line
 }
 
 const Video = ({ src, caption }: mediaProps) => {
@@ -55,10 +57,11 @@ const Video = ({ src, caption }: mediaProps) => {
     );
 };
 
-const ImageSrc = ({ src, caption }: mediaProps) => {
+const ImageSrc = ({ src, caption, border }: mediaProps) => {
+    const borderVal = border ? "1px" : "none";
     return (
         <Box textAlign="center" width="100%" margin="auto" maxWidth="600px">
-            <Box position="relative" width="100%" border="1px">
+            <Box position="relative" width="100%" border={borderVal}>
                 <Image
                     // layout="responsive"
                     objectFit="contain"

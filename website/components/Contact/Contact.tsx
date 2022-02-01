@@ -41,7 +41,7 @@ const Contact = () => {
         });
     };
     return (
-        <Container padding={0} bg="brand.mediumBlue" maxW="full" mt={0} centerContent overflow="hidden">
+        <Container maxHeight="100%" padding={0} bg="brand.mediumBlue" maxW="full" mt={0} centerContent overflow="hidden">
             <Flex justifyContent="center">
                 <Box
                     bg="brand.darkBlue"
