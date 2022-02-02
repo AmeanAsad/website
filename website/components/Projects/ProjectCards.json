@@ -2,7 +2,7 @@
     "convergence-of-sgd": {
         "icon": "document",
         "topic": "Mathematics",
-        "title": "Convergence Rates of Stochastic Gradient Descent",
+        "title": "On Convergence Rates of Stochastic Gradient Descent",
         "tags": ["Convex Optimization", "Python", "Machine Learning"],
         "acknowledgements": [
             {
@@ -19,7 +19,7 @@
     "covid-19-tracker": {
         "icon": "code",
         "topic": "Open Source",
-        "title": "Covid 19 World Project",
+        "title": "Covid 19 World Tracker",
         "tags": ["D3.js", "Django", "React", "Projective Geometry"],
         "acknowledgements": [
             {
@@ -33,7 +33,6 @@
         },
         "date": "May, 2020"
     },
-
     "disease-simulation-module": {
         "icon": "code",
         "topic": "Simulations",
@@ -46,7 +45,18 @@
         },
         "date": "June, 2021"
     },
-
+    "firespread-simulator": {
+        "icon": "code",
+        "topic": "Simulations",
+        "title": "Wildfire Spread Simulator",
+        "tags": ["Cellular Automaton", "Python", "Visualization"],
+        "acknowledgements": [],
+        "links": {
+            "github": "https://github.com/AmeanAsad/Fire-Spread-Model",
+            "web": null
+        },
+        "date": "March, 2019"
+    },
     "hamming-error-decoding": {
         "icon": "code",
         "topic": "Mathematics",
@@ -60,19 +70,6 @@
             "web": null
         },
         "date": "February, 2019"
-    },
-
-    "firespread-simulator": {
-        "icon": "code",
-        "topic": "Simulations",
-        "title": "Wildfire Spread Simulator",
-        "tags": ["Cellular Automaton", "Python", "Visualization"],
-        "acknowledgements": [],
-        "links": {
-            "github": "https://github.com/AmeanAsad/Fire-Spread-Model",
-            "web": null
-        },
-        "date": "March, 2019"
     },
     "turnover-analysis": {
         "icon": "code",
