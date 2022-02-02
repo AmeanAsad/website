@@ -41,7 +41,7 @@
         "tags": ["Simulation", "Python", "Graphics"],
         "acknowledgements": [],
         "links": {
-            "web": "https://covid19-informatics.herokuapp.com/simulations",
+            "web": "https://covid19-informatics.herokuapp.com/simulation",
             "github": "https://github.com/AmeanAsad/stochastic-disease-simulation"
         },
         "date": "June, 2021"

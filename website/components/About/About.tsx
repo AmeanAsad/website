@@ -59,15 +59,15 @@ const AboutPage: NextPage = () => {
     const aboutMeText = (
         <Text color="brand.darkBlue">
             I am in my final year of Mathematics and Computer Engineering at
-            Queen&apos;s, graduating in May 2022. I lived in Egypt for 17 years prior to
-            returning to Canada four years ago to pursue my post-secondary education.
-            The past four years have been filled with a lot new connections, new projects,
-            and new experiences. Last year I completed
+            Queen&apos;s University, graduating in May 2022. I lived in Egypt for 17 years prior to
+            returning to Canada four years ago study.
+            The past four years have been filled with so much growth, experiences,
+            and projects. Last year I completed
             a 16 month internship at IBM working as a Software Engineer as part of the
             Watson Studio Core team. It was an amazing experience and I filed my first ever
             patent! I also Co-founded a computer vision startup called Yasa
             with Liam Hough that aimed to democratize peronsalized fitness for online users.
-            This last summer, we raised 20K to develop and I lead a team of three engineers
+            This last summer, we raised 20K and I lead a team of three engineers
             to develop our platform.
         </Text>
     );
@@ -80,8 +80,8 @@ const AboutPage: NextPage = () => {
             Currently, I am learning about the topics of computer vision, blockchain,
             computational neuroscience, and
             geometric algebra. I have been trying to explore the area of Web3 and Blockchain
-            and I am planning to start a related project soon in that area to explore various
-            concepts related to that space.
+            recently
+            and I am planning to start a related project soon in that area.
             I also enjoy working with hardware a lot, mainly embedded systems and RC models.
             I am always interested to collaborate on new projects on ideas, feel free to
             reach out to me <Link color="brand.mediumBlue" href="/contact"> here</Link> !
