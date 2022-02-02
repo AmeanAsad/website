@@ -1,11 +1,17 @@
 # website
 My personal website built with Typescript + Next.js + Chakra UI
 
+[ameanasad.xyz](https://www.ameanasad.xyz)
+
 ## Tech Stack:
 - Next.js as a development framework
 - Typescript
 - Chakra UI as a component library
 - Backblaze B2 as cloud storage to serve media.
+
+## Deployment:
+- Use Vercel to perform deployment checks.
+- Main deployment to the public is on Netlify.
 
 ## Overview
 
