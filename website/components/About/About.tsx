@@ -111,7 +111,7 @@ const AboutPage: NextPage = () => {
                         height={700}
                         src="https://f004.backblazeb2.com/file/websitev1/portrait.jpg"
                         quality={100}
-                        loading="eager"
+                        priority
                     />
                     {social}
 
