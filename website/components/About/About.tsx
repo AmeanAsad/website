@@ -60,7 +60,7 @@ const AboutPage: NextPage = () => {
         <Text color="brand.darkBlue">
             I am in my final year of Mathematics and Computer Engineering at
             Queen&apos;s University, graduating in May 2022. I lived in Egypt for 17 years prior to
-            returning to Canada four years ago study.
+            returning to Canada four years ago to study.
             The past four years have been filled with so much growth, experiences,
             and projects. Last year I completed
             a 16 month internship at IBM working as a Software Engineer as part of the
@@ -81,9 +81,9 @@ const AboutPage: NextPage = () => {
             computational neuroscience, and
             geometric algebra. I have been trying to explore the area of Web3 and Blockchain
             recently
-            and I am planning to start a related project soon in that area.
+            and I am currently in the workings of a project in that area.
             I also enjoy working with hardware a lot, mainly embedded systems and RC models.
-            I am always interested to collaborate on new projects on ideas, feel free to
+            I am always interested to collaborate on new projects and ideas, so feel free to
             reach out to me <Link color="brand.mediumBlue" href="/contact"> here</Link> !
             <br />
             <br />
