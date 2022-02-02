@@ -67,7 +67,7 @@ const AboutPage: NextPage = () => {
             Watson Studio Core team. It was an amazing experience and I filed my first ever
             patent! I also Co-founded a computer vision startup called Yasa
             with Liam Hough that aimed to democratize peronsalized fitness for online users.
-            This last summer, we raised 20K and I lead a team of three engineers
+            This last summer, we raised 20K and I led a team of three engineers
             to develop our platform.
         </Text>
     );
