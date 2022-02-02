@@ -41,7 +41,7 @@ const AboutPage: NextPage = () => {
                     icon={<BsGithub size="28px" />}
                 />
             </Link>
-            <Link isExternal href="https://twitter.com/ameanasad1">
+            <Link isExternal href="https://twitter.com/ameanasad">
 
                 <IconButton
                     aria-label="Twitter Link"
