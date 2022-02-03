@@ -16,11 +16,11 @@ My personal website built with Typescript + Next.js + Chakra UI
 ## Overview
 
 - `website/*` - Main Next.js directory.
-- `website/pages*` - The different page layouts for my website (home, about, experiences, etc. ).
+- `website/pages/*` - The different page layouts for my website (home, about, experiences, etc. ).
 - `website/public/*` - Contains the website logo sized for different layouts and files for crawling permissions.
 - `website/styles/*` - Global theme that defines fonts, colors, and custom styling.
 - `website/pages/projects/*` - Static pre-rendered page setup for MDX files.
-- `website/components/markdownfiles*` - My MDX files describing my projects.
+- `website/components/markdownfiles/*` - My MDX files describing my projects.
 - `website/utils/*` - Helper functions to setup my MDX static pages.
 
 
