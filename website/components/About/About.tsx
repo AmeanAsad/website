@@ -60,8 +60,8 @@ const AboutPage: NextPage = () => {
         <Text color="brand.darkBlue">
             I am in my final year of Mathematics and Computer Engineering at
             Queen&apos;s University, graduating in May 2022. I lived in Egypt for 17 years prior to
-            returning to Canada four years ago to study.
-            The past four years have been filled with so much growth, experiences,
+            returning to Canada five years ago to study.
+            The past five years have been filled with so much growth, experiences,
             and projects. Last year I completed
             a 16 month internship at IBM working as a Software Engineer as part of the
             Watson Studio Core team. It was an amazing experience and I filed my first ever
