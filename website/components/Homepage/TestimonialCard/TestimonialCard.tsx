@@ -132,7 +132,7 @@ const TestimonialCard: React.FC = () => {
                                     <PopoverBody>
                                         <Box bg="brand.white" padding={4}>
                                             <Text color="brand.darkBlue">
-                                                Disclaimer: These quoutes may or may not be true
+                                                Disclaimer: These quotes may or may not be true
                                             </Text>
                                         </Box>
                                     </PopoverBody>

@@ -33,10 +33,12 @@ interface Person {
     link: string;
 }
 
+// TODO: Fix these eslint disables
 interface mediaProps {
     src: string;
     caption?: string; // eslint-disable-line
     height?:string; // eslint-disable-line
+    border?: boolean; // eslint-disable-line
 }
 
 const Video = ({ src, caption }: mediaProps) => {
@@ -55,10 +57,11 @@ const Video = ({ src, caption }: mediaProps) => {
     );
 };
 
-const ImageSrc = ({ src, caption }: mediaProps) => {
+const ImageSrc = ({ src, caption, border }: mediaProps) => {
+    const borderVal = border ? "1px" : "none";
     return (
         <Box textAlign="center" width="100%" margin="auto" maxWidth="600px">
-            <Box position="relative" width="100%" border="1px">
+            <Box position="relative" width="100%" border={borderVal}>
                 <Image
                     // layout="responsive"
                     objectFit="contain"
@@ -76,17 +79,21 @@ const ImageSrc = ({ src, caption }: mediaProps) => {
 
 const PDF = ({ src }: mediaProps) => {
     return (
-        <Box position="relative" width="100%" height="100vh">
-
-            <object
-                data={src}
-                style={{ position: "absolute" }}
-                width="100%"
-                height="100%"
-                type="application/pdf"
-                aria-label="Pdf Document"
-            />
-        </Box>
+        <>
+            <Link isExternal href={src}>
+                <Text paddingBottom={6}> This is the direct link to the PDF of the paper</Text>
+            </Link>
+            <Box visibility={{ base: "hidden", lg: "visible" }} position="relative" width="100%" height="100vh">
+                <object
+                    data={src}
+                    style={{ position: "absolute" }}
+                    width="100%"
+                    height="100%"
+                    type="application/pdf"
+                    aria-label="Pdf Document"
+                />
+            </Box>
+        </>
     );
 };
 
@@ -153,7 +160,7 @@ const ProjectPage: NextPage<pageProps> = ({ projectId, source }) => {
         webLink = (
             <ListItem>
                 <ListIcon as={ImLink} color="brand.red" />
-                <Link color="brand.mediumBlue" isExternal href={links.github}>
+                <Link color="brand.mediumBlue" isExternal href={links.web}>
                     Web Link
                 </Link>
             </ListItem>
