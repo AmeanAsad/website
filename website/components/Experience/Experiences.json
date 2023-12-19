@@ -56,12 +56,19 @@
         "description": "When I was interning at IBM in 2020 I filed my first patent for finding a novel process to perform internationalization assessments on web applications using NLP. It never crossed my mind that I would be able to do something like that so early in my career, let alone on my first professional internship."
     },
     {
-        "title": "Graduation?",
-        "location": "Kingston, CA",
+        "title": "Graduated",
+        "location": "Canada",
         "company": "Queen's University",
         "date": "May 2022",
         "icon": "grad",
-        "description": ""
+        "description": "Applied Math and Computer Engineering"
+    },
+    {
+        "title": "Distributed Systems Engineer",
+        "location": "__",
+        "company": "Protocol Labs",
+        "date": "June 2022",
+        "icon": "work",
+        "description": "Building a decentralized content delivery network."
     }
-
 ]

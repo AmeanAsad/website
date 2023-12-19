@@ -33,8 +33,7 @@ const timelineIcons = {
     code: BsCodeSlash,
     grad: FaGraduationCap,
     rocket: IoRocketSharp,
-    scroll: FaScroll
-
+    scroll: FaScroll,
 };
 
 const TimeLineElement: NextPage = (props: any) => {
@@ -119,7 +118,7 @@ const TimeLineElement: NextPage = (props: any) => {
 };
 
 const Experience = () => {
-    const experiencesDescending = experiences.reverse();
+    const experiencesDescending = experiences.toReversed();
     const timelineElements = experiencesDescending.map((experience) => {
         return <TimeLineElement key={experience.title} {...experience} />;
     });
@@ -131,7 +130,6 @@ const Experience = () => {
             background="brand.darkBlue"
             className={styles.wrapper}
         >
-
             <div style={{ width: "100%", height: "100%" }}>
                 <VerticalTimeline
                     lineColor={brand.lightBlue}
