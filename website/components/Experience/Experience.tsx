@@ -118,7 +118,7 @@ const TimeLineElement: NextPage = (props: any) => {
 };
 
 const Experience = () => {
-    const experiencesDescending = experiences.toReversed();
+    const experiencesDescending = experiences.slice().reverse();
     const timelineElements = experiencesDescending.map((experience) => {
         return <TimeLineElement key={experience.title} {...experience} />;
     });
