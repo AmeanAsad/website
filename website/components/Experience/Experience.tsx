@@ -133,7 +133,7 @@ const Experience = () => {
             <div style={{ width: "100%", height: "100%" }}>
                 <VerticalTimeline
                     lineColor={brand.lightBlue}
-                    layout="2-columns"
+                    layout="1-column-left"
                 >
                     {timelineElements}
                 </VerticalTimeline>
