@@ -51,16 +51,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
         props: {
             source: mdxSource,
-            projectId: params?.projectId
+            projectId: params?.projectId,
         },
     };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = postFilePaths
-    // Remove file extensions for page paths
+        // Remove file extensions for page paths
         .map((filePath) => filePath.replace(/\.mdx?$/, ""))
-    // Map the path into the static paths object required by Next.js
+        // Map the path into the static paths object required by Next.js
         .map((projectId) => ({ params: { projectId } }));
 
     return {

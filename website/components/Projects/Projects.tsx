@@ -11,7 +11,6 @@ const Projects: NextPage = () => {
     const projectCardElements = keys.map((key) => {
         const projectInfo = projectsInfo[key as keyof typeof projectsInfo];
         return (
-
             <ProjectCard key={projectInfo.title} id={key} {...projectInfo} />
         );
     });

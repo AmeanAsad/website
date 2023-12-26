@@ -1,61 +1,35 @@
 import { MDXProvider } from "@mdx-js/react";
 import Image from "next/image";
 import styles from "../MarkdownFiles/markdown.module.scss";
-import dynamic from "next/dynamic";
-import { Spinner } from "@chakra-ui/react";
+
+import Covid19Tracker from "../MarkdownFiles/covid-19-tracker.mdx";
+import DiseaseSimulationModule from "../MarkdownFiles/disease-simulation-module.mdx";
+import ConvergenceOfSGD from "../MarkdownFiles/convergence-of-sgd.mdx";
+import HammingErrorDecoding from "../MarkdownFiles/hamming-error-decoding.mdx";
+import TurnoverAnalysis from "../MarkdownFiles/turnover-analysis.mdx";
+import FirespreadSimulator from "../MarkdownFiles/firespread-simulator.mdx";
+import LinearOptimization from "../MarkdownFiles/linear-optimization.mdx";
+
+const projectPages = {
+    "covid-19-tracker": Covid19Tracker,
+    "disease-simulation-module": DiseaseSimulationModule,
+    "convergence-of-sgd": ConvergenceOfSGD,
+    "hamming-error-decoding": HammingErrorDecoding,
+    "turnover-analysis": TurnoverAnalysis,
+    "firespread-simulator": FirespreadSimulator,
+    "linear-optimization": LinearOptimization,
+};
 
 const ResponsiveImage = (props: any) => (
     <Image alt={props.alt} layout="responsive" {...props} />
 );
 
-const spinner = (
-    <Spinner
-        thickness="4px"
-        speed="0.65s"
-        emptyColor="gray.200"
-        color="brand.red"
-        size="xl"
-    />
-);
-
-const projectPages = {
-    "covid-19-tracker": dynamic(
-        () => import("../MarkdownFiles/covid-19-tracker.mdx"),
-        { loading: () => spinner }
-    ),
-    "disease-simulation-module": dynamic(
-        () => import("../MarkdownFiles/disease-simulation-module.mdx"),
-        { loading: () => spinner }
-    ),
-    "convergence-of-sgd": dynamic(
-        () => import("../MarkdownFiles/convergence-of-sgd.mdx"),
-        { loading: () => spinner }
-    ),
-    "hamming-error-decoding": dynamic(
-        () => import("../MarkdownFiles/hamming-error-decoding.mdx"),
-        { loading: () => spinner }
-    ),
-    "turnover-analysis": dynamic(
-        () => import("../MarkdownFiles/turnover-analysis.mdx"),
-        { loading: () => spinner }
-    ),
-    "firespread-simulator": dynamic(
-        () => import("../MarkdownFiles/firespread-simulator.mdx"),
-        { loading: () => spinner }
-    ),
-    "linear-optimization": dynamic(
-        () => import("../MarkdownFiles/linear-optimization.mdx"),
-        { loading: () => spinner }
-    ),
-};
-
 const components = {
     img: ResponsiveImage,
-
 };
 
 interface Props {
-    projectId: string
+    projectId: string;
 }
 
 const MarkdownPage = ({ projectId }: Props) => {
