@@ -63,9 +63,9 @@ const AboutPage: NextPage = () => {
     const aboutMeText = (
         <Text color="brand.darkBlue">
             Currently a distributed systems engineer @ Protocol Labs building a
-            decentralized CDN. Previously co-founded Yasa, a computer vision
-            powered fitness app. Im currently based on Toronto but previously
-            lived in Egypt for 17 years.
+            decentralized CDN network called Filecoin Saturn. Previously founded
+            Yasa, a computer vision powered fitness app. Im currently based on
+            Toronto but previously lived in Egypt for 17 years.
         </Text>
     );
 
@@ -74,8 +74,8 @@ const AboutPage: NextPage = () => {
             My main interests and work lie in software engineering and
             mathematical research. My main areas are zero knowledge machine
             learning, reinforcement learning, and incentive design. My goal is
-            to always work on technology that reached millions and contributes a
-            net positived to the world.
+            to always work on technology that reaches millions and contributes a
+            net positive to the world.
             <br />
             <br />
             Outside of my desk, I like food, standup comedy, and I practice Jiu
@@ -96,7 +96,7 @@ const AboutPage: NextPage = () => {
         <Box backgroundColor="brand.white" p={5}>
             <Heading size="2xl" color="brand.mediumBlue" marginBottom={8}>
                 {" "}
-                Wait a minute...who are you?{" "}
+                About?{" "}
             </Heading>
 
             <Flex direction={{ base: "column", lg: "row" }}>
