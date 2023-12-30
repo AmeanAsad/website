@@ -15,17 +15,14 @@ import {
     InputGroup,
     InputLeftElement,
     Textarea,
-    useToast
+    useToast,
 } from "@chakra-ui/react";
-import {
-    MdEmail,
-    MdOutlineEmail,
-} from "react-icons/md";
+import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsPerson, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 const info = {
-    email: "amean.asad@queensu.ca",
-    text: "You can contact me through my email or you can fill this form and I will receive your message directly!"
+    email: "amean.asad1999@gmail.com",
+    text: "You can contact me through my email or you can fill this form and I will receive your message directly!",
 };
 
 const Contact = () => {
@@ -41,7 +38,15 @@ const Contact = () => {
         });
     };
     return (
-        <Container maxHeight="100%" padding={0} bg="brand.mediumBlue" maxW="full" mt={0} centerContent overflow="hidden">
+        <Container
+            maxHeight="100%"
+            padding={0}
+            bg="brand.mediumBlue"
+            maxW="full"
+            mt={0}
+            centerContent
+            overflow="hidden"
+        >
             <Flex justifyContent="center">
                 <Box
                     bg="brand.darkBlue"
@@ -51,9 +56,7 @@ const Contact = () => {
                 >
                     <Heading>Contact</Heading>
 
-                    <Text color="gray.100">
-                        {info.text}
-                    </Text>
+                    <Text color="gray.100">{info.text}</Text>
 
                     <Box p={5}>
                         <HStack
@@ -62,7 +65,10 @@ const Contact = () => {
                             px={5}
                             alignItems="flex-start"
                         >
-                            <Link isExternal href="https://www.linkedin.com/in/ameanasad/">
+                            <Link
+                                isExternal
+                                href="https://www.linkedin.com/in/ameanasad/"
+                            >
                                 <IconButton
                                     aria-label="LinkedIn Link"
                                     variant="ghost"
@@ -72,8 +78,10 @@ const Contact = () => {
                                     icon={<BsLinkedin size="28px" />}
                                 />
                             </Link>
-                            <Link isExternal href="https://github.com/AmeanAsad">
-
+                            <Link
+                                isExternal
+                                href="https://github.com/AmeanAsad"
+                            >
                                 <IconButton
                                     aria-label="Github Link"
                                     variant="ghost"
@@ -83,8 +91,10 @@ const Contact = () => {
                                     icon={<BsGithub size="28px" />}
                                 />
                             </Link>
-                            <Link isExternal href="https://twitter.com/ameanasad">
-
+                            <Link
+                                isExternal
+                                href="https://twitter.com/ameanasad"
+                            >
                                 <IconButton
                                     aria-label="Twitter Link"
                                     variant="ghost"
@@ -107,35 +117,60 @@ const Contact = () => {
                         </Button>
                         <Box bg="brand.mediumBlue" borderRadius="sm" p={3}>
                             <Box m={8} color="brand.white">
-                                <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+                                <form
+                                    name="contact"
+                                    data-netlify="true"
+                                    netlify-honeypot="bot-field"
+                                    hidden
+                                >
                                     <input type="text" name="name" />
                                     <input type="email" name="email" />
                                     <textarea name="message" />
                                 </form>
                                 <VStack spacing={5}>
-                                    <form name="contact" method="POST" action="/" data-netlify="true">
-                                        <input type="hidden" name="form-name" value="contact" />
+                                    <form
+                                        name="contact"
+                                        method="POST"
+                                        action="/"
+                                        data-netlify="true"
+                                    >
+                                        <input
+                                            type="hidden"
+                                            name="form-name"
+                                            value="contact"
+                                        />
                                         <FormControl isRequired id="name">
                                             <FormLabel>Your Name</FormLabel>
                                             <InputGroup borderColor="#E0E1E7">
-                                                <InputLeftElement
-                                                    pointerEvents="none"
-                                                >
+                                                <InputLeftElement pointerEvents="none">
                                                     <BsPerson color="brand.red" />
                                                 </InputLeftElement>
 
-                                                <Input maxWidth="300px" rounded="sm" name="name" type="text" size="md" />
+                                                <Input
+                                                    maxWidth="300px"
+                                                    rounded="sm"
+                                                    name="name"
+                                                    type="text"
+                                                    size="md"
+                                                />
                                             </InputGroup>
                                         </FormControl>
                                         <FormControl id="email">
                                             <FormLabel> Your Email </FormLabel>
-                                            <InputGroup maxWidth="300px" border="sm" borderColor="#E0E1E7">
-                                                <InputLeftElement
-                                                    pointerEvents="none"
-                                                >
+                                            <InputGroup
+                                                maxWidth="300px"
+                                                border="sm"
+                                                borderColor="#E0E1E7"
+                                            >
+                                                <InputLeftElement pointerEvents="none">
                                                     <MdOutlineEmail color="brand.red" />
                                                 </InputLeftElement>
-                                                <Input name="email" rounded="sm" type="email" size="md" />
+                                                <Input
+                                                    name="email"
+                                                    rounded="sm"
+                                                    type="email"
+                                                    size="md"
+                                                />
                                             </InputGroup>
                                         </FormControl>
                                         <FormControl isRequired id="message">
@@ -165,7 +200,7 @@ const Contact = () => {
                                                     fontSize={17}
                                                     fontWeight={1}
                                                 >
-                                                Send Message
+                                                    Send Message
                                                 </Text>
                                             </Button>
                                         </FormControl>
@@ -173,7 +208,6 @@ const Contact = () => {
                                 </VStack>
                             </Box>
                         </Box>
-
                     </Box>
                 </Box>
             </Flex>
