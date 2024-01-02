@@ -9,15 +9,9 @@ const About: NextPage = () => {
         <>
             <Head>
                 <title>About</title>
-                <meta
-                    name="description"
-                    content="Amean Asad general information"
-                />
+                <meta name="description" content="Amean Asad about page" />
             </Head>
-            <PageComponent
-                pageId="about"
-                Component={<AboutPage />}
-            />
+            <PageComponent pageId="about" Component={<AboutPage />} />
         </>
     );
 };
