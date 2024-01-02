@@ -6,19 +6,12 @@ import Head from "next/head";
 
 const exp: NextPage = () => {
     return (
-
         <>
             <Head>
                 <title>Experience</title>
-                <meta
-                    name="description"
-                    content="Amean Asad personal website experience page"
-                />
+                <meta name="description" content="Amean Asad experience page" />
             </Head>
-            <PageComponent
-                pageId="experience"
-                Component={<Experience />}
-            />
+            <PageComponent pageId="experience" Component={<Experience />} />
         </>
     );
 };
