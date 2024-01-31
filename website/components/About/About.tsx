@@ -117,7 +117,7 @@ const AboutPage: NextPage = () => {
                 </Box>
 
                 <Box maxWidth="800px" paddingLeft={{ base: 0, md: 8 }}>
-                    <Heading color="brand.mediumBlue">About Me</Heading>
+                    <Heading color="brand.mediumBlue">About</Heading>
                     {aboutMeText}
 
                     {divider}
