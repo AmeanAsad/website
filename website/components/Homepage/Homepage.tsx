@@ -4,7 +4,9 @@ import { NextPage } from "next";
 import dynamic from "next/dynamic";
 
 const AnimationComponent = dynamic(() => import("./Animation"), { ssr: false });
-const TestimonialCard = dynamic(() => import("./TestimonialCard/TestimonialCard"));
+const TestimonialCard = dynamic(
+    () => import("./TestimonialCard/TestimonialCard")
+);
 
 const HomePage: NextPage = () => {
     return (
@@ -13,7 +15,12 @@ const HomePage: NextPage = () => {
                 <AnimationComponent
                     background="#151247"
                     name="homepageAnimation"
-                    style={{ opacity: 0.9, minHeight: "600px", height: "100vh", width: "100vw" }}
+                    style={{
+                        opacity: 0.9,
+                        minHeight: "600px",
+                        height: "100vh",
+                        width: "100vw",
+                    }}
                 />
             </Box>
             <Box
@@ -24,7 +31,6 @@ const HomePage: NextPage = () => {
                 position="relative"
                 className={styles.pageContent}
             >
-
                 <Flex
                     width="fit-content"
                     top={{ md: "40%", base: "40%", sm: "0" }}
@@ -52,7 +58,6 @@ const HomePage: NextPage = () => {
                         >
                             Asad
                         </Heading>
-
                     </Stack>
                 </Flex>
 
@@ -63,15 +68,14 @@ const HomePage: NextPage = () => {
                     margin="auto"
                     visibility={{ base: "hidden", sm: "visible" }}
                     top={{ base: "20%", sm: "35%" }}
-                    transform={{ md: "translateY(-55%)", base: "translateY(-60%)" }}
-
+                    transform={{
+                        md: "translateY(-55%)",
+                        base: "translateY(-60%)",
+                    }}
                 >
-                    <TestimonialCard />
-
+                    {/* <TestimonialCard /> */}
                 </Flex>
-
             </Box>
-
         </>
     );
 };
