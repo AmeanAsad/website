@@ -2,6 +2,7 @@
 My personal website built with Typescript + Next.js + Chakra UI
 
 [ameanasad.xyz](https://www.ameanasad.xyz)
+[ameanasad.tech](https://www.ameanasad.tech)
 
 ## Tech Stack:
 - Next.js as a development framework
