@@ -4,9 +4,9 @@ import { NextPage } from "next";
 import dynamic from "next/dynamic";
 
 const AnimationComponent = dynamic(() => import("./Animation"), { ssr: false });
-const TestimonialCard = dynamic(
-    () => import("./TestimonialCard/TestimonialCard")
-);
+// const TestimonialCard = dynamic(
+//     () => import("./TestimonialCard/TestimonialCard")
+// );
 
 const HomePage: NextPage = () => {
     return (
