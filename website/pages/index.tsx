@@ -8,12 +8,19 @@ const Home: NextPage = () => {
         <>
             <Head>
                 <title>Amean Asad</title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
                 <meta
                     name="description"
                     content="Amean Asad's personal website"
                 />
-                <meta property="og:image" content="https://www.ameanasad.xyz/metaLink.png" />
+                <link rel="canonical" href="https://www.ameanasad.xyz/" />.
+                <meta
+                    property="og:image"
+                    content="https://www.ameanasad.xyz/metaLink.png"
+                />
             </Head>
             <PageComponent pageId="home" Component={<HomePage />} />
         </>
