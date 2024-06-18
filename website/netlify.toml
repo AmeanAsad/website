@@ -1,4 +1,9 @@
 
-[[plugins]] 
-
+[[plugins]]
     package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/*"
+  to = "https://ameanasad.xyz/:splat"
+  status = 301
+  force = true
