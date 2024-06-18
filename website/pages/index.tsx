@@ -16,7 +16,6 @@ const Home: NextPage = () => {
                     name="description"
                     content="Amean Asad's personal website"
                 />
-                <link rel="canonical" href="https://www.ameanasad.xyz/" />.
                 <meta
                     property="og:image"
                     content="https://www.ameanasad.xyz/metaLink.png"
