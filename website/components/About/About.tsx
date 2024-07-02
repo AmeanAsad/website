@@ -62,10 +62,11 @@ const AboutPage: NextPage = () => {
 
     const aboutMeText = (
         <Text color="brand.darkBlue">
-            Currently a distributed systems engineer @ Protocol Labs building a
-            decentralized CDN network called Filecoin Saturn. Previously founded
-            Yasa, a computer vision powered fitness app. Im currently based on
-            Toronto but previously lived in Egypt for 17 years.
+            Currently founding a startup. Previously a distributed systems
+            engineer @ Protocol Labs building a decentralized CDN network called
+            Filecoin Saturn. Founded Yasa, a computer vision powered fitness
+            app. Im currently based on Toronto but previously lived in Egypt for
+            17 years.
         </Text>
     );
 
