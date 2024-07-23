@@ -62,11 +62,10 @@ const AboutPage: NextPage = () => {
 
     const aboutMeText = (
         <Text color="brand.darkBlue">
-            Currently founding a startup. Previously a distributed systems
-            engineer @ Protocol Labs building a decentralized CDN network called
-            Filecoin Saturn. Founded Yasa, a computer vision powered fitness
-            app. Im currently based on Toronto but previously lived in Egypt for
-            17 years.
+            Previously a distributed systems engineer @ Protocol Labs building a
+            decentralized CDN network called Filecoin Saturn. Founded Yasa, a
+            computer vision powered fitness app. Im currently based on Toronto
+            but previously lived in Egypt for 17 years.
         </Text>
     );
 
@@ -84,15 +83,15 @@ const AboutPage: NextPage = () => {
         </Text>
     );
 
-    const currentWork = (
-        <Text color="brand.darkBlue">
-            Currently I am working on a decentralized CDN at Protocol Labs
-            called{" "}
-            <Link isExternal href="https://saturn.tech/" sx={{}}>
-                Filecoin Saturn
-            </Link>
-        </Text>
-    );
+    // const currentWork = (
+    //     <Text color="brand.darkBlue">
+    //         Currently I am working on a decentralized CDN at Protocol Labs
+    //         called{" "}
+    //         <Link isExternal href="https://saturn.tech/" sx={{}}>
+    //             Filecoin Saturn
+    //         </Link>
+    //     </Text>
+    // );
     return (
         <Box backgroundColor="brand.white" p={5}>
             <Heading size="2xl" color="brand.mediumBlue" marginBottom={8}>
@@ -128,8 +127,8 @@ const AboutPage: NextPage = () => {
 
                     {divider}
 
-                    <Heading color="brand.mediumBlue"> Current Work</Heading>
-                    {currentWork}
+                    {/* <Heading color="brand.mediumBlue"> Current Work</Heading>
+                    {currentWork} */}
                 </Box>
             </Flex>
         </Box>
