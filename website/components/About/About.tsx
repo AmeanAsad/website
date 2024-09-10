@@ -106,17 +106,17 @@ const AboutPage: NextPage = () => {
     const interests = (
         <Text color="brand.darkBlue">
             Currently in San Francisco starting a new company. My interests lie
-            in mathematics and engineering. I really enjoy distributed systems,
-            information theory, zero knowledge math, and machine learning. All
-            things considered, the work I enjoy the most is simply building
-            positive things that people use.
+            in mathematics and engineering. I&apo;m highly interested in
+            distributed systems, information theory, zero knowledge math, and
+            machine learning. In general, the type of work I enjoy the most is
+            simply building positive things that people use.
             <br />
             <br />
             Outside of my desk, I like food, really enjoy stand up comedy, and I
             practice jiu jitsu.
             <br />
             <br />
-            Here are some things I&apo;sve been upto during the past few years:
+            Here are some things I&apo;ve been upto during the past few years:
         </Text>
     );
 
