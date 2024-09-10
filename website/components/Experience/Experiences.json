@@ -70,5 +70,21 @@
         "date": "June 2022",
         "icon": "work",
         "description": "Building a decentralized content delivery network."
+    },
+    {
+        "title": "Co-Founder",
+        "location": "Toronto, CA",
+        "company": "Commonplace",
+        "date": "Dec 2023",
+        "icon": "rocket",
+        "description": "One digital library for everything you come across anywhere on the internet"
+    },
+    {
+        "title": "Co-Founder",
+        "location": "Toronto, CA",
+        "company": "__",
+        "date": "July 2024",
+        "icon": "rocket",
+        "description": "TBD"
     }
 ]
