@@ -116,7 +116,7 @@ const AboutPage: NextPage = () => {
             practice jiu jitsu.
             <br />
             <br />
-            Here are some things i've been upto during the past few years:
+            Here are some things I&apo;sve been upto during the past few years:
         </Text>
     );
 
