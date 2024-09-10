@@ -6,7 +6,9 @@ import {
     HStack,
     IconButton,
     Link,
+    ListItem,
     Text,
+    UnorderedList,
 } from "@chakra-ui/react";
 import { NextPage } from "next";
 import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
@@ -58,27 +60,63 @@ const AboutPage: NextPage = () => {
             </Link>
         </HStack>
     );
-
     const aboutMeText = (
-        <Text color="brand.darkBlue">
-            Previously a distributed systems engineer @ Protocol Labs building a
-            decentralized CDN network called Filecoin Saturn. Founded Yasa, a
-            computer vision powered fitness app. Im currently based on Toronto
-            but previously lived in Egypt for 17 years.
+        <Text color="brand.darkBlue" p={3}>
+            <UnorderedList spacing={3}>
+                {/* <ListItem>
+                    2024: Founded{" "}
+                    <Link
+                        isExternal
+                        href="https://chromewebstore.google.com/detail/focal/foejbliibcljbobfidlbahiilkgkcnfe?hl=en"
+                    >
+                        Focal
+                    </Link>
+                </ListItem> */}
+                <ListItem>
+                    2024: Moved to San Francisco, working on a new company
+                </ListItem>
+                <ListItem>
+                    2024: Founded{" "}
+                    <Link isExternal href="https://mycommon.place">
+                        Commonplace
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    2022-2024: Distributed Systems Engineer @ Protocol Labs
+                </ListItem>
+
+                <ListItem>
+                    2021: Founded Yasa, a fitness analytics platform
+                    (discontinued).
+                </ListItem>
+                <ListItem>
+                    2020: Filed my first{" "}
+                    <Link
+                        isExternal
+                        href=" https://patents.google.com/patent/US20220414316A1/en?inventor=amean+asad
+"
+                    >
+                        patent in machine learning
+                    </Link>
+                </ListItem>
+            </UnorderedList>
         </Text>
     );
 
     const interests = (
         <Text color="brand.darkBlue">
-            My main interests and work lie in software engineering and
-            mathematical research. My main areas are zero knowledge machine
-            learning, reinforcement learning, and incentive design. My goal is
-            to always work on technology that reaches millions and contributes a
-            net positive to the world.
+            Currently in San Francisco starting a new company. My interests lie
+            in mathematics and engineering. I really enjoy distributed systems,
+            information theory, zero knowledge math, and machine learning. All
+            things considered, the work I enjoy the most is simply building
+            positive things that people use.
             <br />
             <br />
-            Outside of my desk, I like food, standup comedy, and I practice Jiu
-            Jitsu
+            Outside of my desk, I like food, really enjoy stand up comedy, and I
+            practice jiu jitsu.
+            <br />
+            <br />
+            Here are some things i've been upto during the past few years:
         </Text>
     );
 
@@ -86,13 +124,12 @@ const AboutPage: NextPage = () => {
         <Box backgroundColor="brand.white" p={10}>
             <Flex direction="column">
                 <Box maxWidth="800px">
-                    <Heading color="brand.mediumBlue">About</Heading>
-                    {aboutMeText}
-
-                    {divider}
-
-                    <Heading color="brand.mediumBlue"> Interests </Heading>
+                    <Heading color="brand.mediumBlue" mb={4}>
+                        About
+                    </Heading>
                     {interests}
+
+                    {aboutMeText}
 
                     {divider}
                 </Box>
