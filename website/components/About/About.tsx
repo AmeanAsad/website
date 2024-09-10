@@ -9,7 +9,6 @@ import {
     Text,
 } from "@chakra-ui/react";
 import { NextPage } from "next";
-import Image from "next/image";
 import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 const AboutPage: NextPage = () => {
@@ -17,7 +16,7 @@ const AboutPage: NextPage = () => {
 
     const social = (
         <HStack
-            mt={{ lg: 2, md: 2 }}
+            mt={4}
             spacing={7}
             mb={4}
             paddingTop={3}
@@ -83,40 +82,10 @@ const AboutPage: NextPage = () => {
         </Text>
     );
 
-    // const currentWork = (
-    //     <Text color="brand.darkBlue">
-    //         Currently I am working on a decentralized CDN at Protocol Labs
-    //         called{" "}
-    //         <Link isExternal href="https://saturn.tech/" sx={{}}>
-    //             Filecoin Saturn
-    //         </Link>
-    //     </Text>
-    // );
     return (
-        <Box backgroundColor="brand.white" p={5}>
-            <Heading size="2xl" color="brand.mediumBlue" marginBottom={8}>
-                {" "}
-                About?{" "}
-            </Heading>
-
-            <Flex direction={{ base: "column", lg: "row" }}>
-                <Box
-                    margin={{ base: "auto", lg: "0" }}
-                    minWidth={330}
-                    maxWidth={700}
-                >
-                    <Image
-                        layout="intrinsic"
-                        width={562}
-                        height={700}
-                        src="https://f004.backblazeb2.com/file/websitev1/portrait.jpg"
-                        quality={100}
-                        priority
-                    />
-                    {social}
-                </Box>
-
-                <Box maxWidth="800px" paddingLeft={{ base: 0, md: 8 }}>
+        <Box backgroundColor="brand.white" p={10}>
+            <Flex direction="column">
+                <Box maxWidth="800px">
                     <Heading color="brand.mediumBlue">About</Heading>
                     {aboutMeText}
 
@@ -126,10 +95,8 @@ const AboutPage: NextPage = () => {
                     {interests}
 
                     {divider}
-
-                    {/* <Heading color="brand.mediumBlue"> Current Work</Heading>
-                    {currentWork} */}
                 </Box>
+                {social}
             </Flex>
         </Box>
     );
