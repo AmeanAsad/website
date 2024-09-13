@@ -106,7 +106,7 @@ const AboutPage: NextPage = () => {
     const interests = (
         <Text color="brand.darkBlue">
             Currently in San Francisco starting a new company. My interests lie
-            in mathematics and engineering. I&apo;m highly interested in
+            in mathematics and engineering. I&apos;m highly interested in
             distributed systems, information theory, zero knowledge math, and
             machine learning. In general, the type of work I enjoy the most is
             simply building positive things that people use.
@@ -116,7 +116,8 @@ const AboutPage: NextPage = () => {
             practice jiu jitsu.
             <br />
             <br />
-            Here are some things I&apo;ve been upto during the past few years:
+            Here are some things I&apos;ve been upto during the past few years:
+        </Text>
         </Text>
     );
 
