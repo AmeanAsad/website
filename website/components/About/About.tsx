@@ -68,6 +68,7 @@ const AboutPage: NextPage = () => {
                     <Link
                         isExternal
                         href="https://chromewebstore.google.com/detail/focal/foejbliibcljbobfidlbahiilkgkcnfe?hl=en"
+                        color="blue.500"
                     >
                         Focal
                     </Link>
@@ -77,7 +78,11 @@ const AboutPage: NextPage = () => {
                 </ListItem>
                 <ListItem>
                     2024: Founded{" "}
-                    <Link isExternal href="https://mycommon.place">
+                    <Link
+                        isExternal
+                        href="https://mycommon.place"
+                        color="blue.500"
+                    >
                         Commonplace
                     </Link>
                 </ListItem>
@@ -95,6 +100,7 @@ const AboutPage: NextPage = () => {
                         isExternal
                         href=" https://patents.google.com/patent/US20220414316A1/en?inventor=amean+asad
 "
+                        color="blue.500"
                     >
                         patent in machine learning
                     </Link>
@@ -106,18 +112,17 @@ const AboutPage: NextPage = () => {
     const interests = (
         <Text color="brand.darkBlue">
             Currently in San Francisco starting a new company. My interests lie
-            in mathematics and engineering. I&apos;m highly interested in
+            in mathematics and engineering. I am highly interested in
             distributed systems, information theory, zero knowledge math, and
             machine learning. In general, the type of work I enjoy the most is
-            simply building positive things that people use.
+            simply building technology that people use.
             <br />
             <br />
-            Outside of my desk, I like food, really enjoy stand up comedy, and I
-            practice jiu jitsu.
+            Away from desk, I enjoy making food, watching stand up comedy, and
+            training jiu jitsu.
             <br />
             <br />
-            Here are some things I&apos;ve been upto during the past few years:
-        </Text>
+            Here are some things I have been upto during the past few years:
         </Text>
     );
 
