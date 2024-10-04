@@ -112,8 +112,8 @@ const AboutPage: NextPage = () => {
     const interests = (
         <Text color="brand.darkBlue">
             Currently in San Francisco starting a new company. My interests lie
-            in mathematics and engineering. Specifically I have lots of
-            experience in distributed systems, information theory, zero
+            in mathematics and engineering. Specifically I have lots of passion
+            and experience in distributed systems, information theory, zero
             knowledge math, and machine learning. In general, the type of work I
             enjoy the most is simply building technology that people use.
             <br />
