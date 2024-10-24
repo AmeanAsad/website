@@ -91,6 +91,11 @@ const AboutPage: NextPage = () => {
                 </ListItem>
 
                 <ListItem>
+                    2022: Graduated Uni, studied Applied Mathemtics and Computer
+                    Engineering
+                </ListItem>
+
+                <ListItem>
                     2021: Founded Yasa, a fitness analytics platform
                     (discontinued).
                 </ListItem>
@@ -105,6 +110,7 @@ const AboutPage: NextPage = () => {
                         patent in machine learning
                     </Link>
                 </ListItem>
+                <ListItem>2019-2020: Software Engineer @IBM</ListItem>
             </UnorderedList>
         </Text>
     );
