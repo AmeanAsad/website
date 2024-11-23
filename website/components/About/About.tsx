@@ -91,8 +91,8 @@ const AboutPage: NextPage = () => {
                 </ListItem>
 
                 <ListItem>
-                    2022: Graduated Uni, studied Applied Mathemtics and Computer
-                    Engineering
+                    2022: Graduated Uni, studied Applied Mathematics and
+                    Computer Engineering
                 </ListItem>
 
                 <ListItem>
