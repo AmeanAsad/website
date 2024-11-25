@@ -77,6 +77,16 @@ const AboutPage: NextPage = () => {
                     2024: Moved to San Francisco, working on a new company
                 </ListItem>
                 <ListItem>
+                    2024: Created{" "}
+                    <Link
+                        isExternal
+                        href="https://focalbrowse.com"
+                        color="blue.500"
+                    >
+                        Focal
+                    </Link>
+                </ListItem>
+                <ListItem>
                     2024: Founded{" "}
                     <Link
                         isExternal
