@@ -134,8 +134,8 @@ const AboutPage: NextPage = () => {
             enjoy the most is simply building technology that people use.
             <br />
             <br />
-            Away from desk, I enjoy making food, watching stand up comedy, and
-            training jiu jitsu.
+            Away from my desk, I enjoy making food, watching stand up comedy,
+            and training jiu jitsu.
             <br />
             <br />
             Here are some things I have been upto during the past few years:
