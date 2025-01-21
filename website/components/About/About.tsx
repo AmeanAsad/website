@@ -74,7 +74,7 @@ const AboutPage: NextPage = () => {
                     </Link>
                 </ListItem> */}
                 <ListItem>
-                    2024: founding
+                    2024: founding{" "}
                     <Link isExternal href="https://lunal.ai" color="blue.500">
                         Lunal
                     </Link>
