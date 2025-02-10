@@ -73,12 +73,7 @@ const AboutPage: NextPage = () => {
                         Focal
                     </Link>
                 </ListItem> */}
-                <ListItem>
-                    2024: founding{" "}
-                    <Link isExternal href="https://lunal.ai" color="blue.500">
-                        Lunal
-                    </Link>
-                </ListItem>
+                <ListItem>Currently working on a new company in SF</ListItem>
                 <ListItem>
                     2024: Created{" "}
                     <Link
