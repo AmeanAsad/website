@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.ameanasad.tech/</loc>
+      <loc>https://www.ameanasad.com/</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/about</loc>
+      <loc>https://www.ameanasad.com/about</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/articles</loc>
+      <loc>https://www.ameanasad.com/articles</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.2</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/contact</loc>
+      <loc>https://www.ameanasad.com/contact</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/experience</loc>
+      <loc>https://www.ameanasad.com/experience</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects</loc>
+      <loc>https://www.ameanasad.com/projects</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects/covid-19-tracker</loc>
+      <loc>https://www.ameanasad.com/projects/covid-19-tracker</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects/disease-simulation-module</loc>
+      <loc>https://www.ameanasad.com/projects/disease-simulation-module</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects/convergence-of-sgd</loc>
+      <loc>https://www.ameanasad.com/projects/convergence-of-sgd</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects/hamming-error-decoding</loc>
+      <loc>https://www.ameanasad.com/projects/hamming-error-decoding</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects/turnover-analysis</loc>
+      <loc>https://www.ameanasad.com/projects/turnover-analysis</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects/firespread-simulator</loc>
+      <loc>https://www.ameanasad.com/projects/firespread-simulator</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
    </url>
    <url>
-      <loc>https://www.ameanasad.tech/projects/linear-optimization</loc>
+      <loc>https://www.ameanasad.com/projects/linear-optimization</loc>
       <lastmod>2023-12-25</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.4</priority>
