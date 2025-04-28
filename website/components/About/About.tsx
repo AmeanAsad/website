@@ -6,10 +6,11 @@ import {
     HStack,
     IconButton,
     Link,
+    ListItem,
     Text,
+    UnorderedList,
 } from "@chakra-ui/react";
 import { NextPage } from "next";
-import Image from "next/image";
 import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 const AboutPage: NextPage = () => {
@@ -17,7 +18,7 @@ const AboutPage: NextPage = () => {
 
     const social = (
         <HStack
-            mt={{ lg: 2, md: 2 }}
+            mt={4}
             spacing={7}
             mb={4}
             paddingTop={3}
@@ -59,77 +60,99 @@ const AboutPage: NextPage = () => {
             </Link>
         </HStack>
     );
-
     const aboutMeText = (
-        <Text color="brand.darkBlue">
-            Currently a distributed systems engineer @ Protocol Labs building a
-            decentralized CDN network called Filecoin Saturn. Previously founded
-            Yasa, a computer vision powered fitness app. Im currently based on
-            Toronto but previously lived in Egypt for 17 years.
+        <Text color="brand.darkBlue" p={3}>
+            <UnorderedList spacing={3}>
+                {/* <ListItem>
+                    2024: Founded{" "}
+                    <Link
+                        isExternal
+                        href="https://chromewebstore.google.com/detail/focal/foejbliibcljbobfidlbahiilkgkcnfe?hl=en"
+                        color="blue.500"
+                    >
+                        Focal
+                    </Link>
+                </ListItem> */}
+                <ListItem>Currently working on a new company in SF</ListItem>
+                <ListItem>
+                    2024: Created{" "}
+                    <Link
+                        isExternal
+                        href="https://focalbrowse.com"
+                        color="blue.500"
+                    >
+                        Focal
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    2024: Founded{" "}
+                    <Link
+                        isExternal
+                        href="https://mycommon.place"
+                        color="blue.500"
+                    >
+                        Commonplace
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    2022-2024: Distributed Systems Engineer @ Protocol Labs
+                </ListItem>
+
+                <ListItem>
+                    2022: Graduated Uni, studied Applied Mathematics
+                </ListItem>
+
+                <ListItem>
+                    2021: Founded Yasa, a fitness analytics platform
+                    (discontinued).
+                </ListItem>
+                <ListItem>
+                    2020: Filed my first{" "}
+                    <Link
+                        isExternal
+                        href=" https://patents.google.com/patent/US20220414316A1/en?inventor=amean+asad
+"
+                        color="blue.500"
+                    >
+                        patent in machine learning
+                    </Link>
+                </ListItem>
+                <ListItem>2019-2020: Software Engineer @IBM</ListItem>
+            </UnorderedList>
         </Text>
     );
 
     const interests = (
         <Text color="brand.darkBlue">
-            My main interests and work lie in software engineering and
-            mathematical research. My main areas are zero knowledge machine
-            learning, reinforcement learning, and incentive design. My goal is
-            to always work on technology that reaches millions and contributes a
-            net positive to the world.
+            Currently in San Francisco starting a new company. My interests lie
+            in mathematics and engineering. Specifically I have lots of passion
+            and experience in distributed systems, information theory, zero
+            knowledge math, and machine learning. In general, the type of work I
+            enjoy the most is simply building technology that people use.
             <br />
             <br />
-            Outside of my desk, I like food, standup comedy, and I practice Jiu
-            Jitsu
+            Away from my desk, I enjoy making food, watching stand up comedy,
+            and training jiu jitsu.
+            <br />
+            <br />
+            Here are some things I have been upto during the past few years:
         </Text>
     );
 
-    const currentWork = (
-        <Text color="brand.darkBlue">
-            Currently I am working on a decentralized CDN at Protocol Labs
-            called{" "}
-            <Link isExternal href="https://saturn.tech/" sx={{}}>
-                Filecoin Saturn
-            </Link>
-        </Text>
-    );
     return (
-        <Box backgroundColor="brand.white" p={5}>
-            <Heading size="2xl" color="brand.mediumBlue" marginBottom={8}>
-                {" "}
-                About?{" "}
-            </Heading>
+        <Box backgroundColor="brand.white" p={10}>
+            <Flex direction="column">
+                <Box maxWidth="800px">
+                    <Heading color="brand.mediumBlue" mb={4}>
+                        About
+                    </Heading>
+                    {interests}
 
-            <Flex direction={{ base: "column", lg: "row" }}>
-                <Box
-                    margin={{ base: "auto", lg: "0" }}
-                    minWidth={330}
-                    maxWidth={700}
-                >
-                    <Image
-                        layout="intrinsic"
-                        width={562}
-                        height={700}
-                        src="https://f004.backblazeb2.com/file/websitev1/portrait.jpg"
-                        quality={100}
-                        priority
-                    />
-                    {social}
-                </Box>
-
-                <Box maxWidth="800px" paddingLeft={{ base: 0, md: 8 }}>
-                    <Heading color="brand.mediumBlue">About</Heading>
                     {aboutMeText}
 
                     {divider}
-
-                    <Heading color="brand.mediumBlue"> Interests </Heading>
-                    {interests}
-
-                    {divider}
-
-                    <Heading color="brand.mediumBlue"> Current Work</Heading>
-                    {currentWork}
                 </Box>
+                {social}
             </Flex>
         </Box>
     );

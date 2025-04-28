@@ -26,12 +26,16 @@ interface LinkItemProps {
     href: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-    { name: "Home", icon: null, href: "/home", id: "home", },
-    { name: "About", icon: null, href: "/about", id: "about", },
-    { name: "Projects", icon: null, href: "/projects", id: "projects", },
-    { name: "Experience", icon: null, href: "/experience", id: "experience", },
-    { name: "Contact", icon: null, href: "/contact", id: "contact", },
-    { name: "Articles", icon: null, href: "/articles", id: "articles", },
+    { name: "Home", icon: null, href: "/home", id: "home" },
+    { name: "About", icon: null, href: "/about", id: "about" },
+    {
+        name: "Blog",
+        icon: null,
+        href: "https://blog.ameanasad.xyz/",
+        id: "articles",
+    },
+    { name: "Projects", icon: null, href: "/projects", id: "projects" },
+    { name: "Experience", icon: null, href: "/experience", id: "experience" },
 ];
 
 interface NavItemProps extends FlexProps {
@@ -67,7 +71,7 @@ const NavItem = ({ children, selected, ...rest }: NavItemProps) => {
 
 interface SidebarProps extends BoxProps {
     onClose: () => void;
-    pageId: string
+    pageId: string;
 }
 
 const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
@@ -89,9 +93,13 @@ const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
                         onClick={onClose}
                     />
                     <Box marginTop={2} margin="auto">
-                        <Image alt="Amean Asad Logo" src={svgCa} height="70px" width="70px" />
+                        <Image
+                            alt="Amean Asad Logo"
+                            src={svgCa}
+                            height="70px"
+                            width="70px"
+                        />
                     </Box>
-
                 </Flex>
                 {LinkItems.map((link) => {
                     const isSelected = link.id === pageId;
@@ -101,7 +109,6 @@ const SidebarContent = ({ onClose, pageId, ...rest }: SidebarProps) => {
                                 <Heading size="md">{link.name} </Heading>
                             </NavItem>
                         </Link>
-
                     );
                 })}
             </Flex>
@@ -132,11 +139,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                 icon={<ImMenu />}
                 onClick={onOpen}
             />
-            <Heading
-                fontSize="4xl"
-                ml="8"
-                color="brand.mediumBlue"
-            >
+            <Heading fontSize="4xl" ml="8" color="brand.mediumBlue">
                 Menu
             </Heading>
         </Flex>
@@ -144,7 +147,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
 };
 
 interface SideBarProps {
-    pageId: string
+    pageId: string;
 }
 
 const SideBar: NextPage<SideBarProps> = ({ pageId }) => {
@@ -163,7 +166,6 @@ const SideBar: NextPage<SideBarProps> = ({ pageId }) => {
                 width="100%"
                 borderRight="1px"
                 borderColor="brand.darkBlue"
-
             />
             <Drawer
                 autoFocus={false}

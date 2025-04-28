@@ -10,10 +10,10 @@
     {
         "title": "Queen's University",
         "location": "Kingston, CA",
-        "company": "Bachelor in Mathematics and Computer Engineering",
+        "company": "Bachelor in Mathematics",
         "date": "September 2017, Moving to Canada",
         "icon": "travel",
-        "description": "After 17 eventful years in Egypt, I was offered two scholarships to study at Queen's University in Canada. I am currently in in my final year of Mathematics and Computer Engineering expected to graduate May 2022. "
+        "description": "After 17 eventful years in Egypt, I was offered two scholarships to study at Queen's University in Canada "
     },
     {
         "title": "Lead Software Developer",
@@ -70,5 +70,21 @@
         "date": "June 2022",
         "icon": "work",
         "description": "Building a decentralized content delivery network."
+    },
+    {
+        "title": "Co-Founder",
+        "location": "Toronto, CA",
+        "company": "Commonplace",
+        "date": "Dec 2023",
+        "icon": "rocket",
+        "description": "One digital library for everything you come across anywhere on the internet"
+    },
+    {
+        "title": "Co-Founder",
+        "location": "San Francisco, CA",
+        "company": "__",
+        "date": "July 2024",
+        "icon": "rocket",
+        "description": "TBD"
     }
 ]
