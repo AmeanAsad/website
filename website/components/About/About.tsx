@@ -73,7 +73,13 @@ const AboutPage: NextPage = () => {
                         Focal
                     </Link>
                 </ListItem> */}
-                <ListItem>Currently working on a new company in SF</ListItem>
+                <ListItem>
+                    Currently building{" "}
+                    <Link isExternal href="https://lunal.dev" color="blue.500">
+                        Lunal
+                    </Link>{" "}
+                    in San Fransico.
+                </ListItem>
                 <ListItem>
                     2024: Created{" "}
                     <Link
@@ -124,7 +130,7 @@ const AboutPage: NextPage = () => {
 
     const interests = (
         <Text color="brand.darkBlue">
-            Currently in San Francisco starting a new company. My interests lie
+            Currently in San Francisco working on Lunal.dev . My interests lie
             in mathematics and engineering. Specifically I have lots of passion
             and experience in distributed systems, information theory, zero
             knowledge math, and machine learning. In general, the type of work I
