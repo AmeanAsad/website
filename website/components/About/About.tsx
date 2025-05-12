@@ -105,7 +105,8 @@ const AboutPage: NextPage = () => {
                 </ListItem>
 
                 <ListItem>
-                    2022: Graduated Uni, studied Applied Mathematics
+                    2022: Graduated Uni, studied Applied Mathematics and
+                    Computer Engineering
                 </ListItem>
 
                 <ListItem>
@@ -142,8 +143,8 @@ const AboutPage: NextPage = () => {
             <br />
             <br />
             Away from my desk, I train jiu jitsu, play tennis, and make a lot of
-            tea. My current favorite dessert is Tiramisu and my favorite dinner
-            is Koshari.
+            tea. My current favorite dessert is Tiramisu and my go to comfort
+            dinner is Koshari.
             <br />
             <br />
             Here are some things I have been upto during the past few years:
