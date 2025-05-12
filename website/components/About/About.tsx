@@ -137,7 +137,8 @@ const AboutPage: NextPage = () => {
             . My interests lie in math and engineering. I have worked a lot on
             distributed systems, information theory, zero knowledge proofs, and
             machine learning. In general, the type of work I enjoy the most is
-            simply building tech that people use.
+            simply building tech that people use, maybe with a slight bias
+            towards math though ngl.
             <br />
             <br />
             Away from my desk, I train jiu jitsu, play tennis, and make a lot of
