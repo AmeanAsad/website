@@ -130,15 +130,19 @@ const AboutPage: NextPage = () => {
 
     const interests = (
         <Text color="brand.darkBlue">
-            Currently in San Francisco working on Lunal.dev . My interests lie
-            in mathematics and engineering. Specifically I have lots of passion
-            and experience in distributed systems, information theory, zero
-            knowledge math, and machine learning. In general, the type of work I
-            enjoy the most is simply building technology that people use.
+            Currently in San Francisco working on{" "}
+            <Link href="https://lunal.dev" isExternal>
+                Lunal
+            </Link>
+            . My interests lie in math and engineering. I have worked a lot on
+            distributed systems, information theory, zero knowledge proofs, and
+            machine learning. In general, the type of work I enjoy the most is
+            simply building tech that people use.
             <br />
             <br />
-            Away from my desk, I enjoy making food, watching stand up comedy,
-            and training jiu jitsu.
+            Away from my desk, I train jiu jitsu, play tennis, and make a lot of
+            tea. My current favorite dessert is Tiramisu and my favorite dinner
+            is Koshari.
             <br />
             <br />
             Here are some things I have been upto during the past few years:
