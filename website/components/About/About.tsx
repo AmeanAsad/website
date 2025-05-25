@@ -147,7 +147,7 @@ const AboutPage: NextPage = () => {
             dinner is Koshari.
             <br />
             <br />
-            Here are some things I have been upto during the past few years:
+            Here are some of the things I have been upto in the past few years:
         </Text>
     );
 
