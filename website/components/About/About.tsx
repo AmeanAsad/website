@@ -78,7 +78,7 @@ const AboutPage: NextPage = () => {
                     <Link isExternal href="https://lunal.dev" color="blue.500">
                         Lunal
                     </Link>{" "}
-                    in San Fransico.
+                    in San Francisco.
                 </ListItem>
                 <ListItem>
                     2024: Created{" "}
@@ -109,10 +109,7 @@ const AboutPage: NextPage = () => {
                     Computer Engineering
                 </ListItem>
 
-                <ListItem>
-                    2021: Founded Yasa, a fitness analytics platform
-                    (discontinued).
-                </ListItem>
+                <ListItem>2021: Founded Yasa (discontinued).</ListItem>
                 <ListItem>
                     2020: Filed my first{" "}
                     <Link
@@ -131,13 +128,14 @@ const AboutPage: NextPage = () => {
 
     const interests = (
         <Text color="brand.darkBlue">
-            Currently in San Francisco working on{" "}
-            <Link href="https://lunal.dev" isExternal>
+            Currently in San Francisco working on confidential computing by
+            building{" "}
+            <Link href="https://lunal.dev" color="blue.500" isExternal>
                 Lunal
             </Link>
             . My interests lie in math and engineering. I have worked a lot on
-            distributed systems, information theory, zero knowledge proofs, and
-            machine learning. In general, the type of work I enjoy the most is
+            distributed systems, machine learning, information theory, and zero
+            knowledge proofs. In general, the type of work I enjoy the most is
             simply building tech that people use, maybe with a slight bias
             towards math though ngl.
             <br />
