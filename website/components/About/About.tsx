@@ -102,7 +102,7 @@ const AboutPage: NextPage = () => {
                 </ListItem>
                 <ListItem>
                     2022-2024: Distributed Systems Engineer @ Protocol Labs.
-                    Built the world's largest decentralized CDN saturn
+                    Built the world&apos;s largest decentralized CDN saturn
                     (https://github.com/filecoin-saturn)
                 </ListItem>
 
@@ -127,8 +127,8 @@ const AboutPage: NextPage = () => {
                 <ListItem>2019-2020: Software Engineer @IBM</ListItem>
                 <ListItem>
                     {" "}
-                    2015-2016: Competed on Egypt's IMO team. I ranked 7th in all
-                    of Egypt.
+                    2015-2016: Competed on Egypt&apos;s IMO team. I ranked 7th
+                    in all of Egypt.
                 </ListItem>
             </UnorderedList>
         </Text>
