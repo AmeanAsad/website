@@ -101,7 +101,9 @@ const AboutPage: NextPage = () => {
                     </Link>
                 </ListItem>
                 <ListItem>
-                    2022-2024: Distributed Systems Engineer @ Protocol Labs
+                    2022-2024: Distributed Systems Engineer @ Protocol Labs.
+                    Built the world's largest decentralized CDN saturn
+                    (https://github.com/filecoin-saturn)
                 </ListItem>
 
                 <ListItem>
@@ -120,16 +122,21 @@ const AboutPage: NextPage = () => {
                     >
                         patent in machine learning
                     </Link>
+                    . At the time, youngest patent holder at IBM.
                 </ListItem>
                 <ListItem>2019-2020: Software Engineer @IBM</ListItem>
+                <ListItem>
+                    {" "}
+                    2015-2016: Competed on Egypt's IMO team. I ranked 7th in all
+                    of Egypt.
+                </ListItem>
             </UnorderedList>
         </Text>
     );
 
     const interests = (
         <Text color="brand.darkBlue">
-            Currently in San Francisco working on confidential computing by
-            building{" "}
+            Currently in San Francisco building{" "}
             <Link href="https://lunal.dev" color="blue.500" isExternal>
                 Lunal
             </Link>
