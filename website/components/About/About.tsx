@@ -74,11 +74,12 @@ const AboutPage: NextPage = () => {
                     </Link>
                 </ListItem> */}
                 <ListItem>
-                    Currently building{" "}
+                    Co-founded
                     <Link isExternal href="https://lunal.dev" color="blue.500">
                         Lunal
                     </Link>{" "}
-                    in San Francisco.
+                    in San Francisco. Building the private compute
+                    infrastructure for the internet.
                 </ListItem>
                 <ListItem>
                     2024: Created{" "}
@@ -103,7 +104,8 @@ const AboutPage: NextPage = () => {
                 <ListItem>
                     2022-2024: Distributed Systems Engineer @ Protocol Labs.
                     Built the world&apos;s largest decentralized CDN saturn
-                    (https://github.com/filecoin-saturn)
+                    (https://github.com/filecoin-saturn). Saturn had 80 million
+                    users.
                 </ListItem>
 
                 <ListItem>
@@ -111,7 +113,10 @@ const AboutPage: NextPage = () => {
                     Computer Engineering
                 </ListItem>
 
-                <ListItem>2021: Founded Yasa (discontinued).</ListItem>
+                <ListItem>
+                    2021: Founded Yasa, worked on early models for 3d pose
+                    detection on mobile (discontinued).
+                </ListItem>
                 <ListItem>
                     2020: Filed my first{" "}
                     <Link
@@ -148,8 +153,8 @@ const AboutPage: NextPage = () => {
             <br />
             <br />
             Away from my desk, I train jiu jitsu, play tennis, and make a lot of
-            tea. My current favorite dessert is Tiramisu and my go to comfort
-            dinner is Koshari.
+            tea. My current favorite dessert is Pistachio Cheesecake and my go
+            to comfort dinner is Koshari.
             <br />
             <br />
             Here are some of the things I have been upto in the past few years:
