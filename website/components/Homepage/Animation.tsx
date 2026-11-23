@@ -8,6 +8,9 @@ interface Bound {
 
 const MOBILE_ROTATION = 0.002;
 const DESKTOP_ROTATION = 0.0008;
+// Lower is fainter (1 is fully opaque lines)
+const LINE_OPACITY = 0.45;
+const POINT_COLORS = ["#22212a", "#6b6860", "#a39f93"];
 class AnimationComponent extends PtsCanvas {
     // Use type definitions to make the constructor types defined on component
     pts: any;
@@ -119,7 +122,7 @@ class AnimationComponent extends PtsCanvas {
         try {
             const poly = Polygon.convexHull(polygonCoords);
 
-            this.form.fillOnly("#050410").polygon(poly);
+            this.form.fillOnly("#f1ebd9").polygon(poly);
         } catch (err) {
             // Ignore exception
             // Exception is ignored because the mouse is out of bounds
@@ -139,18 +142,18 @@ class AnimationComponent extends PtsCanvas {
                 1 - lp.$subtract(p[1]).magnitude() / (this.space.size.x / 2)
             );
             this.form
-                .stroke(`rgba(255, 77, 91,${ratio}`, ratio * 2)
+                .stroke(`rgba(120, 118, 128, ${ratio * LINE_OPACITY})`, ratio * 1.5)
                 .line([p[1], lp2]);
-            this.form.fillOnly(["#f03", "#09f", "#0c6"][i % 3]).point(p[1], 1);
+            this.form.fillOnly(POINT_COLORS[i % 3]).point(p[1], 1);
 
             ratio = Math.min(
                 1,
                 1 - lp.$subtract(p[0]).magnitude() / (this.space.size.x / 2)
             );
             this.form
-                .stroke(`rgba(255, 255, 255,${ratio}`, ratio * 2)
+                .stroke(`rgba(34, 33, 42, ${ratio * LINE_OPACITY})`, ratio * 1.5)
                 .line([p[0], lp]);
-            this.form.fillOnly(["#f03", "#09f", "#0c6"][i % 3]).point(p[0], 1);
+            this.form.fillOnly(POINT_COLORS[i % 3]).point(p[0], 1);
         });
     }
 }

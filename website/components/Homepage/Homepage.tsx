@@ -1,82 +1,74 @@
-import styles from "./Homepage.module.scss";
-import { Box, Flex, Heading, Stack } from "@chakra-ui/react";
-import { NextPage } from "next";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import menu from "../menu";
+import praise from "../../data/praise.json";
 
 const AnimationComponent = dynamic(() => import("./Animation"), { ssr: false });
-// const TestimonialCard = dynamic(
-//     () => import("./TestimonialCard/TestimonialCard")
-// );
 
-const HomePage: NextPage = () => {
+const QUOTE_DURATION = 4000;
+const FADE_DURATION = 600;
+
+// Cycles through the praise quotes, fading between them.
+const PraiseCycle = () => {
+    const [index, setIndex] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        let fade: ReturnType<typeof setTimeout>;
+        const cycle = setInterval(() => {
+            setVisible(false);
+            fade = setTimeout(() => {
+                setIndex((current) => (current + 1) % praise.length);
+                setVisible(true);
+            }, FADE_DURATION);
+        }, QUOTE_DURATION);
+        return () => {
+            clearInterval(cycle);
+            clearTimeout(fade);
+        };
+    }, []);
+
+    const quote = praise[index];
     return (
-        <>
-            <Box className="animation" zIndex="5" position="absolute" top={0}>
+        <blockquote
+            className="home-praise"
+            style={{ opacity: visible ? 1 : 0 }}
+        >
+            <p>&ldquo;{quote.content}&rdquo;</p>
+            <cite>&mdash; {quote.name}</cite>
+        </blockquote>
+    );
+};
+
+const HomePage = () => {
+    return (
+        <div className="home">
+            <div className="home-canvas">
                 <AnimationComponent
-                    background="#151247"
+                    background="#faf6ea"
                     name="homepageAnimation"
                     style={{
-                        opacity: 0.9,
                         minHeight: "600px",
                         height: "100vh",
                         width: "100vw",
                     }}
                 />
-            </Box>
-            <Box
-                marginTop={{
-                    base: "0",
-                    md: "0",
-                }}
-                position="relative"
-                className={styles.pageContent}
-            >
-                <Flex
-                    width="fit-content"
-                    top={{ md: "40%", base: "40%", sm: "0" }}
-                    transform={{ md: "translateY(-50%)", base: "0" }}
-                    margin="auto"
-                    zIndex="1000"
-                    position="relative"
-                    pointerEvents="none"
-                >
-                    <Stack justifyContent="center">
-                        <Heading
-                            pointerEvents="none"
-                            textAlign="center"
-                            fontSize={{ base: "25vmin", sm: "17vmin" }}
-                            color="brand.white"
-                        >
-                            Amean
-                        </Heading>
-
-                        <Heading
-                            pointerEvents="none"
-                            textAlign="center"
-                            fontSize={{ base: "25vmin", sm: "17vmin" }}
-                            color="brand.white"
-                        >
-                            Asad
-                        </Heading>
-                    </Stack>
-                </Flex>
-
-                <Flex
-                    zIndex="1000"
-                    position="relative"
-                    width="fit-content"
-                    margin="auto"
-                    visibility={{ base: "hidden", sm: "visible" }}
-                    top={{ base: "20%", sm: "35%" }}
-                    transform={{
-                        md: "translateY(-55%)",
-                        base: "translateY(-60%)",
-                    }}
-                >
-                    {/* <TestimonialCard /> */}
-                </Flex>
-            </Box>
-        </>
+            </div>
+            <nav className="nav home-nav">
+                {menu.map((item) => (
+                    <Link key={item.href} href={item.href}>
+                        <a aria-current={item.href === "/" ? "page" : undefined}>
+                            {item.name}
+                        </a>
+                    </Link>
+                ))}
+            </nav>
+            <div className="home-center">
+                <h1 className="home-name">Amean Asad</h1>
+                <PraiseCycle />
+            </div>
+        </div>
     );
 };
 
