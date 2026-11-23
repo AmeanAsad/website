@@ -42,6 +42,15 @@ module.exports = {
         "refer-default-export": "off",
         quotes: ["error", "double"],
         "no-restricted-properties": "off",
+        // next/link wraps a bare <a>, the href lives on the Link
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                components: ["Link"],
+                specialLink: ["hrefLeft", "hrefRight"],
+                aspects: ["invalidHref", "preferButton"],
+            },
+        ],
         "use-object-destructuring": "off",
     },
 };

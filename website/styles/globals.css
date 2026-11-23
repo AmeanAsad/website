@@ -1,0 +1,233 @@
+:root {
+    --ink: #22212a;
+    --cream: #faf6ea;
+    --red: #ff4d5b;
+    --link: #2b5797;
+    --muted: #6b6860;
+    --rule: #ddd6c3;
+    --font: "STIX Two Text", "STIX Two", Georgia, "Times New Roman", serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin: 2em 0 0.6em;
+}
+
+h1 {
+    font-size: 2.25rem;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--red);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2rem 0;
+}
+
+li {
+    margin: 0.4em 0;
+}
+
+small,
+.muted {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+/* ---------- Plain pages (everything except the homepage) ---------- */
+
+.page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    padding-bottom: 14px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.nav a[aria-current="page"] {
+    color: var(--ink);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page footer {
+    margin-top: 48px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+/* Blog */
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-list li {
+    margin: 0 0 1.75rem;
+}
+
+.post-list a {
+    font-size: 1.3rem;
+}
+
+.post-list p {
+    margin: 0.25rem 0 0;
+}
+
+.post h1 {
+    margin-bottom: 0.3em;
+}
+
+.post img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+}
+
+.post pre,
+.post .katex-display,
+.post table {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.post .katex-display {
+    padding: 4px 0;
+}
+
+.post pre {
+    padding: 12px;
+    border: 1px solid var(--rule);
+}
+
+.post table {
+    display: block;
+    border-collapse: collapse;
+}
+
+.post th,
+.post td {
+    border: 1px solid var(--rule);
+    padding: 4px 10px;
+    text-align: left;
+}
+
+.post blockquote {
+    margin: 0 0 2rem;
+    padding-left: 16px;
+    border-left: 3px solid var(--red);
+}
+
+/* ---------- Homepage: the animation, the menu and the praise ---------- */
+
+.home {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    /* matches the canvas colour so there is no flash before it loads */
+    background: var(--cream);
+}
+
+.home-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Same menu as the other pages, sitting on top of the animation */
+.home-nav {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 20px 0;
+    border-bottom: 0;
+}
+
+.home-center {
+    position: absolute;
+    top: 34%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding: 0 20px;
+    pointer-events: none;
+    text-align: center;
+}
+
+.home-name {
+    margin: 0;
+    font-size: clamp(2.75rem, 9vmin, 5rem);
+    font-weight: 400;
+}
+
+.home-praise {
+    max-width: 480px;
+    margin: 1.5rem auto 0;
+    transition: opacity 0.6s ease;
+}
+
+.home-praise p {
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.home-praise cite {
+    font-size: 0.9rem;
+    color: var(--muted);
+}

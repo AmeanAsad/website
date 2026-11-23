@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Carl Friedrich Gauss",
+        "role": "Prince of Mathematicians",
+        "content": "When I added the numbers from 1 to 100, I actually looked over the answer from Amean's desk."
+    },
+    {
+        "name": "Leonhard Euler",
+        "role": "Mathematician",
+        "content": "Amean was kind enough to let the theorems be named after me once I had rediscovered them."
+    },
+    {
+        "name": "Alan Turing",
+        "role": "Chief Cryptographer at Bletchley Park",
+        "content": "The decision problem was inspired by Amean's ability to answer any question."
+    },
+    {
+        "name": "John Von Neumann",
+        "role": "Mathematician",
+        "content": "The next John Von Neumann."
+    },
+    {
+        "name": "Claude Shannon",
+        "role": "Founder at Info Theory",
+        "content": "He put the 'Information' in Information Theory."
+    },
+    {
+        "name": "John Nash",
+        "role": "Game Theorist",
+        "content": "I decided to pursue Game Theory after consistently losing to Amean in monopoly deal."
+    }
+]

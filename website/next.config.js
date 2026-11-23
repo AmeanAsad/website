@@ -10,8 +10,16 @@ module.exports = withBundleAnalyzer({
         locales: ["en"],
         defaultLocale: "en",
       },
-    images: {
-        domains: ["f004.backblazeb2.com"],
+    async redirects() {
+        return [
+            // Pages that no longer exist
+            { source: "/projects", destination: "/about", permanent: false },
+            { source: "/projects/:slug", destination: "/about", permanent: false },
+            { source: "/articles", destination: "/blog", permanent: false },
+            { source: "/contact", destination: "/about", permanent: false },
+            { source: "/experience", destination: "/about", permanent: false },
+            { source: "/praise", destination: "/", permanent: false },
+        ];
     },
     webpack: (config, options) => {
         config.experiments = {

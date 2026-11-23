@@ -1,5 +1,5 @@
 # website
-My personal website built with Typescript + Next.js + Chakra UI
+My personal website built with Typescript + Next.js and plain HTML/CSS
 
 [ameanasad.xyz](https://www.ameanasad.xyz)
 [ameanasad.tech](https://www.ameanasad.tech)
@@ -7,8 +7,8 @@ My personal website built with Typescript + Next.js + Chakra UI
 ## Tech Stack:
 - Next.js as a development framework
 - Typescript
-- Chakra UI as a component library
-- Backblaze B2 as cloud storage to serve media.
+- Plain CSS (`website/styles/globals.css`), no component library
+- Markdown blog posts rendered to HTML at build time
 
 ## Deployment:
 - Use Vercel to perform deployment checks.
@@ -19,10 +19,10 @@ My personal website built with Typescript + Next.js + Chakra UI
 - `website/*` - Main Next.js directory.
 - `website/pages/*` - The different page layouts for my website (home, about, experiences, etc. ).
 - `website/public/*` - Contains the website logo sized for different layouts and files for crawling permissions.
-- `website/styles/*` - Global theme that defines fonts, colors, and custom styling.
-- `website/pages/projects/*` - Static pre-rendered page setup for MDX files.
-- `website/components/markdownfiles/*` - My MDX files describing my projects.
-- `website/utils/*` - Helper functions to setup my MDX static pages.
+- `website/styles/*` - The one global stylesheet.
+- `website/content/blog/*` - Blog posts in markdown. Add a file here to publish a post (`draft: true` hides it).
+- `website/data/*` - The praise quotes that cycle on the homepage.
+- `website/utils/*` - Helpers that turn the markdown posts into HTML.
 
 
 ## Running Locally
